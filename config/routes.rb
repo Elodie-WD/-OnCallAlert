@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
+
+
+  resources :bookings, only: :index
+
+
+  get '/on_duty', to: "users#on_duty", as: :on_duty
+  get '/on_call', to: "users#on_call", as: :on_call
+  get '/default', to: "users#on_default", as: :default
+
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,4 +18,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get '/rooting', to: "pages#rooting", as: :rooting
+
+  get '/show', to: "contact#show", as: :contact
+
+  get '/show', to: "map#show", as: :map
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+
 end
