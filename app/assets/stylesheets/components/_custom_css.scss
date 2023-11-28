@@ -1,0 +1,77 @@
+/* Bouton ROSE */
+
+.btn-pink a {
+  padding: 15px 25px;
+  background-color:#FF6392;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
+  text-decoration: none;
+}
+
+/* Bouton BLEU CLAIR */
+
+.btn-ight-blue a {
+  padding: 15px 25px;
+  background-color:#7FC8F8;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px #7FC8F8);
+  text-decoration: none;
+}
+
+/* Bouton BLEU FONCÉ */
+
+.btn-dark-blue a {
+  padding: 15px 25px;
+  background-color:#03045E;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px #03045E);
+  text-decoration: none;
+}
+
+/* Titres */
+
+.h1 {
+  font-family: quicksand;
+  font-size: 35px;
+  color: #03045E;
+}
+
+.h2 {
+  font-family: quicksand;
+  font-size: 29px;
+  color: #03045E;
+}
+
+.h3 {
+  font-size: 25px;
+  font-family: Quicksand;
+}
+
+.h4 {
+  font-size: 16px;
+  font-family: Quicksand;
+}
+
+.p-grey {
+  font-family: Montserrat;
+  font-size: 13px;
+  color: #777777;
+}
+
+.p-dark-blue {
+  font-family: Montserrat;
+  font-size: 13px;
+  color: #03045E;
+}
