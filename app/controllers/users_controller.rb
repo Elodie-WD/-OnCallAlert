@@ -1,11 +1,14 @@
 class UsersController < ApplicationController
 
-  Def on_call
+  def on_call
+
   end
 
-  Def on_duty
+  def on_duty
+    raise
   end
 
-  Def default
+  def default
   end
+
 end
