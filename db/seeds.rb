@@ -8,7 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
 # User.destroy_all
 # Booking.destroy_all
 # Department.destroy_all
