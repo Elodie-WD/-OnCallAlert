@@ -1,38 +1,55 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+<%# <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h4 class="text-white">MENU</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+      </div></div>
+      %>
+    <nav class="navbar navbar-dark bg-dark ">
+     <%# <% if user_signed_in? %>
+      <div class="maboite">
+        <div class ="toggle-button">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <img src="<%=image_path("logo.png")%>" class="logonavbar" style="width: 150px;"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</div>
+            <div class="offcanvas-body">
+                <div>
+                <ul class="monul">
+                  <ol class="list">
+                     <ol class="list">L'astreinte du jour</ol>
+                    <%# <%= link_to "L'astreinte du jour", contact_path(current_user), class: "nav-link" %>
+                  </ol>
+                  <ol class="list">Mon planning</ol>
+                    <%# <%= link_to "Mon planning", bookings_index_path(current_user), class: "nav-link" %>
+                  <ol class="list">Historique des conversations</ol>
+                    <%# <%= link_to "Historique des conversations", bookins_index_path(current_user), class: "nav-link" %>
+                  <ol class="list">Mon profil</ol>
+                     <%# <%= link_to "Mon profil", rooting_path, class: "nav-link" %>
+                  <ol class="list">Se déconnecter</ol>
+                     <%# <%= link_to "Se déconnecter", destroy_user_session_path(current_user), class: "nav-link" %>
+                  <ol class="listurgence">Une urgence ?</ol>
+                </ul>
+              </div>
+              <a href="" class="big-btn-alarm">Contacter l'astreinte</a>
+                 <%# <%= link_to "Contacter l'astreinte", bookins_index_path(current_user), class: "nav-link" %>
+            </div>
+            </div>
+          </div>
+
+          <div >
+            <img src="<%=image_path("logo.png")%>" class="logo" style="width: 150px;">
+              <%# <%= link_to "L'astreinte du jour", profile_path(current_user), class: "nav-link" %>
+          </div>
+            <div class="maboiteavatar">
+            <i class="fa-regular fa-bell"></i>
+            <img src="<%=image_path("avatar1.png")%>" style="width: 40px";class="avatar" class="bg-info rounded-circle">
+            </div>
+   </nav>

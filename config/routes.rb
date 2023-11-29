@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   get '/show', to: "map#show", as: :map
 
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
 end
