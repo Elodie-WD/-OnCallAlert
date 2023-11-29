@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_many :bookings, dependent: :destroy
   belongs_to :department
   validates :last_name, presence: true

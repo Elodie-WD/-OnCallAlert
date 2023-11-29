@@ -11,9 +11,9 @@
 # User.destroy_all
 # Booking.destroy_all
 # Department.destroy_all
-Hospital.destroy_all
-Department.destroy_all
 Chatroom.destroy_all
+Department.destroy_all
+Hospital.destroy_all
 
 hospital1 = Hospital.create!
 
@@ -53,4 +53,3 @@ Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
 Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
 
 Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
-
