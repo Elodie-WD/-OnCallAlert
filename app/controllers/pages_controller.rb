@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @booking = Booking.new
+    # @booking = Booking.new
     # @booking.user_id == current_user
     @booking = Booking.where(date: Date.today, user: current_user).first
   end

@@ -65,13 +65,14 @@
 /* Gros Bouton ROSE */
 
 .big-btn-alarm {
-  padding: 25px 40px;
+  padding: 20px 35px;
   margin-top: 10px;
   margin-bottom:10px;
   background-color:#FF6392;
+  line-height: 20px;
   text-align: center;
-  border-radius: 40px;
-  max-width: 200px;
+  border-radius: 100px;
+  max-width: 400px;
   color: #fff;
   font-family: montserrat;
   filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
@@ -85,13 +86,14 @@
 /* Gros Bouton BLEU CLAIR */
 
 .big-btn-message {
-  padding: 25px 40px;
+  padding: 20px 35px;
+  line-height: 20px;
   margin-top: 10px;
   margin-bottom:10px;
   background-color:#7FC8F8;
   text-align: center;
-  border-radius: 40px;
-  max-width: 200px;
+  border-radius: 100px;
+  max-width: 400px;
   color: #fff;
   font-family: montserrat;
   filter: drop-shadow(0px 4px 15px #7FC8F8);
