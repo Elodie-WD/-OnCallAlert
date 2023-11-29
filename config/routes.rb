@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-
-
   resources :bookings, only: :index
-
-
   get '/on_duty', to: "users#on_duty", as: :on_duty
   get '/on_call', to: "users#on_call", as: :on_call
-  get '/default', to: "users#on_default", as: :default
+  get '/default', to: "users#default", as: :default
 
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -28,5 +24,4 @@ Rails.application.routes.draw do
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
-
 end

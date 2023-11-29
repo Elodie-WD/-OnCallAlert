@@ -1,4 +1,4 @@
 class MapsController < ApplicationController
-  Def show
+  def show
   end
 end
