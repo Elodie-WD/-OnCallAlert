@@ -1,7 +1,14 @@
-/* Bouton ROSE */
+/* HTML Button
+<a href="" class="little-btn-pink">Button 1</a>
+*/
 
-.btn-pink a {
+
+/* Petit Bouton ROSE */
+
+.little-btn-pink {
   padding: 15px 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color:#FF6392;
   text-align: center;
   border-radius: 40px;
@@ -12,10 +19,16 @@
   text-decoration: none;
 }
 
-/* Bouton BLEU CLAIR */
+.little-btn-pink a {
+  text-decoration: none;
+}
 
-.btn-ight-blue a {
+/* Petit Bouton BLEU CLAIR */
+
+.little-btn-light-blue {
   padding: 15px 25px;
+  margin-top: 10px;
+  margin-bottom:10px;
   background-color:#7FC8F8;
   text-align: center;
   border-radius: 40px;
@@ -26,10 +39,16 @@
   text-decoration: none;
 }
 
-/* Bouton BLEU FONCÉ */
+.little-btn-light-blue a {
+  text-decoration: none;
+}
 
-.btn-dark-blue a {
+/* Petit Bouton BLEU FONCÉ */
+
+.little-btn-dark-blue {
   padding: 15px 25px;
+  margin-top: 10px;
+  margin-bottom:10px;
   background-color:#03045E;
   text-align: center;
   border-radius: 40px;
@@ -40,38 +59,116 @@
   text-decoration: none;
 }
 
+.little-btn-dark-blue a {
+  text-decoration: none;
+}
+
+/* Gros Bouton ROSE */
+
+.big-btn-alarm {
+  padding: 25px 40px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  background-color:#FF6392;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
+  text-decoration: none;
+}
+
+.big-btn-alarm a {
+  text-decoration: none;
+}
+
+/* Gros Bouton BLEU CLAIR */
+
+.big-btn-message {
+  padding: 25px 40px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  background-color:#7FC8F8;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px #7FC8F8);
+  text-decoration: none;
+}
+
+.big-btn-message a {
+  text-decoration: none;
+}
+
+/* Gros Bouton BLEU FONCÉ */
+
+.big-btn-dark-blue {
+  padding: 25px 40px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  background-color:#03045E;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px #03045E);
+  text-decoration: none;
+}
+
+.big-btn-dark-blue a {
+  text-decoration: none;
+}
+
 /* Titres */
 
 .h1 {
   font-family: quicksand;
-  font-size: 35px;
+  font-weight: bold;
+  font-size: 40px;
   color: #03045E;
 }
 
 .h2 {
   font-family: quicksand;
-  font-size: 29px;
+  font-weight: bold;
+  font-size: 32px;
   color: #03045E;
 }
 
 .h3 {
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: bold;
   font-family: Quicksand;
 }
 
 .h4 {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   font-family: Quicksand;
 }
 
+/* paragraphe gris */
+
 .p-grey {
   font-family: Montserrat;
-  font-size: 13px;
+  font-size: 15px;
   color: #777777;
 }
 
+/* paragraphe bleu foncé */
+
 .p-dark-blue {
   font-family: Montserrat;
-  font-size: 13px;
+  font-size: 15px;
   color: #03045E;
+}
+
+/* Espace */
+
+.spacing {
+  margin: 40px;
 }
