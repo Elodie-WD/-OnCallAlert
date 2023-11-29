@@ -1,0 +1,20 @@
+<h1>contact</h1>
+<%= @on_call %>
+<%= @contact.first_name %>
+<div class="container-wrapper">
+  <h1><%= @title %></h1>
+  <div class="picture-circle"></div>
+  <div class="text-content">
+  <%= @contact.first_name %> <%= @contact.last_name %>
+  <%= @contact.email %>
+
+
+
+  </div>
+    <div class="content-btn">
+      <a href="" class="big-btn-message">Contacter la<br><%= @title %></a>
+      <a href="" class="big-btn-alarm">Confirmer le<br>début de l'astreinte</a>
+    </div>
+ </div>
+
+<%= link_to "Profile", rooting_path() %>

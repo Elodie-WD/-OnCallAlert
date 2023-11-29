@@ -33,3 +33,18 @@ Booking.create!(on_call: true, date: "2023-11-29", user: user1)
 Booking.create!(on_call: false, date: "2023-11-29", user: user2)
 
 Booking.create!(on_call: nil, date: "2023-11-29", user: user3)
+
+
+
+Booking.create!(on_call: true, date: "2023-11-30", user: user1)
+
+Booking.create!(on_call: false, date: "2023-11-30", user: user2)
+
+Booking.create!(on_call: nil, date: "2023-11-30", user: user3)
+
+
+Booking.create!(on_call: false, date: "2023-12-01", user: user1)
+
+Booking.create!(on_call: true, date: "2023-12-01", user: user2)
+
+Booking.create!(on_call: nil, date: "2023-12-01", user: user3)
