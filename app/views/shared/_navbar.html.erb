@@ -51,5 +51,9 @@
             <div class="maboiteavatar">
             <i class="fa-regular fa-bell"></i>
             <img src="<%=image_path("avatar1.png")%>" style="width: 40px";class="avatar" class="bg-info rounded-circle">
+            <%# a enlever apres  %>
+    <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+     <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+ <%# div et nav a garder apres  %>
             </div>
    </nav>
