@@ -17,9 +17,9 @@ Rails.application.routes.draw do
 
   get '/rooting', to: "pages#rooting", as: :rooting
 
-  get '/show', to: "contact#show", as: :contact
+  get '/show', to: "contacts#show", as: :contact
 
-  get '/show', to: "map#show", as: :map
+  get '/itinerary', to: "maps#show", as: :map
 
   resources :chatrooms, only: :show do
     resources :messages, only: :create
