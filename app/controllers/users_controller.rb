@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def on_duty
-    raise
+   
   end
 
   def default
