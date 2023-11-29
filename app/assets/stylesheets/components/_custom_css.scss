@@ -1,6 +1,11 @@
+/* HTML Button
+<a href="" class="little-btn-pink">Button 1</a>
+*/
+
+
 /* Petit Bouton ROSE */
 
-.little-btn-pink a {
+.little-btn-pink {
   padding: 15px 25px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -14,9 +19,13 @@
   text-decoration: none;
 }
 
+.little-btn-pink a {
+  text-decoration: none;
+}
+
 /* Petit Bouton BLEU CLAIR */
 
-.little-btn-light-blue a {
+.little-btn-light-blue {
   padding: 15px 25px;
   margin-top: 10px;
   margin-bottom:10px;
@@ -30,9 +39,13 @@
   text-decoration: none;
 }
 
+.little-btn-light-blue a {
+  text-decoration: none;
+}
+
 /* Petit Bouton BLEU FONCÉ */
 
-.little-btn-dark-blue a {
+.little-btn-dark-blue {
   padding: 15px 25px;
   margin-top: 10px;
   margin-bottom:10px;
@@ -46,9 +59,13 @@
   text-decoration: none;
 }
 
+.little-btn-dark-blue a {
+  text-decoration: none;
+}
+
 /* Gros Bouton ROSE */
 
-.big-btn-alarm a {
+.big-btn-alarm {
   padding: 25px 40px;
   margin-top: 10px;
   margin-bottom:10px;
@@ -62,9 +79,13 @@
   text-decoration: none;
 }
 
+.big-btn-alarm a {
+  text-decoration: none;
+}
+
 /* Gros Bouton BLEU CLAIR */
 
-.big-btn-message a {
+.big-btn-message {
   padding: 25px 40px;
   margin-top: 10px;
   margin-bottom:10px;
@@ -78,9 +99,13 @@
   text-decoration: none;
 }
 
+.big-btn-message a {
+  text-decoration: none;
+}
+
 /* Gros Bouton BLEU FONCÉ */
 
-.big-btn-dark-blue a {
+.big-btn-dark-blue {
   padding: 25px 40px;
   margin-top: 10px;
   margin-bottom:10px;
@@ -91,6 +116,10 @@
   color: #fff;
   font-family: montserrat;
   filter: drop-shadow(0px 4px 15px #03045E);
+  text-decoration: none;
+}
+
+.big-btn-dark-blue a {
   text-decoration: none;
 }
 
