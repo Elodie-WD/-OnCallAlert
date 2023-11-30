@@ -1,20 +1,36 @@
-<h1>contact</h1>
-<%= @on_call %>
-<%= @contact.first_name %>
-<div class="container-wrapper">
-  <h1><%= @title %></h1>
-  <div class="picture-circle"></div>
-  <div class="text-content">
-  <%= @contact.first_name %> <%= @contact.last_name %>
-  <%= @contact.email %>
 
-
-
+<div class="container-show">
+  <div class="container-header-picture">
+    <h1><%= @title %></h1>
+    <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
   </div>
-    <div class="content-btn">
-      <a href="" class="big-btn-message">Contacter la<br><%= @title %></a>
-      <a href="" class="big-btn-alarm">Confirmer le<br>début de l'astreinte</a>
+  <div class="container-footer_text-btn">
+    <div class="text-content">
+      <%= @contact.first_name %> <%= @contact.last_name %>
+      <%= @contact.email %>
+       <%= link_to "Profile", rooting_path() %>
+      <h1>contact</h1>
+      <%= @on_call %>
+      <%= @contact.first_name %>
     </div>
+    </div>
+    <div class="content-btn">
+      <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
+      <a href="" class="big-btn-message">Contacter la<br><%= @title %></a>
+      </div>
  </div>
 
-<%= link_to "Profile", rooting_path() %>
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
+  <div class="offcanvas-header" class="modal-pink" class="rounded-top">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <a href="" class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer l'appel<br>en Urgences</a>
+    </div>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    ...
+  </div>
+</div>
+
+<%# <a href="tel:+33612345678" class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer l'appel<br>en Urgences</a> %>
+<%= link_to "Test", chatroom_path(@chatroom) %>

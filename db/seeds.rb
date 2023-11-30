@@ -26,11 +26,11 @@ user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_con
 user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "User3", last_name: "Default", department: department1)
 
 
-Booking.create!(on_call: true, date: "2023-11-29", user: user1)
+Booking.create!(on_call: true, date: "2023-12-01", user: user1)
 
-Booking.create!(on_call: false, date: "2023-11-29", user: user2)
+Booking.create!(on_call: false, date: "2023-12-01", user: user2)
 
-Booking.create!(on_call: nil, date: "2023-11-29", user: user3)
+Booking.create!(on_call: nil, date: "2023-12-01", user: user3)
 
 
 

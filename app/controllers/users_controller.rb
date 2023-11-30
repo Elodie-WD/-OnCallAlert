@@ -33,6 +33,6 @@ class UsersController < ApplicationController
   end
 
   def default
-    @booking = Booking.where(date: Date.today, user: current_user).first
+   
   end
 end
