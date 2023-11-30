@@ -2,29 +2,31 @@
   <h1>Bonjour Pierre</h1>
   <div class="text-content">
     <div class="text-content-infos">
-      <h6>Situation actuelle:</h6>
-      <h6>Prochaine astreinte:</h6>
-      <h6>Prochaine garde:</h6>
+      <h6>Situation actuelle: <i>en garde<i></h6>
+      <h6>Prochaine astreinte:  <%= @on_call.date.to_date %></h6>
+      <h6>Prochaine garde:  <%= @on_duty.date.to_date %></h6>
     </div>
   </div>
   <div class="grid-wrapper">
     <div class="wrapper left-wrapper">
       <div class="circle-wrapper"></div>
       <div>
-        <h6>Personne</h6><h6>D'astreinte</h6>
+      <%= link_to "Personne d'astreinte", contact_path() %>
+    <%# <h6>Personne</h6><h6>D'astreinte</h6> %>
       </div>
     </div>
     <div class="wrapper right-wrapper">
-      <div class="circle-wrapper"></div>
+      <div class="circle-wrapper">
+      <%= link_to "", bookings_path() %>
+      </div>
       <div>
         <h6>Mon</h6><h6>Planning</h6>
       </div>
   </div>
 
   </div>
-  <div class="content-btn">
-      <div >
-        <a  class="btn-pink" href="">Contacter la personne de garde</a>
-      </div>
-  </div>
+
+   <%= link_to "Contacter la personne d'astreinte", contact_path(), class: "big-btn-message" %>
+
+
 </div>

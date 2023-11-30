@@ -8,10 +8,11 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
 # User.destroy_all
 # Booking.destroy_all
 # Department.destroy_all
+Chatroom.destroy_all
+Department.destroy_all
 Hospital.destroy_all
 
 hospital1 = hopital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
@@ -22,7 +23,30 @@ user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_con
 user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "User2", last_name: "On-duty",department: department1)
 user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "User3", last_name: "Default", department: department1)
 
+Booking.create!(on_call: true, date: "2023-12-01", user: user1)
 
-Booking.create!(on_call: true, date: "2023-11-29", user: user1)
-Booking.create!(on_call: false, date: "2023-11-29", user: user2)
-Booking.create!(on_call: nil, date: "2023-11-29", user: user3)
+Booking.create!(on_call: false, date: "2023-12-01", user: user2)
+
+Booking.create!(on_call: nil, date: "2023-12-01", user: user3)
+
+
+
+
+Booking.create!(on_call: true, date: "2023-11-30", user: user1)
+
+Booking.create!(on_call: false, date: "2023-11-30", user: user2)
+
+Booking.create!(on_call: nil, date: "2023-11-30", user: user3)
+
+
+Booking.create!(on_call: false, date: "2023-12-01", user: user1)
+
+Booking.create!(on_call: true, date: "2023-12-01", user: user2)
+
+Booking.create!(on_call: nil, date: "2023-12-01", user: user3)
+
+Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
+
+Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
+
+Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
