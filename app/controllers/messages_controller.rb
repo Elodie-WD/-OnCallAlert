@@ -8,9 +8,9 @@ class MessagesController < ApplicationController
       ChatroomChannel.broadcast_to(
         @chatroom,
         {
-        message_html: render_to_string(partial: "message", locals: {message: @message}),
-        sender_id: @message.user.id
-      }
+          message_html: render_to_string(partial: "message", locals: { message: @message }),
+          sender_id: @message.user.id
+        }
       )
       head :ok
       # redirect_to chatroom_path(@chatroom, anchor: "message#{@message.id}")

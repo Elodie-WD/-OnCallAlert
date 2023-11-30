@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def on_call
     @on_call = Booking.all.where(on_call: true, user_id: current_user)
     if Booking.all.where(on_call: true, user_id: current_user).first.date.to_date == Date.today
@@ -33,6 +32,6 @@ class UsersController < ApplicationController
   end
 
   def default
-   
+
   end
 end

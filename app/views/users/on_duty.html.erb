@@ -17,7 +17,7 @@
     </div>
     <div class="wrapper right-wrapper">
       <div class="circle-wrapper">
-      <%= link_to "P", bookings_path() %>
+      <%= link_to "", bookings_path() %>
       </div>
       <div>
         <h6>Mon</h6><h6>Planning</h6>
@@ -25,7 +25,8 @@
   </div>
 
   </div>
-  <div class="content-btn content-btn-alarm">
-    <a href="" class="big-btn-alarm">Contacter la<br>personne d'astreinte</a>
-  </div>
+
+   <%= link_to "Contacter la personne d'astreinte", contact_path(), class: "big-btn-message" %>
+
+
 </div>

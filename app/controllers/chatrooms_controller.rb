@@ -1,5 +1,4 @@
 class ChatroomsController < ApplicationController
-
   def index
     @chatrooms = Chatroom.all
   end
@@ -8,5 +7,4 @@ class ChatroomsController < ApplicationController
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
   end
-
 end
