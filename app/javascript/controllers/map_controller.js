@@ -22,13 +22,14 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10",
       center: [this.longitudeValue, this.latitudeValue], // starting position
-      zoom: 12
+      zoom: 16
     })
     fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${this.longitudeValue},${this.latitudeValue};${this.hospitalLongitudeValue},${this.hospitalLatitudeValue}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`)
 .then(response => response.json())
     .then((data) => {
       console.log(data)
       const itinerary = data.routes[0];
+      const duration = itinerary.duration
       const route = itinerary.geometry.coordinates;
       const geojson = {
         type: 'Feature',
@@ -78,7 +79,7 @@ export default class extends Controller {
         },
         paint: {
           'circle-radius': 10,
-          'circle-color': '#3887be'
+          'circle-color': '#eb1514'
         }
       });
 
@@ -103,18 +104,14 @@ export default class extends Controller {
         },
         paint: {
           'circle-radius': 10,
-          'circle-color': '#3887be'
+          'circle-color': '#337e1c'
         }
       });
 
     })
   }
 
-itineraire(){
-fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${latitude},${longitude};${hospitalLatitude},${hospitalLongitude}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`)
-.then(response => response.json())
-    .then((data) => {
-      console.log(data)
-    })
-}
+  #setDuration(duration) {
+    duration = (Math.ceil(duration/60))
+  }
 }
