@@ -10,7 +10,8 @@ export default class extends Controller {
     latitude: Number,
     longitude: Number,
     hospitalLatitude: Number,
-    hospitalLongitude: Number
+    hospitalLongitude: Number,
+    duration: Number
   }
   connect() {
     console.log(this.latitudeValue)
@@ -29,7 +30,7 @@ export default class extends Controller {
     .then((data) => {
       console.log(data)
       const itinerary = data.routes[0];
-      const duration = itinerary.duration
+      const duration = itinerary.duration;
       const route = itinerary.geometry.coordinates;
       const geojson = {
         type: 'Feature',

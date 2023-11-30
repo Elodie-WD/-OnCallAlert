@@ -14,7 +14,7 @@
 # Department.destroy_all
 Hospital.destroy_all
 
-hospital1 = Hospital.create!
+hospital1 = hopital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
 
 department1 = Department.create!(hospital: hospital1)
 
@@ -26,5 +26,3 @@ user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_con
 Booking.create!(on_call: true, date: "2023-11-29", user: user1)
 Booking.create!(on_call: false, date: "2023-11-29", user: user2)
 Booking.create!(on_call: nil, date: "2023-11-29", user: user3)
-
-hopital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
