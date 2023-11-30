@@ -1,13 +1,5 @@
-<%# <div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h4 class="text-white">MENU</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-      </div>
-      </div></div>
-      %>
+
     <nav class="navbar navbar-dark bg-dark ">
-     <%# <% if user_signed_in?%>
       <div class="maboite">
         <div class ="toggle-button">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -33,16 +25,14 @@
                 </ul>
               </div>
               <a href="<%= contact_path %>" class="big-btn-alarm">Contacter l'astreinte</a>
-                 <%# <%= link_to "Contacter l'astreinte", bookins_index_path(current_user), class: "nav-link"%>
-
-            </div>
+               </div>
             </div>
           </div>
 
           <div >
              <a href="<%= root_path %>">
             <img src="<%=image_path("logo.png")%>" class="logo" style="width: 150px;">
-              <%# <%= link_to "L'astreinte du jour", profile_path(current_user), class: "nav-link" %>
+
           </div>
             <div class="maboiteavatar">
             <i class="fa-regular fa-bell"></i>
@@ -50,3 +40,7 @@
             <img src="<%= image_path("avatar1.png") %>" style="width: 40px;" class="avatar bg-info rounded-circle" /></a>
             </div>
    </nav>
+          <div >
+
+  </div>
+</nav>
