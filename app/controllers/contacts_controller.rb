@@ -1,5 +1,4 @@
 class ContactsController < ApplicationController
-
   def show
     @booking = Booking.where(date: Date.today, user: current_user).first
     if @booking.on_call
