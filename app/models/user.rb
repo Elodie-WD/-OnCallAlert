@@ -14,5 +14,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
+
 end
