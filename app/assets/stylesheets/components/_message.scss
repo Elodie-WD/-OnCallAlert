@@ -13,10 +13,10 @@
 }
 
 .sender-style {
-  background-color: rgb(255, 255, 255);
+  background-color: #7FC8F8;
   font-family: Montserrat;
   font-size: 15px;
-  color: #03045E;
+  color: #fff;
   border-radius:30px;
   padding: 30px;
 
@@ -35,4 +35,30 @@
 .form-control {
   background-color: #ffffff!important;
   border-radius: 50px;
+}
+
+.title-chatroom {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* */
+
+.btn-primary {
+  --bs-btn-bg: #0d6dfd00!important;
+  border: none!important;
+}
+
+.btn-primary :hover {
+  --bs-btn-bg: #0d6dfd00!important;
+  border: none!important;
+}
+
+#new_message > button {
+  margin-left: -180px;
+}
+
+.btn-message-send {
+  height: 50px;
 }
