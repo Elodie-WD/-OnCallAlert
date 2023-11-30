@@ -13,4 +13,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
 end
