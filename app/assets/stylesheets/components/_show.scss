@@ -9,6 +9,10 @@
   margin: 0;
   position: relative;
   h1{
+    padding-top: 10px;
+    color: $dark-blue;
+    font-family: $quicksand;
+    font-weight: 700;
     text-align: center;
   }
   img{
@@ -20,9 +24,9 @@
   }
 }
 
-.text-content{
+.infos-contact-content{
   margin: 0;
-  height: 30vh;
+  height: 20vh;
   padding-top: 80px;
   background-color: $blue-ultra-light;
   text-align: center;
@@ -30,6 +34,6 @@
 
 .container-footer_text-btn{
   margin: 0;
-  height: 30vh;
+  height: 20vh;
   margin-bottom: 80px;
 }
