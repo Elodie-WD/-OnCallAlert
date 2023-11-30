@@ -15,7 +15,7 @@ Chatroom.destroy_all
 Department.destroy_all
 Hospital.destroy_all
 
-hospital1 = hopital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
+hospital1 = Hospital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
 
 department1 = Department.create!(hospital: hospital1)
 

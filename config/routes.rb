@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get '/rooting', to: "pages#rooting", as: :rootinggi
+  get '/rooting', to: "pages#rooting", as: :rooting
 
   get '/show', to: "contacts#show", as: :contact
 
