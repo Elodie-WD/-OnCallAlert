@@ -9,15 +9,15 @@
   </div>
   <div class="grid-wrapper">
     <div class="wrapper left-wrapper">
-      <div class="circle-wrapper"></div>
+      <%= link_to "", contact_path(), class: "circle-wrapper" %>
       <div>
-        <h6>Personne</h6><h6>De garde</h6>
+      <%= link_to "Personne de garde", contact_path() %>
       </div>
     </div>
     <div class="wrapper right-wrapper">
-      <div class="circle-wrapper">
-      <%= link_to "P", bookings_path() %>
-      </div>
+
+      <%= link_to "", bookings_path(), class: "circle-wrapper" %>
+
       <div>
         <h6>Mon</h6><h6>Planning</h6>
       </div>
@@ -25,9 +25,32 @@
 
   </div>
     <div class="content-btn">
-      <a href="" class="big-btn-message">Contacter la<br>personne de garde</a>
-      <a href="" class="big-btn-alarm">Confirmer le<br>début de l'astreinte</a>
+      <%= link_to "Contacter la personne de garde", contact_path, class: "big-btn-message" %>
+      <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Confirmer le<br>début de l'astreinte</a>
+      <%# <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a> %>
     </div>
  </div>
 
-<%= link_to "Personne de garde", contact_path() %>
+
+
+
+
+<%= link_to "Profile", rooting_path() %>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
+  <div class="offcanvas-header" class="modal-pink">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a>
+    </div>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    ...
+  </div>
+</div>

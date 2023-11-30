@@ -1,0 +1,35 @@
+.container-show{
+  margin: 0;
+}
+
+.container-header-picture{
+  background-color: $blue-light;
+  height: 20vh;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  h1{
+    text-align: center;
+  }
+  img{
+    position: absolute;
+    border-radius: 50%;
+    left:50%;
+    bottom:-50%;
+    transform: translateX(-50%);
+  }
+}
+
+.text-content{
+  margin: 0;
+  height: 30vh;
+  padding-top: 80px;
+  background-color: $blue-ultra-light;
+  text-align: center;
+}
+
+.container-footer_text-btn{
+  margin: 0;
+  height: 30vh;
+  margin-bottom: 80px;
+}

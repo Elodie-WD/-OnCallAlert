@@ -15,5 +15,7 @@ class ContactsController < ApplicationController
     else
       redirect_to default_path
     end
+
+    @chatroom = Chatroom.find_or_create_by(department: current_user.department, date: Date.today)
   end
 end
