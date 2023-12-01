@@ -4,3 +4,4 @@ class BookingsController < ApplicationController
     @booking = Booking.where(date: Date.today, user: current_user).first
   end
 end
+

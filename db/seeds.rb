@@ -44,6 +44,7 @@ Booking.create!(on_call: false, date: "2023-12-03", user: user2)
 
 Booking.create!(on_call: nil, date: "2023-12-03", user: user3)
 
+
 Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
 
 Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
