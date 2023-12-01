@@ -1,4 +1,4 @@
-<h1>Calendrier</h1>
+<h1 id="TitreCalendrier">Calendrier</h1>
 
 <% if @booking.on_call %>
   <%= link_to "Retour au profil", on_call_path() %>
@@ -7,3 +7,9 @@
     <% else %>
 <%= link_to "Retour au profil", default_path() %>
     <% end %>
+
+<div class="calendar">
+<%= calendar(number_of_days: 5) do |date| %>
+  <%= date %>
+<% end %>
+</div>
