@@ -1,10 +1,25 @@
 <div class="container-wrapper">
-  <h1>Bonjour Karim</h1>
+  <h1>Bonjour Karim 👋🏻</h1>
   <div class="text-content">
     <div class="text-content-infos">
-      <h6>Situation actuelle: En repos</h6>
-      <h6>Prochaine astreinte:</h6>
-      <h6>Prochaine garde:</h6>
+      <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+          <%= image_tag "icon1.png" %>
+        <% end %>
+        <p class="text-box-profil">Situation actuelle: <span class="p-grey">en astreinte</span></p>
+      </div>
+      <div class="elements-profil-box">
+      <%= link_to "", class: "icons-profil" do %>
+          <%= image_tag "icon2.png" %>
+        <% end %>
+      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+      </div>
+      <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+            <%= image_tag "icon3.png" %>
+          <% end %>
+        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+      </div>
     </div>
   </div>
   <div class="grid-wrapper">
