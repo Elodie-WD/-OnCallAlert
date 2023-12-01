@@ -27,13 +27,20 @@
     <div class="wrapper left-wrapper">
       <%= link_to "", contact_path(), class: "circle-wrapper" %>
       <div>
-      <%= link_to "Personne de garde", contact_path() %>
+      <%= link_to contact_path(), class: "text-de-garde" do %>
+        <%= safe_join(["Personne<br>".html_safe, "de garde"]) %>
+      <% end %>
+
+
       </div>
     </div>
     <div class="wrapper right-wrapper">
-      <%= link_to "", bookings_path(), class: "circle-wrapper" %>
+      <%= link_to "", class: "circle-wrapper" do %>
+                <%= image_tag "icon-calendar.png" %>
+              <% end %>
+
       <div>
-        <h6>Mon</h6><h6>Planning</h6>
+        <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
       </div>
     </div>
   </div>
@@ -48,12 +55,13 @@
 
     <!-- Modal -->
 
-
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
       <div class="modal-pink">
-        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation de début d'astreinte</h5>
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation d'astreinte</h5>
+        <p class="p-grey">Confirme ton astreinte avant de prendre la route</p>
         <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="offcanvas" aria-label="Close" data-action="click->activation#validation">Confirmation</a>
         <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
+
       </div>
     </div>
   </div>
