@@ -6,11 +6,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <%= javascript_importmap_tags %>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' >
-    <link rel="icon" type="image/png" href="app/assets/images/favicon.png" />
-
+    <link rel="shortcut icon" type="image/png" href="app/assets/images/favicon.png">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'/>
   </head>
 
   <body><%= render "shared/navbar" %>
