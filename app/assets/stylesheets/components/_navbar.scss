@@ -1,14 +1,20 @@
+
+
 // NAVBAR_______________________________________________________________________
 // Changement couleur navbar
 .navbar-dark {
-    background-color: #F3FCFE!important;
+  background-color: white !important;
 
-    --bs-navbar-toggler-icon-bg: url(data:'app/assets/images/avatar1.png');
+  --bs-navbar-toggler-icon-bg: url(data:'app/assets/images/avatar1.png');
+}
+
+.logo {
+margin-left: 30px;
 }
 
 // Changement couleur du bouton de la navbar
 .navbar-toggler-icon {
- background-image: url('menu-burger.png');
+background-image: url('menu-burger.png');
 }
 
 // Réglage des div de la navbar
@@ -20,24 +26,25 @@ justify-content: space-between;
 
 // retrait programmation boostrap de base du la navbar
 .element.style {
-  width: 0px;
-  width: 0%;
+width: 0px;
+width: 0%;
 }
 
 .maboiteavatar {
-  padding-right: 5px;
+padding-right: 5px;
 }
 
 // SIDE MENU_________________________________________________________________
 
 // réglage du side menu à 80% d'ouverture
 .offcanvas {
-  --bs-offcanvas-width: 300px !important;
+--bs-offcanvas-width: 300px !important;
+background-color:$blue-ultra-light;
 }
 
 // Réglage et centrage du logo dans le side menu
 .logonavbar {
-  margin-left: 40px;
+margin-left: 40px;
 }
 
 
@@ -51,39 +58,44 @@ padding-left: 15px;
 
 // Réglage du padding start et du margin bottom des lists hors celles dessous
 .list {
-  padding-inline-start: 0px;
-  margin-bottom: 12px;
-
+padding-inline-start: 0px;
+margin-bottom: 12px;
+margin-top: 25px;
 }
 
 // Réglage de la phrase de la list "une urgence ?"
 .listurgence {
-  padding-inline-start: 50px;
-  padding-top: 200px;
-  margin-bottom: 40px;
+padding-inline-start: 60px;
+padding-top: 200px;
+margin-bottom: 40px;
 }
 
 // Big bouton rose
 
 .big-btn-alarm {
-  padding: 25px 40px;
-  margin-top: 30px;
-  margin-bottom:10px;
-  background-color:#FF6392;
-  text-align: center;
-  border-radius: 40px;
-  max-width: 200px;
-  color: #fff;
-  font-family: montserrat;
-  filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
-  text-decoration: none;
-  margin-left: 20px;
+padding: 25px 40px;
+margin-top: 30px;
+margin-bottom:10px;
+background-color:#FF6392;
+text-align: center;
+border-radius: 40px;
+max-width: 200px;
+color: #fff;
+font-family: montserrat;
+filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
+text-decoration: none;
+margin-left: 20px;
 }
 
 .big-btn-alarm a {
-  text-decoration: none;
+text-decoration: none;
 }
 
-.logo {
-  margin-left: 32px;
+.monul {
+color:#03045E;
+}
+
+
+.maboiteavatar .fa-regular.fa-bell{
+color: #03045E;
 }
