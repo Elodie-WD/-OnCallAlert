@@ -1,5 +1,5 @@
 <div class="container-wrapper">
-  <h1>Bonjour Pierre</h1>
+  <h1>Bonjour <%= @user.first_name %></h1>
   <div class="text-content">
     <div class="text-content-infos">
       <h6>Situation actuelle: <i>en garde<i></h6>
@@ -7,8 +7,8 @@
       <h6>Prochaine garde:  <%= @on_duty.date.to_date %></h6>
     </div>
   </div>
-  <div class="grid-wrapper">
-    <div class="wrapper left-wrapper">
+  <div class="grid-wrapper" data-controller="activation">
+    <div class="wrapper left-wrapper" data-activation-target="card">
       <div class="circle-wrapper"></div>
       <div>
       <%= link_to "Personne d'astreinte", contact_path() %>
@@ -25,8 +25,9 @@
   </div>
 
   </div>
-
-   <%= link_to "Contacter la personne d'astreinte", contact_path(), class: "big-btn-message" %>
-
-
+  <div class="content-btn">
+    <%= link_to contact_path, class: "big-btn-message" do %>
+      <h6>Contacter<br>la personne d'astreinte</h6>
+    <% end %>
+    </div>
 </div>

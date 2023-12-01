@@ -8,6 +8,10 @@
     --bs-navbar-toggler-icon-bg: url(data:'app/assets/images/avatar1.png');
 }
 
+.logo {
+  margin-left: 30px;
+}
+
 // Changement couleur du bouton de la navbar
 .navbar-toggler-icon {
  background-image: url('menu-burger.png');
@@ -35,6 +39,7 @@ justify-content: space-between;
 // réglage du side menu à 80% d'ouverture
 .offcanvas {
   --bs-offcanvas-width: 300px !important;
+  background-color:$blue-ultra-light;
 }
 
 // Réglage et centrage du logo dans le side menu
@@ -55,12 +60,12 @@ padding-left: 15px;
 .list {
   padding-inline-start: 0px;
   margin-bottom: 12px;
-
+  margin-top: 25px;
 }
 
 // Réglage de la phrase de la list "une urgence ?"
 .listurgence {
-  padding-inline-start: 50px;
+  padding-inline-start: 60px;
   padding-top: 200px;
   margin-bottom: 40px;
 }
@@ -84,4 +89,13 @@ padding-left: 15px;
 
 .big-btn-alarm a {
   text-decoration: none;
+}
+
+.monul {
+  color:#03045E;
+}
+
+
+.maboiteavatar .fa-regular.fa-bell{
+  color: #03045E;
 }

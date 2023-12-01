@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def on_call
+    @user = current_user
     @on_call = Booking.all.where(on_call: true, user_id: current_user)
     if Booking.all.where(on_call: true, user_id: current_user).first.date.to_date == Date.today
       @on_call = @on_call.second
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def on_duty
+    @user = current_user
     @on_call = Booking.all.where(on_call: true, user_id: current_user)
     if Booking.all.where(on_call: true, user_id: current_user).first.date.to_date == Date.today
       @on_call = @on_call.second
