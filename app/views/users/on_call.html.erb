@@ -1,5 +1,6 @@
+
 <div class="container-wrapper">
-  <h1>Bonjour Marie</h1>
+  <h1>Bonjour <%= @user.first_name %></h1>
   <div class="text-content">
     <div class="text-content-infos">
       <h6>Situation actuelle: <i>en astreinte<i></h6>
@@ -15,41 +16,30 @@
       </div>
     </div>
     <div class="wrapper right-wrapper">
-
       <%= link_to "", bookings_path(), class: "circle-wrapper" %>
       <div>
         <h6>Mon</h6><h6>Planning</h6>
       </div>
+    </div>
   </div>
-
-  </div>
+  <div data-controller="activation">
     <div class="content-btn">
-      <%= link_to "Contacter la personne de garde", contact_path, class: "big-btn-message" %>
-      <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Confirmer le<br>début de l'astreinte</a>
+      <%= link_to contact_path, class: "big-btn-message" do %>
+        <h6>Contacter<br>la personne de garde</h6>
+      <% end %>
+      <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button">Confirmer le<br>début de l'astreinte</a>
       <%# <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a> %>
     </div>
- </div>
+
+    <!-- Modal -->
 
 
-
-
-
-
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-
-
-
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
-  <div class="offcanvas-header" class="modal-pink">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
-    <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
+      <div class="modal-pink">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation de début d'astreinte</h5>
+        <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="offcanvas" aria-label="Close" data-action="click->activation#validation">Confirmation</a>
+        <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
+      </div>
     </div>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body small">
-    ...
   </div>
 </div>

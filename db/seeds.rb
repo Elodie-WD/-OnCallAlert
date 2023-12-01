@@ -19,9 +19,9 @@ hospital1 = Hospital.create!(name: "pellegrin", address: "rue de la pelouse de d
 
 department1 = Department.create!(hospital: hospital1)
 
-user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "User1", last_name: "On-call", department: department1)
-user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "User2", last_name: "On-duty",department: department1)
-user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "User3", last_name: "Default", department: department1)
+user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Alice", last_name: "On-call", department: department1)
+user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Baptiste", last_name: "On-duty",department: department1)
+user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Karim", last_name: "Default", department: department1)
 
 Booking.create!(on_call: true, date: "2023-12-01", user: user1)
 
