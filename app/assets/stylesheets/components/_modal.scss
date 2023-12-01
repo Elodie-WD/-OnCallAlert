@@ -1,0 +1,22 @@
+ .modal-pink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:$blue-light;
+  cursor: pointer;
+  height: 100vh;
+  border-radius: 60px 60px 0 0;
+  h5{
+    padding: 20px;
+    font-family: $quicksand;
+    font-weight: 900;
+    text-align: center;
+  }
+}
+modal-header{
+  border: 0px;
+}
+#offcanvasBottom{
+  border-radius: 60px 60px 0 0;
+}

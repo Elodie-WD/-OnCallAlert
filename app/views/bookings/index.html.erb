@@ -1,0 +1,9 @@
+<h1>Calendrier</h1>
+
+<% if @booking.on_call %>
+  <%= link_to "Retour au profil", on_call_path() %>
+<% elsif @booking.on_call == false %>
+<%= link_to "Retour au profil", on_duty_path() %>
+    <% else %>
+<%= link_to "Retour au profil", default_path() %>
+    <% end %>

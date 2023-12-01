@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_many :bookings, dependent: :destroy
   belongs_to :department
   validates :last_name, presence: true
@@ -13,4 +13,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+  enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
+
 end

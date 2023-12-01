@@ -1,33 +1,60 @@
+
 <div class="container-wrapper">
-  <h1>Bonjour Marie</h1>
-  <div class="text-content">
+  <h1>Bonjour <%= @user.first_name %> 👋🏻</h1>
+   <div class="text-content">
     <div class="text-content-infos">
-      <h6>Situation actuelle:</h6>
-      <h6>Prochaine astreinte:</h6>
-      <h6>Prochaine garde:</h6>
+      <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+          <%= image_tag "icon1.png" %>
+        <% end %>
+        <p class="text-box-profil">Situation actuelle: <span class="p-grey">en astreinte</span></p>
+      </div>
+      <div class="elements-profil-box">
+      <%= link_to "", class: "icons-profil" do %>
+          <%= image_tag "icon2.png" %>
+        <% end %>
+      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+      </div>
+      <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+            <%= image_tag "icon3.png" %>
+          <% end %>
+        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+      </div>
     </div>
   </div>
   <div class="grid-wrapper">
     <div class="wrapper left-wrapper">
-      <div class="circle-wrapper"></div>
+      <%= link_to "", contact_path(), class: "circle-wrapper" %>
       <div>
-        <h6>Personne</h6><h6>De garde</h6>
+      <%= link_to "Personne de garde", contact_path() %>
       </div>
     </div>
     <div class="wrapper right-wrapper">
-      <div class="circle-wrapper"></div>
+      <%= link_to "", bookings_path(), class: "circle-wrapper" %>
       <div>
         <h6>Mon</h6><h6>Planning</h6>
       </div>
+    </div>
   </div>
+  <div data-controller="activation">
+    <div class="content-btn">
+      <%= link_to contact_path, class: "big-btn-message" do %>
+        <h6>Contacter<br>la personne de garde</h6>
+      <% end %>
+      <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button">Confirmer le<br>début de l'astreinte</a>
+      <%# <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a> %>
+    </div>
 
-  </div>
-  <div class="content-btn">
-      <div class="btn-light-blue">
-      <a href="">Contacter<br>la personne de garde</a>
+    <!-- Modal -->
+
+
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
+      <div class="modal-pink">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation de début d'astreinte</h5>
+        <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="offcanvas" aria-label="Close" data-action="click->activation#validation">Confirmation</a>
+        <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
       </div>
-      <div class="btn-pink">
-      <a href="">Confirmer le<br>début de l'astreinte</a>
-      </div>
+    </div>
   </div>
 </div>

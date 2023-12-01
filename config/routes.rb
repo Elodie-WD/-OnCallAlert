@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
   devise_for :users
   resources :bookings, only: :index
   get '/on_duty', to: "users#on_duty", as: :on_duty
@@ -17,11 +18,11 @@ Rails.application.routes.draw do
 
   get '/rooting', to: "pages#rooting", as: :rooting
 
-  get '/show', to: "contact#show", as: :contact
+  get '/show', to: "contacts#show", as: :contact
 
-  get '/show', to: "map#show", as: :map
+  get '/itinerary', to: "maps#show", as: :map
 
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [:show, :index, :create] do
     resources :messages, only: :create
   end
 end

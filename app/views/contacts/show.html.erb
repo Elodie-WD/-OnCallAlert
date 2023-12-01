@@ -1,0 +1,34 @@
+
+<div class="container-show">
+  <div class="container-header-picture">
+    <h1><%= @title %></h1>
+    <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
+  </div>
+  <div class="container-footer_text-btn">
+    <div class="infos-contact-content">
+      <h6><%= @contact.first_name %></h6>
+      <h6><%= @contact.last_name %></h6>
+      <h6><%= @contact.email %></h6>
+    </div>
+  </div>
+    <%= link_to "Profile", rooting_path() %>
+  <div class="content-btn">
+    <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
+    <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
+      <h6>MESSAGES</h6>
+    <% end %>
+
+  </div>
+</div>
+
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
+    <div class="modal-pink">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Souhaitez-vous appeler <%= @title %>?</h5>
+      <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="offcanvas" aria-label="Close">Appel d'Urgence</a>
+      <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# <a href="tel:+33612345678" class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer l'appel<br>en Urgences</a> %>
