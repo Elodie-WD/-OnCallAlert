@@ -30,14 +30,15 @@
     <%# <h6>Personne</h6><h6>D'astreinte</h6> %>
       </div>
     </div>
-    <div class="wrapper right-wrapper">
-      <div class="circle-wrapper">
-      <%= link_to "", bookings_path() %>
+     <div class="wrapper right-wrapper">
+      <%= link_to "", class: "circle-wrapper" do %>
+                <%= image_tag "icon-calendar.png" %>
+              <% end %>
+
+      <div class="text-mon-planning-profil">
+        <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
       </div>
-      <div>
-        <h6>Mon</h6><h6>Planning</h6>
-      </div>
-  </div>
+    </div>
 
   </div>
   <div class="content-btn">
