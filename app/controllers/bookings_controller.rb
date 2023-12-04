@@ -10,3 +10,4 @@ class BookingsController < ApplicationController
     redirect_to on_call_path
   end
 end
+

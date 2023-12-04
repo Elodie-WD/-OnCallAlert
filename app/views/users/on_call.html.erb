@@ -1,24 +1,46 @@
 
 <div class="container-wrapper">
-  <h1>Bonjour <%= @user.first_name %></h1>
-  <div class="text-content">
+  <h1>Bonjour <%= @user.first_name %> 👋🏻</h1>
+   <div class="text-content">
     <div class="text-content-infos">
-      <h6>Situation actuelle: <i>en astreinte<i></h6>
-      <h6>Prochaine astreinte:  <%= @on_call.date.to_date %></h6>
-      <h6>Prochaine garde:  <%= @on_duty.date.to_date %></h6>
+      <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+          <%= image_tag "icon1.png" %>
+        <% end %>
+        <p class="text-box-profil">Situation actuelle: <span class="p-grey">en astreinte</span></p>
+      </div>
+      <div class="elements-profil-box">
+      <%= link_to "", class: "icons-profil" do %>
+          <%= image_tag "icon2.png" %>
+        <% end %>
+      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+      </div>
+      <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+            <%= image_tag "icon3.png" %>
+          <% end %>
+        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+      </div>
     </div>
   </div>
   <div class="grid-wrapper">
     <div class="wrapper left-wrapper">
       <%= link_to "", contact_path(), class: "circle-wrapper" %>
       <div>
-      <%= link_to "Personne de garde", contact_path() %>
+      <%= link_to contact_path(), class: "text-de-garde" do %>
+        <%= safe_join(["Personne<br>".html_safe, "de garde"]) %>
+      <% end %>
+
+
       </div>
     </div>
     <div class="wrapper right-wrapper">
-      <%= link_to "", bookings_path(), class: "circle-wrapper" %>
-      <div>
-        <h6>Mon</h6><h6>Planning</h6>
+      <%= link_to "", class: "circle-wrapper" do %>
+                <%= image_tag "icon-calendar.png" %>
+              <% end %>
+
+      <div class="text-mon-planning-profil">
+        <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
       </div>
     </div>
   </div>
@@ -37,13 +59,14 @@
 
     <!-- Modal -->
 
-
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
       <div class="modal-pink">
+
         <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation de début d'astreinte</h5>
         <%= button_to "Confirmation", booking_path(@booking), method: :patch,   class:"big-btn-alarm", data: {
                 action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close"%>
         <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
+
       </div>
     </div>
   </div>

@@ -3,12 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color:$blue-light;
+  background-color: $blue-ultra-light;
   cursor: pointer;
   height: 100vh;
   border-radius: 60px 60px 0 0;
+  padding-bottom: 50px;
   h5{
-    padding: 20px;
+    margin-top: 45px;
     font-family: $quicksand;
     font-weight: 900;
     text-align: center;
@@ -19,4 +20,5 @@ modal-header{
 }
 #offcanvasBottom{
   border-radius: 60px 60px 0 0;
+  bottom: 70px;
 }

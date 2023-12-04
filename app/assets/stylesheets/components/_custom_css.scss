@@ -89,7 +89,8 @@
 .big-btn-message {
   padding: 20px 35px;
   line-height: 20px;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color:#7FC8F8;
   text-align: center;
   border-radius: 100px;
@@ -177,15 +178,16 @@
 
 .p-grey {
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 14px;
   color: #777777;
+  font-weight: 500;
 }
 
 /* paragraphe bleu foncé */
 
 .p-dark-blue {
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 14px;
   color: #03045E;
 }
 
