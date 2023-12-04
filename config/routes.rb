@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/on_duty', to: "users#on_duty", as: :on_duty
   get '/on_call', to: "users#on_call", as: :on_call
   get '/default', to: "users#default", as: :default
+  get '/get_doctors/:date', to: "users#get_doctors", as: :get_doctors
   patch '/users/:id', to: "users#update", as: :deplacement_update
 
   root to: "pages#home"

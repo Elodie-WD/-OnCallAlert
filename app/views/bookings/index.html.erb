@@ -1,14 +1,25 @@
-<h1 id="TitreCalendrier">Calendrier</h1>
+<div class="container" data-controller="calendar">
 
-<% if @booking.on_call %>
-  <%= link_to "Retour au profil", on_call_path() %>
-<% elsif @booking.on_call == false %>
-<%= link_to "Retour au profil", on_duty_path() %>
-    <% else %>
-<%= link_to "Retour au profil", default_path() %>
-    <% end %>
-<div class="calendar">
-<%= calendar(number_of_days: 5) do |date| %>
-  <%= date %>
-<% end %>
+  <div class="calendar" id="calendrier">
+  <%= calendar(number_of_days: 5) do |date| %>
+      <div class="day" data-action="click->calendar#getUsers">
+        <%= date %>
+      </div>
+  <% end %>
+  </div>
+
+  <div class="container d-flex justify-content-between">
+    <div class="box1">
+      <img src="<%= image_path("avatar1.png") %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
+      <br> <a id="nom">Dr. Marie Moreau</a>
+      <br> <a id="metier">Obstétricien</a>
+      <br><a id="status"> De garde </a>
+    </div>
+    <div class="box2">
+      <img src="<%= image_path("avatar1.png") %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
+      <p data-calendar-target="astreinteLastName" id="nom">Dr. Marie Moreau</p>
+      <p id="metier">Obstétricien</p>
+      <p id="status"> D'astreinte </p>
+    </div>
+  </div>
 </div>
