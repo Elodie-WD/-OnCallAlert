@@ -65,3 +65,8 @@ chatroom2 = Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: 
 
 chatroom3 = Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
 
+
+Message.create!(content: "hello", chatroom: chatroom1, user: user1)
+Message.create!(content: "Salut Alice", chatroom: chatroom1, user: user2)
+Message.create!(content: "Super merci, je suis d'astreinte aujourd'hui, comment est le service ce soir ?", chatroom: chatroom1, user: user1)
+Message.create!(content: "Plutôt calme pour l'instant, je te tiens au jus", chatroom: chatroom1, user: user2)
