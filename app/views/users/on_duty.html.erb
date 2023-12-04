@@ -26,7 +26,7 @@
     <div class="grid-wrapper" data-controller="activation">
       <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
 
-        <div class="circle-wrapper"></div>
+<!--         <div class="circle-wrapper"></div>
         <div>
         <% if @booking_contact.status == false %>
           <%= link_to "Personne d'astreinte", contact_path(), id: "link-blue" %>
@@ -34,9 +34,26 @@
           <%= link_to "Personne d'astreinte", contact_path(), id: "link-green" %>
         <% elsif @contact.rejected?%>
         <%= link_to "Intervention refusée", contact_path(), id: "link-red" %>
-        <% end %>
+        <% end %> -->
+
+        <div class="circle-wrapper">
+          <% if @booking_contact.status == false %>
+            <%= image_tag "icon-status-false.png" %>
+          <% else %>
+            <%= image_tag "icon-status-true.png" %>
+          <% end %>
         </div>
+        <div>
+          <% if @booking_contact.status == false %>
+            <%= link_to "Mon astreinte", contact_path(), id: "link-blue" %>
+          <% else %>
+            <%= link_to "Astreinte confirmée", contact_path(), id: "link-green" %>
+          <% end %>
+         </div>
       </div>
+
+
+
       <div class="wrapper right-wrapper">
         <%= link_to "", class: "circle-wrapper" do %>
                   <%= image_tag "icon-calendar.png" %>

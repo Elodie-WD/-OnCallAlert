@@ -201,9 +201,31 @@
   color: #F0B6FF;
 }
 
+/* On Duty icon validation astreinte */
+
+.circle-wrapper img {
+  margin-top: 20px;
+  margin-left: 2px;
+  width: 21px;
+
+}
+
+body > div.background-on-duty > div > div.grid-wrapper > div.wrapper.right-wrapper > a > img {
+  margin-top: 7px!important;
+  right: 30px!important;
+  margin-left: 8px!important;
+  width: 18px!important;
+}
+
 
 /* On Call */
 
 .text-situation-on-call {
   color: #F0B6FF;
+}
+
+body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a > img {
+  margin-left: 8px;
+  margin-top: 7px;
+  width: 18px;
 }
