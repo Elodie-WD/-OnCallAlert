@@ -21,28 +21,46 @@ department1 = Department.create!(hospital: hospital1)
 
 user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Alice", last_name: "On-call", department: department1)
 user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Baptiste", last_name: "On-duty",department: department1)
-user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Karim", last_name: "Default", department: department1)
+user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Nadia", last_name: "Default", department: department1)
 
-Booking.create!(on_call: true, date: "2023-12-01", user: user1)
-
-Booking.create!(on_call: false, date: "2023-12-01", user: user2)
-
-Booking.create!(on_call: nil, date: "2023-12-01", user: user3)
-
-
-
+<<<<<<< HEAD
 Booking.create!(on_call: false, date: "2023-12-02", user: user1)
-
-Booking.create!(on_call: true, date: "2023-12-02", user: user2)
-
-Booking.create!(on_call: nil, date: "2023-12-02", user: user3)
+=======
 
 
-Booking.create!(on_call: true, date: "2023-12-03", user: user1)
+>>>>>>> 4110aca290fa4926e83bb07d1ab4f97fc979758d
 
-Booking.create!(on_call: false, date: "2023-12-03", user: user2)
+Booking.create!(on_call: true, date: "2023-12-04", user: user1, status: false)
 
-Booking.create!(on_call: nil, date: "2023-12-03", user: user3)
+Booking.create!(on_call: false, date: "2023-12-04", user: user2, status: false)
+
+Booking.create!(on_call: nil, date: "2023-12-04", user: user3, status: false)
+
+
+Booking.create!(on_call: true, date: "2023-12-05", user: user2, status: false)
+
+Booking.create!(on_call: false, date: "2023-12-05", user: user1, status: false)
+
+Booking.create!(on_call: nil, date: "2023-12-05", user: user3, status: false)
+
+
+Booking.create!(on_call: false, date: "2023-12-06", user: user1, status: false)
+
+Booking.create!(on_call: true, date: "2023-12-06", user: user2, status: false)
+
+Booking.create!(on_call: nil, date: "2023-12-06", user: user3, status: false)
+
+Booking.create!(on_call: true, date: "2023-12-07", user: user1, status: false)
+
+Booking.create!(on_call: false, date: "2023-12-07", user: user2, status: false)
+
+Booking.create!(on_call: nil, date: "2023-12-07", user: user3, status: false)
+
+Booking.create!(on_call: false, date: "2023-12-08", user: user2, status: false)
+
+Booking.create!(on_call: true, date: "2023-12-08", user: user1, status: false)
+
+Booking.create!(on_call: nil, date: "2023-12-08", user: user3, status: false)
 
 
 Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)

@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["button", "card"]
   connect() {
-    console.log(this.cardTarget)
+    console.log(this.buttonTarget)
   }
   validation() {
     this.buttonTarget.innerText = "Astreinte Confirmé";
