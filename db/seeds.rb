@@ -11,9 +11,10 @@
 # User.destroy_all
 # Booking.destroy_all
 # Department.destroy_all
-Chatroom.destroy_all
+# Chatroom.destroy_all
 Department.destroy_all
 Hospital.destroy_all
+# Message.destroy_all
 
 hospital1 = Hospital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
 
@@ -60,9 +61,9 @@ Booking.create!(on_call: nil, date: "2023-12-08", user: user3, status: false)
 
 chatroom1 = Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
 
-Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
+chatroom2 = Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
 
-Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
+chatroom3 = Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
 
 
 Message.create!(content: "hello", chatroom: chatroom1, user: user1)
