@@ -22,12 +22,16 @@
       </div>
     </div>
   </div>
-  <div data-controller="activation">
+  <div data-controller="activation" data-controller="notification-subscription">
     <div class="content-btn">
       <%= link_to contact_path, class: "big-btn-message" do %>
         <h6>Contacter<br>la personne de garde</h6>
       <% end %>
-      <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button">Confirmer le<br>début de l'astreinte</a>
+      <% if @booking.status == false %>
+        <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button" data-notification-subscription-target="messages">Confirmer le<br>début de l'astreinte</a>
+      <% else @booking.status == true %>
+        <a class="big-btn-green" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button" data-notification-subscription-target="messages">Astreinte Confirmée</a>
+      <% end %>
       <%# <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a> %>
     </div>
 
@@ -37,7 +41,8 @@
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
       <div class="modal-pink">
         <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation de début d'astreinte</h5>
-        <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="offcanvas" aria-label="Close" data-action="click->activation#validation">Confirmation</a>
+        <%= button_to "Confirmation", booking_path(@booking), method: :patch,   class:"big-btn-alarm", data: {
+                action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close"%>
         <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
       </div>
     </div>

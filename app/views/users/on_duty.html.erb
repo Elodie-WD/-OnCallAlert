@@ -8,11 +8,16 @@
     </div>
   </div>
   <div class="grid-wrapper" data-controller="activation">
-    <div class="wrapper left-wrapper" data-activation-target="card">
+    <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
+
       <div class="circle-wrapper"></div>
       <div>
-      <%= link_to "Personne d'astreinte", contact_path() %>
+      <% if @booking_contact.status == false %>
+        <%= link_to "Personne d'astreinte", contact_path(), id: "link-blue" %>
+      <% else @booking_contact.status == true %>
     <%# <h6>Personne</h6><h6>D'astreinte</h6> %>
+        <%= link_to "Personne d'astreinte", contact_path(), id: "link-green" %>
+      <% end %>
       </div>
     </div>
     <div class="wrapper right-wrapper">
