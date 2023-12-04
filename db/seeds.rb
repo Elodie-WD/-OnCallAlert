@@ -23,13 +23,6 @@ user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_con
 user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Baptiste", last_name: "On-duty",department: department1)
 user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Nadia", last_name: "Default", department: department1)
 
-<<<<<<< HEAD
-Booking.create!(on_call: false, date: "2023-12-02", user: user1)
-=======
-
-
->>>>>>> 4110aca290fa4926e83bb07d1ab4f97fc979758d
-
 Booking.create!(on_call: true, date: "2023-12-04", user: user1, status: false)
 
 Booking.create!(on_call: false, date: "2023-12-04", user: user2, status: false)
@@ -63,8 +56,11 @@ Booking.create!(on_call: true, date: "2023-12-08", user: user1, status: false)
 Booking.create!(on_call: nil, date: "2023-12-08", user: user3, status: false)
 
 
-Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
+chatroom1 = Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
 
 Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
 
 Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
+
+
+Message.create!(content: "hello", chatroom: chatroom1, user: user2)
