@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-
-
   def on_call
     planning_date
   end
@@ -8,6 +6,7 @@ class UsersController < ApplicationController
   def on_duty
     planning_date
     @booking_contact = Booking.find_by(date: Date.today, on_call: true)
+    @contact = @on_call.user
   end
 
   def default
@@ -15,9 +14,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    @on_call = Booking.find_by(date: Date.today, on_call: true).user_id
-    @contact = User.all.find { |user| user.id == @on_call }
-    @contact.called!
+    @on_call = Booking.find_by(date: Date.today, on_call: true)
+    @contact = @on_call.user
+    @contact.update(deplacement: params[:deplacement].to_i)
     redirect_to contact_path
     # enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
   end
