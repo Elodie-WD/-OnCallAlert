@@ -31,7 +31,6 @@
         <% if @booking_contact.status == false %>
           <%= link_to "Personne d'astreinte", contact_path(), id: "link-blue" %>
         <% else @booking_contact.status == true %>
-      <%# <h6>Personne</h6><h6>D'astreinte</h6> %>
           <%= link_to "Personne d'astreinte", contact_path(), id: "link-green" %>
         <% end %>
         </div>
