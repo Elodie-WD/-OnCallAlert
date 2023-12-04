@@ -1,7 +1,8 @@
-<p>Bonjour <%= @resource.email %>!</p>
 
-<p>Votre compte est bloqué à cause d'un nombre important de connexions.</p>
+<p>Bonjour<%= @resource.email %>!</p>
 
-<p>Merci de cliquer ci-dessous afin de débloquer le compte :</p>
+<p>Votre compte est bloqué à cause d'un nombre importants de connexions.</p>
+
+<p>Merci de cliquer sur le lien ci-dessous afin de débloquer votre compte:</p>
 
 <p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
