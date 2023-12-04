@@ -44,7 +44,6 @@
           <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
         </div>
       </div>
-
     </div>
     <div class="content-btn-on-duty">
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
@@ -53,3 +52,9 @@
       </div>
   </div>
 </div>
+
+
+
+
+<%# <%= button_to "Appel d'Urgence", deplacement_update_path(@contact.id, deplacement: 1), method: :patch, class:"big-btn-alarm", data: {
+                action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close"%>

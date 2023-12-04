@@ -13,9 +13,9 @@
   </div>
     <%= link_to "Profile", rooting_path() %>
   <div class="content-btn">
-    <% if @contact.deplacement == "uncalled" %>
+    <% if @contact.uncalled? %>
       <a href="" class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
-    <% else @contact.deplacement == "called" %>
+    <% else @contact.called? %>
       <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
       data-bs-toggle="offcanvas"
       aria-controls="offcanvasBottom" >Astreinte appelée. Rappel?</a>
@@ -30,7 +30,7 @@
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
     <div class="modal-pink">
       <h5 class="offcanvas-title" id="offcanvasBottomLabel">Souhaitez-vous appeler <%= @title %>?</h5>
-        <%= button_to "Appel d'Urgence", deplacement_update_path(@contact.id), method: :patch, class:"big-btn-alarm", data: {
+        <%= button_to "Appel d'Urgence", deplacement_update_path(@contact.id, deplacement: 1), method: :patch, class:"big-btn-alarm", data: {
                 action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close"%>
       <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
       </div>

@@ -50,11 +50,13 @@ Booking.create!(on_call: true, date: "2023-12-06", user: user2, status: false)
 
 Booking.create!(on_call: nil, date: "2023-12-06", user: user3, status: false)
 
+
 Booking.create!(on_call: true, date: "2023-12-07", user: user1, status: false)
 
 Booking.create!(on_call: false, date: "2023-12-07", user: user2, status: false)
 
 Booking.create!(on_call: nil, date: "2023-12-07", user: user3, status: false)
+
 
 Booking.create!(on_call: false, date: "2023-12-08", user: user2, status: false)
 
