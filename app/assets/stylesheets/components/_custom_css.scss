@@ -9,13 +9,13 @@
   padding: 15px 25px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color:#FF6392;
+  background-color:#F0B6FF;
   text-align: center;
   border-radius: 40px;
   max-width: 200px;
   color: #fff;
   font-family: montserrat;
-  filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
+  filter: drop-shadow(0px 4px 15px rgba(255, 99, 249, 0.70));
   text-decoration: none;
 }
 
@@ -62,20 +62,38 @@
 .little-btn-dark-blue a {
   text-decoration: none;
 }
+/* Petit Bouton BLEU FONCÉ */
 
+.little-btn-green {
+  padding: 15px 25px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  background-color:#80ed99;
+  text-align: center;
+  border-radius: 40px;
+  max-width: 200px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 1px 8px #03045E);
+  text-decoration: none;
+}
+
+.little-btn-green a {
+  text-decoration: none;
+}
 /* Gros Bouton ROSE */
 
 .big-btn-alarm {
-  padding: 20px 35px;
+  padding: 20px 32px;
   margin: 10px;
-  background-color:#FF6392;
+  background-color:#F0B6FF;
   line-height: 20px;
   text-align: center;
   border-radius: 100px;
   max-width: 400px;
   color: #fff;
   font-family: montserrat;
-  filter: drop-shadow(0px 4px 15px rgba(255, 99, 146, 0.50));
+  filter: drop-shadow(0px 4px 15px rgba(255, 99, 249, 0.70));
   text-decoration: none;
   cursor: pointer;
 }
@@ -87,7 +105,7 @@
 /* Gros Bouton BLEU CLAIR */
 
 .big-btn-message {
-  padding: 20px 35px;
+  padding: 20px 32px;
   line-height: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -108,7 +126,7 @@
 /* Gros Bouton BLEU FONCÉ */
 
 .big-btn-dark-blue {
-  padding: 25px 40px;
+  padding: 20px 32px;
   margin-top: 10px;
   margin-bottom:10px;
   background-color:#03045E;
@@ -130,14 +148,14 @@
   padding: 20px 35px;
   line-height: 20px;
   margin: 10px;
-  background-color:#1ca963;
+  background-color:#80ed99;
   text-align: center;
   border-radius: 40px;
   max-width: 400px;
   color: #fff;
   font-family: montserrat;
   text-decoration: none;
-  filter: drop-shadow(0px 1px 8px #5b9377);
+  filter: drop-shadow(0px 1px 8px #80ed99);
 }
 .cursor{
   cursor: pointer;
@@ -172,6 +190,7 @@
   font-size: 18px;
   font-weight: bold;
   font-family: Quicksand;
+  color: #03045E;
 }
 
 /* paragraphe gris */
@@ -197,10 +216,16 @@
   margin: 40px;
 }
 
+
+/* Couleurs validation personne de garde */
+
 #link-blue{
   color: #03045E;
 }
 
 #link-green{
-  color:#1ca963;
+  color: #73de8c;
+}
+#link-red{
+  color:red;
 }

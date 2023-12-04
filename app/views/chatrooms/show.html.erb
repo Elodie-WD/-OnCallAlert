@@ -1,5 +1,19 @@
 <div class="container chatroom">
-  <h2 class="title-chatroom"><%= @chatroom.name %></h1>
+  <h2 class="title-chatroom"><%= %></h1>
+
+  <div class="text-en-tete-historique">
+    <div class="row">
+      <div class="col">
+        <%= link_to "Retour", rooting_path(), class: "text-historique" %>
+      </div>
+      <div class="col">
+        <h2 class="title-historique"></h2>
+      </div>
+      <div class="col">
+        <h4 class="text-historique"></h4>
+      </div>
+    </div>
+  </div>
 
   <div class="messages"
   data-controller="chatroom-subscription"
@@ -31,6 +45,5 @@
   </div>
 
 
-<%= link_to "Profile", rooting_path() %>
 <% end %>
 </div>
