@@ -1,54 +1,56 @@
-<div class="container-wrapper">
-  <h1>Bonjour <%= @user.first_name %> 👋🏻</h1>
-   <div class="text-content">
-    <div class="text-content-infos">
-      <div class="elements-profil-box">
-        <%= link_to "", class: "icons-profil" do %>
-          <%= image_tag "icon1.png" %>
-        <% end %>
-        <p class="text-box-profil">Situation actuelle: <span class="p-grey">en astreinte</span></p>
-      </div>
-      <div class="elements-profil-box">
-      <%= link_to "", class: "icons-profil" do %>
-          <%= image_tag "icon2.png" %>
-        <% end %>
-      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
-      </div>
-      <div class="elements-profil-box">
-        <%= link_to "", class: "icons-profil" do %>
-            <%= image_tag "icon3.png" %>
+<div class="background-on-duty">
+  <div class="container-wrapper">
+    <h1 class="h1-on-duty">Bonjour <%= @user.first_name %> 👋🏻</h1>
+    <div class="text-content">
+      <div class="text-content-infos">
+        <div class="elements-profil-box">
+          <%= link_to "", class: "icons-profil" do %>
+            <%= image_tag "icon1.png" %>
           <% end %>
-        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+          <p class="text-box-profil">Aujourd'hui vous êtes: <span class="text-situation-on-duty"><br>EN GARDE</span></p>
+        </div>
+        <div class="elements-profil-box">
+        <%= link_to "", class: "icons-profil" do %>
+            <%= image_tag "icon2.png" %>
+          <% end %>
+        <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+        </div>
+        <div class="elements-profil-box">
+          <%= link_to "", class: "icons-profil" do %>
+              <%= image_tag "icon3.png" %>
+            <% end %>
+          <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="grid-wrapper" data-controller="activation">
-    <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
+    <div class="grid-wrapper" data-controller="activation">
+      <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
 
-      <div class="circle-wrapper"></div>
-      <div>
-      <% if @booking_contact.status == false %>
-        <%= link_to "Personne d'astreinte", contact_path(), id: "link-blue" %>
-      <% else @booking_contact.status == true %>
-    <%# <h6>Personne</h6><h6>D'astreinte</h6> %>
-        <%= link_to "Personne d'astreinte", contact_path(), id: "link-green" %>
+        <div class="circle-wrapper"></div>
+        <div>
+        <% if @booking_contact.status == false %>
+          <%= link_to "Personne d'astreinte", contact_path(), id: "link-blue" %>
+        <% else @booking_contact.status == true %>
+      <%# <h6>Personne</h6><h6>D'astreinte</h6> %>
+          <%= link_to "Personne d'astreinte", contact_path(), id: "link-green" %>
+        <% end %>
+        </div>
+      </div>
+      <div class="wrapper right-wrapper">
+        <%= link_to "", class: "circle-wrapper" do %>
+                  <%= image_tag "icon-calendar.png" %>
+                <% end %>
+
+        <div class="text-mon-planning-profil">
+          <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
+        </div>
+      </div>
+
+    </div>
+    <div class="content-btn-on-duty">
+      <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
+        <h6>Contacter<br>la personne d'astreinte</h6>
       <% end %>
       </div>
-    </div>
-     <div class="wrapper right-wrapper">
-      <%= link_to "", class: "circle-wrapper" do %>
-                <%= image_tag "icon-calendar.png" %>
-              <% end %>
-
-      <div class="text-mon-planning-profil">
-        <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
-      </div>
-    </div>
-
   </div>
-  <div class="content-btn">
-    <%= link_to contact_path, class: "big-btn-message" do %>
-      <h6>Contacter<br>la personne d'astreinte</h6>
-    <% end %>
-    </div>
 </div>
