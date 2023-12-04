@@ -12,6 +12,8 @@ class ChatroomsController < ApplicationController
       @on_call = Booking.where(date: Date.today, on_call: true).first.user_id
       @contact = User.all.find { |user| user.id == @on_call }
     end
+
+  
   end
 
   def show
