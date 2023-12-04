@@ -16,11 +16,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_01_141905) do
 
   create_table "bookings", force: :cascade do |t|
     t.boolean "on_call"
-    t.date "date"
+    t.string "date"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "status"
+    t.boolean "status", default: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
