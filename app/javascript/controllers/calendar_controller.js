@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="calendar"
 export default class extends Controller {
-  static targets = ["day", "astreinteLastName"]
+  static targets = ["day", "astreinteLastName", "astreinteJobTitle", "degardeLastName", "degardeJobTitle"]
 
   getUsers(event) {
      const dateselection = event.currentTarget.innerText
@@ -11,6 +11,9 @@ export default class extends Controller {
       .then(response => response.json())
       .then((data) => {
         this.astreinteLastNameTarget.innerText = data[0].last_name
+        this.astreinteJobTitle.innerText = data[0].job_title
+        this.degardeLastNameTarget.innerText = data[1].last_name
+        this.degardeJobTitle.innerText = data[1].job_title
     })
   };
 

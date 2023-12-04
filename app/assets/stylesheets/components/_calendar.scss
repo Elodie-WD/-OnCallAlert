@@ -12,6 +12,12 @@ text-align: center;
   border: solid;
 }
 
+.container-calendar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
 .box1{
   text-align: center;
   margin-left: 23px;
