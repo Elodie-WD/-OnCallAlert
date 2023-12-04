@@ -24,6 +24,7 @@ user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_con
 user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Baptiste", last_name: "On-duty",department: department1)
 user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Nadia", last_name: "Default", department: department1)
 
+
 Booking.create!(on_call: true, date: "2023-12-04", user: user1, status: false)
 
 Booking.create!(on_call: false, date: "2023-12-04", user: user2, status: false)

@@ -17,4 +17,13 @@ class User < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
+
+  def next_booking(on_call)
+    next_bookings = bookings.where(on_call: on_call)
+    next_bookings.first.date.to_date == Date.today ? next_bookings.second : next_bookings.first
+  end
+
+
+
+
 end

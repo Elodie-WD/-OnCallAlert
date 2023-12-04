@@ -26,6 +26,16 @@
     <div class="grid-wrapper" data-controller="activation">
       <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
 
+<!--         <div class="circle-wrapper"></div>
+        <div>
+        <% if @booking_contact.status == false %>
+          <%= link_to "Personne d'astreinte", contact_path(), id: "link-blue" %>
+        <% elsif @booking_contact.status == true %>
+          <%= link_to "Personne d'astreinte", contact_path(), id: "link-green" %>
+        <% elsif @contact.rejected?%>
+        <%= link_to "Intervention refusée", contact_path(), id: "link-red" %>
+        <% end %> -->
+
         <div class="circle-wrapper">
           <% if @booking_contact.status == false %>
             <%= image_tag "icon-status-false.png" %>
@@ -55,9 +65,20 @@
       </div>
     </div>
     <div class="content-btn-on-duty">
+    <% if @contact.uncalled?%>
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
         <h6>Contacter<br>la personne d'astreinte</h6>
       <% end %>
+    <% elsif @contact.accepted?%>
+      <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
+        <h6>Contacter<br>la personne d'astreinte</h6>
+      <% end %>
+        <%= link_to "Départ accepté", map_path(), class: "little-btn-green" %>
+    <% elsif @contact.rejected?%>
+      <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
+        <h6>Contacter<br>la personne d'astreinte</h6>
+      <% end %>
+    <% end %>
       </div>
   </div>
 </div>
