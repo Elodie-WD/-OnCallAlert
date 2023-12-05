@@ -4,7 +4,7 @@
   <div class="text-en-tete-historique">
     <div class="row">
       <div class="col">
-        <%= link_to "Retour", rooting_path(), class: "text-historique" %>
+        <%= link_to "Retour", contact_path(), class: "text-historique" %>
       </div>
       <div class="col">
         <h2 class="title-historique"></h2>
@@ -28,6 +28,7 @@
 
     <% end %>
   </div>
+
     <%= simple_form_for [@chatroom, @message],
           html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
           %>

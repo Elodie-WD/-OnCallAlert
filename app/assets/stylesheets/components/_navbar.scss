@@ -102,3 +102,26 @@ color:#03045E;
 .maboiteavatar .fa-regular.fa-bell{
 color: #03045E;
 }
+
+.icon-navbar-connexion img {
+  width: 27px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.wrapper{
+  height: 130px;
+  width: 150px;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  .circle-wrapper-avatar-on-call{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    top:20px;
+    left:20px;
+  }
+}

@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["day", "astreinteLastName", "astreinteJobTitle", "degardeLastName", "degardeJobTitle"]
 
   getUsers(event) {
-     const dateselection = event.currentTarget.innerText
+     const dateselection = event.currentTarget.dataset.date
      const url = `/get_doctors/${dateselection}`
      fetch(url, {headers: {"Accept": "application/json"}})
       .then(response => response.json())

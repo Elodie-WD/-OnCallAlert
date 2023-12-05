@@ -30,21 +30,30 @@
               <a href="<%= root_path %>">
               <img src="<%=image_path("logo.png")%>" class="logo" style="width: 140px;">
           </div>
-
-            <div class="maboiteavatar">
-            <% if "#{controller.controller_name}##{controller.action_name}" == "chatrooms#show" %>
-              <div class="bell-container">
-                <i class="fa-regular fa-bell"></i>
-              </div>
-            <% else %>
-              <div class="bell-container">
-                <i class="fa-regular fa-bell"></i>
-                <div class="notifications <%= current_user&.notifs? ? "" : "d-none" %>" data-chatroom-subscription-target="notif">N</div>
-              </div>
-            <% end %>
-
-            <a href="<%= rooting_path %>">
-            <img src="<%= image_path("avatar1.png") %>" style="width: 40px;" class="avatar bg-info rounded-circle" /></a>
-          </div>
+           <div class="maboiteavatar">
+              <a href="<%= rooting_path %>">
+              <% if user_signed_in? %>
+                  <% if "#{controller.controller_name}##{controller.action_name}" == "chatrooms#show" %>
+                      <div class="bell-container">
+                          <i class="fa-regular fa-bell"></i>
+                      </div>
+                  <% else %>
+                      <div class="bell-container">
+                            <i class="fa-regular fa-bell"></i>
+                       <div class="notifications <%= current_user&.notifs? ? "" : "d-none" %>" data-chatroom-subscription-target="notif">N</div>
+                        </div>
+                     <% end %>                  
+                <% if current_user.bookings.find_by(date: Date.today).on_call %>
+                    <img src="<%= image_path('avatar-men.jpg') %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
+                  <% else %>
+                    <img src="<%= image_path('avatar-women.jpg') %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
+                  <% end %>
+              <% else  %>
+                  <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
+                    <%= image_tag "icon-user-homepage.png" %>
+                  <% end %>
+                <% end %>
+              </a>
+            </div>
       </div>
     </nav>

@@ -243,3 +243,22 @@ body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a 
 .text-mon-planning-profil a {
   margin-top: 50px;
 }
+
+.avatar-personne-de-garde img {
+  width: 31px;
+  border-radius: 50px;
+  margin-left: -19px;
+}
+
+
+.avatar-personne-de-garde-on-duty img {
+  width: 36px;
+  border-radius: 50px;
+  margin-left: -40px;
+  margin-top: -31px;
+  z-index: 1;
+}
+
+.icon-validation-personne-astreinte img {
+  z-index: 100;
+}

@@ -1,0 +1,142 @@
+[33mcommit a1f2e46aaca770b6a83ea73a1bb8059261428ae2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mheroku/master[m[33m)[m
+Merge: 1a36e41 24e920e
+Author: Thibaut FEBVIN <147395753+Tibols33@users.noreply.github.com>
+Date:   Tue Dec 5 14:37:28 2023 +0100
+
+    Merge pull request #62 from Elodie-WD/telephone
+    
+    ok
+
+[33mcommit 24e920eb6c83e38a2cb032d2ed6e417bfec81adc[m
+Author: Thibaut Febvin <thibaut.febvin@gmail.com>
+Date:   Tue Dec 5 14:36:24 2023 +0100
+
+    ok
+
+[33mcommit 1a36e41331dde733261c2a6695cdca2b1564d1eb[m
+Merge: aa8662b 636da6d
+Author: MargotRx <147396181+MargotRoux@users.noreply.github.com>
+Date:   Tue Dec 5 14:08:39 2023 +0100
+
+    Merge pull request #61 from Elodie-WD/DesignPageProfil
+    
+    design page profil pas terminé
+
+[33mcommit 636da6d536012004572d685351a34d356e2cdf09[m
+Author: MargotRx <margot.roux.mr@gmail.com>
+Date:   Tue Dec 5 14:07:10 2023 +0100
+
+    design page profil pas terminé
+
+[33mcommit aa8662b4d48b629300f8de4fc91819aaf5fd5351[m
+Merge: f0f7921 8134640
+Author: Théo Alaux <143192700+Talaux@users.noreply.github.com>
+Date:   Tue Dec 5 12:10:36 2023 +0100
+
+    Merge pull request #60 from Elodie-WD/calendriersuiteind2
+    
+    A merger
+
+[33mcommit 813464026f9e7e9c1cffd004b97feafd664ff7fb[m[33m ([m[1;31morigin/calendriersuiteind2[m[33m)[m
+Merge: 743d947 f0f7921
+Author: Théo Alaux <143192700+Talaux@users.noreply.github.com>
+Date:   Tue Dec 5 12:10:27 2023 +0100
+
+    Merge branch 'master' into calendriersuiteind2
+
+[33mcommit 743d947019c5fc6ae63f004ee089d44ba3c381ef[m
+Author: tTheo Alaux <alaux.theo@gmail.com>
+Date:   Tue Dec 5 11:58:29 2023 +0100
+
+    A merger
+
+[33mcommit f0f79219c399863580ad610cd218e56e633f9a97[m
+Merge: b201792 5a35624
+Author: MargotRx <147396181+MargotRoux@users.noreply.github.com>
+Date:   Tue Dec 5 11:36:01 2023 +0100
+
+    Merge pull request #59 from Elodie-WD/liensprofil
+    
+    liens profil + design profil
+
+[33mcommit b201792f23955e50c0310d303f1eadb8c29f80b0[m
+Merge: 3df723c 9601a69
+Author: ETTAICHE <147248216+Elodie-WD@users.noreply.github.com>
+Date:   Tue Dec 5 11:35:54 2023 +0100
+
+    Merge pull request #58 from Elodie-WD/notifications3
+    
+    mod div map
+
+[33mcommit 5a356246c562b7bf72fbc8956602ee12f11e4230[m
+Author: MargotRx <margot.roux.mr@gmail.com>
+Date:   Tue Dec 5 11:35:26 2023 +0100
+
+    liens profil + design profil
+
+[33mcommit 3df723c657611d71483d3255e08dd6d8c804106f[m
+Merge: 475e23e 1dc4c30
+Author: ETTAICHE <147248216+Elodie-WD@users.noreply.github.com>
+Date:   Tue Dec 5 11:30:28 2023 +0100
+
+    Merge pull request #57 from Elodie-WD/maps2
+    
+    ok
+
+[33mcommit 1dc4c3042cf5015e3067909e3bc4e8206864e7b6[m[33m ([m[1;31morigin/maps2[m[33m)[m
+Merge: d19a9a2 475e23e
+Author: ETTAICHE <147248216+Elodie-WD@users.noreply.github.com>
+Date:   Tue Dec 5 11:30:18 2023 +0100
+
+    Merge branch 'master' into maps2
+
+[33mcommit 475e23e3eeea4d03c54904124fd6df42a60c21cf[m
+Merge: b0fce59 8725097
+Author: ETTAICHE <147248216+Elodie-WD@users.noreply.github.com>
+Date:   Tue Dec 5 11:22:22 2023 +0100
+
+    Merge pull request #56 from Elodie-WD/notification-link-map
+    
+    changement map show
+
+[33mcommit d19a9a2eb7e687312022eb666895546b25c9c1d2[m
+Author: Thibaut Febvin <thibaut.febvin@gmail.com>
+Date:   Tue Dec 5 11:21:27 2023 +0100
+
+    ok
+
+[33mcommit 9601a69a067645696a3887b079dd184188e74bf3[m
+Author: elodie ettaiche <e.ettaiche@gmail.com>
+Date:   Tue Dec 5 11:14:35 2023 +0100
+
+    mod div map
+
+[33mcommit b0fce590a06b667dc81a4404b702396fae994a30[m
+Merge: 45b5949 1037810
+Author: MargotRx <147396181+MargotRoux@users.noreply.github.com>
+Date:   Tue Dec 5 11:02:48 2023 +0100
+
+    Merge pull request #55 from Elodie-WD/loginCSS
+    
+    Design Login + Historique
+
+[33mcommit 1037810883426250cfb60d018a304b769e19c0f1[m
+Author: MargotRx <margot.roux.mr@gmail.com>
+Date:   Tue Dec 5 11:01:51 2023 +0100
+
+    Design Login + Historique
+
+[33mcommit 87250975d9667a152757c4e5d52f496167612e22[m
+Author: elodie ettaiche <e.ettaiche@gmail.com>
+Date:   Tue Dec 5 10:59:30 2023 +0100
+
+    changement map show
+
+[33mcommit 45b5949bcc57836b7b428fa47320afa1a60fbc26[m
+Merge: e5d8dae 36734f3
+Author: Thibaut FEBVIN <147395753+Tibols33@users.noreply.github.com>
+Date:   Tue Dec 5 09:25:51 2023 +0100
+
+    Merge pull request #54 from Elodie-WD/suitecalendrier
+    
+    Suitecalendrier

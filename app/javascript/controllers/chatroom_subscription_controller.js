@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ["messages", "notif"]
 
   resetForm(event) {
-    event.preventDefault();
+    // event.preventDefault();
     event.target.reset()
   }
 
@@ -26,13 +26,12 @@ export default class extends Controller {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
     if(!currentUserIsSender) {
       this.notifTarget.classList.remove("d-none")
-      console.log("Yo")
       console.log(this.notifTarget)
     }
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message_html)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
-    console.log("coucou")
+
   }
 
   #buildMessageElement(currentUserIsSender, message) {

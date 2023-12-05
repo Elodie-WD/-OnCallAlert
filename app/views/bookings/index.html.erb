@@ -2,8 +2,8 @@
 
   <div class="calendar" id="calendrier">
   <%= calendar(number_of_days: 5) do |date| %>
-      <div class="day" data-action="click->calendar#getUsers">
-        <%= date %>
+      <div class="day" data-action="click->calendar#getUsers" data-date="<%= date %>">
+        <%= date.day %>
       </div>
   <% end %>
   </div>
