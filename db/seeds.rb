@@ -71,4 +71,3 @@ Message.create!(content: "hello", chatroom: chatroom1, user: user1)
 Message.create!(content: "Salut Alice", chatroom: chatroom1, user: user2)
 Message.create!(content: "Super merci, je suis d'astreinte aujourd'hui, comment est le service ce soir ?", chatroom: chatroom1, user: user1)
 Message.create!(content: "Plutôt calme pour l'instant, je te tiens au jus", chatroom: chatroom1, user: user2)
-
