@@ -1,7 +1,23 @@
 
 <div class="container-show">
   <div class="container-header-picture">
-    <h1><%= @title %></h1>
+    <div class="text-show-profil">
+      <div class="row">
+        <div class="col">
+          <%= link_to "Retour", rooting_path(), class: "text-historique" %>
+        </div>
+        <div class="col">
+          <h2 class="title-historique"><%= @title %></h2>
+        </div>
+        <div class="col">
+          <h4 class="text-historique"></h4>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
   </div>
   <div class="container-footer-text-btn">
@@ -9,7 +25,7 @@
       <h4>Dr <%= @contact.first_name %> <%= @contact.last_name %></h4>
       <h5>Service d'obstétrique</h5>
       <h6>Email: <%= @contact.email %></h6>
-      <%# <h6>Tel: <%= @contact.tel %></h6> %>
+      <%# <h6>Tel: <%= @contact.tel %>
     </div>
     <div class="content-btn">
       <% if @contact.uncalled? %>

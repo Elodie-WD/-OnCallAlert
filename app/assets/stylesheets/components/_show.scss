@@ -4,10 +4,13 @@
 
 .container-header-picture{
   background-color: $blue-light;
-  height: 20vh;
+  height: 40vh;
   width: 100%;
   margin: 0;
   position: relative;
+  margin-top: -100px;
+  padding-top: 70px;
+  z-index: 2;
   h1{
     padding-top: 10px;
     color: $dark-blue;
@@ -18,9 +21,9 @@
   img{
     position: absolute;
     border-radius: 50%;
-    left:50%;
-    bottom:-50%;
+    left: 50%;
     transform: translateX(-50%);
+    margin-top: -17px;
   }
 }
 
@@ -50,4 +53,10 @@
   margin: 0;
   padding-top: 100px;
   height: 20vh;
+}
+
+
+.text-show-profil {
+  margin-top: 40px;
+  padding: 19px;
 }
