@@ -1,3 +1,4 @@
+
 <div class="background-on-duty">
   <div class="container-wrapper">
     <h1 class="h1-on-duty">Bonjour <%= @user.first_name %> 👋🏻</h1>
@@ -25,7 +26,6 @@
     </div>
     <div class="grid-wrapper" data-controller="activation">
       <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
-
         <div class="circle-wrapper">
           <% if @booking_contact.status == false %>
             <%= image_tag "icon-status-false.png" %>
