@@ -139,6 +139,13 @@
   margin-top: 50px;
 }
 
+.text-de-garde:hover {
+  color: $blue-light;
+}
+
+#link-blue:hover {
+  color: $blue-light;
+}
 
 /* Icon calendrier */
 
@@ -161,6 +168,8 @@
   background-color: #fbeeff!important;
   margin-top: -57px;
   padding-top: 56px;
+  padding-bottom: 70px;
+
 }
 
 .big-btn-message-on-duty {
@@ -229,4 +238,8 @@ body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a 
   margin-left: 8px;
   margin-top: 7px;
   width: 18px;
+}
+
+.text-mon-planning-profil a {
+  margin-top: 50px;
 }
