@@ -27,7 +27,7 @@ class User < ApplicationRecord
     self.department&.chatrooms
         &.find_by(date: Date.today)
         &.messages
-        &.where.not(user: self)
+        &.where&.not(user: self)
         &.map(&:viewed)
         &.include?(nil)
   end
