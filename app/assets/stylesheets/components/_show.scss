@@ -27,9 +27,22 @@
 .infos-contact-content{
   margin: 0;
   height: 20vh;
-  padding-top: 80px;
+  padding-top: 100px;
   background-color: $blue-ultra-light;
   text-align: center;
+  h4{
+  font-family: $quicksand;
+  font-weight: 700;
+  }
+  h5{
+    font-family: $quicksand;
+    font-weight: 400;
+    color: rgb(144, 144, 144);
+  }
+  h6{
+    font-family: $montserrat;
+    font-weight: 400;
+    }
 }
 
 .container-footer_text-btn{

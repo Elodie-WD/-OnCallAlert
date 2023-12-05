@@ -7,7 +7,7 @@
         <%= link_to "", class: "icons-profil" do %>
           <%= image_tag "icon1.png" %>
         <% end %>
-        <p class="text-box-profil">Situation actuelle: <span class="p-grey">en garde</span></p>
+        <p class="text-box-profil">Aujourd'hui vous êtes: <span class="text-situation-on-call"><br>EN ASTREINTE</span></p>
       </div>
       <div class="elements-profil-box">
       <%= link_to "", class: "icons-profil" do %>
@@ -49,11 +49,29 @@
       <%= link_to contact_path, class: "big-btn-message" do %>
         <h6>Contacter<br>la personne de garde</h6>
       <% end %>
-      <% if @booking.status == false %>
-        <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button" data-notification-subscription-target="messages">Confirmer le<br>début de l'astreinte</a>
-      <% else @booking.status == true %>
-        <a class="big-btn-green" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button" data-notification-subscription-target="messages">Astreinte Confirmée</a>
+      <% if @contact.uncalled?%>
+        <% if @booking.status == false %>
+          <a class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button" data-notification-subscription-target="messages">Confirmer le<br>début de l'astreinte</a>
+        <% else @booking.status == true %>
+          <a class="big-btn-green" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" data-activation-target="button" data-notification-subscription-target="messages">Astreinte Confirmée</a>
+        <% end %>
+      <% elsif @contact.called?%>
+        <div class = "content-btn-validation-depart">
+          <%= button_to "Départ accepté", deplacement_update_path(current_user.id, deplacement: 2), method: :patch,     class:"little-btn-green"%>
+          <%= button_to "Départ refusé", deplacement_update_path(current_user.id, deplacement: 3), method: :patch, class:"little-btn-dark-blue"%>
+        </div>
+      <% elsif @contact.rejected?%>
+        <div class = "content-btn-validation-depart">
+          <%= button_to "Départ accepté?", deplacement_update_path(current_user.id, deplacement: 2), method: :patch,     class:"little-btn-green"%>
+          <%= button_to "Confirmer le refus", deplacement_update_path(current_user.id, deplacement: 0), method: :patch, class:"little-btn-dark-blue"%>
+       <% else @contact.accepted? %>
+        <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
+        data-bs-toggle="offcanvas"
+        aria-controls="offcanvasBottom" >Rappel?</a>
+        <%= button_to "Fin d'intervention", deplacement_update_path(current_user.id, deplacement: 0), method: :patch, class:"little-btn-dark-blue"%>
+        </div>
       <% end %>
+
       <%# <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a> %>
     </div>
 
@@ -61,12 +79,10 @@
 
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
       <div class="modal-pink">
-
         <h5 class="offcanvas-title" id="offcanvasBottomLabel">Validation de début d'astreinte</h5>
         <%= button_to "Confirmation", booking_path(@booking), method: :patch,   class:"big-btn-alarm", data: {
                 action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close"%>
         <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
-
       </div>
     </div>
   </div>

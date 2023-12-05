@@ -14,9 +14,7 @@
 .text-content{
   border-radius: 10px;
   background: $white;
-  padding: 30px;
-
-
+  padding: 30px 27px 20px 27px;
 
 
   .text-box-profil  {
@@ -92,11 +90,19 @@
 }
 .content-btn{
   width: 70%;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
+}
+.content-btn-validation-depart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 10px 0;
 }
 .green{
   background-color:rgb(29, 129, 29);
@@ -107,7 +113,7 @@
 
 .icons-profil img {
   width: 27px;
-  margin-right: 15px;
+  margin-right: 11px;
 }
 
 
@@ -146,4 +152,81 @@
 
   height: 120px;
 
+}
+
+
+/* On Duty */
+
+.background-on-duty {
+  background-color: #fbeeff!important;
+  margin-top: -57px;
+  padding-top: 56px;
+}
+
+.big-btn-message-on-duty {
+  padding: 17px 20px;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #7FC8F8;
+  text-align: center;
+  border-radius: 100px;
+  max-width: 400px;
+  color: #fff;
+  font-family: montserrat;
+  filter: drop-shadow(0px 4px 15px #7FC8F8);
+  text-decoration: none;
+  margin-top: 40px;
+}
+
+.content-btn-on-duty {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.h1-on-duty {
+  color: $dark-blue;
+  font-family: $quicksand;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.text-situation-on-duty {
+  color: #F0B6FF;
+}
+
+/* On Duty icon validation astreinte */
+
+.circle-wrapper img {
+  margin-top: 20px;
+  margin-left: 2px;
+  width: 21px;
+
+}
+
+body > div.background-on-duty > div > div.grid-wrapper > div.wrapper.right-wrapper > a > img {
+  margin-top: 7px!important;
+  right: 30px!important;
+  margin-left: 8px!important;
+  width: 18px!important;
+}
+
+
+/* On Call */
+
+.text-situation-on-call {
+  color: #F0B6FF;
+}
+
+body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a > img {
+  margin-left: 8px;
+  margin-top: 7px;
+  width: 18px;
 }

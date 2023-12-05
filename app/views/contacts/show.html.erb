@@ -4,33 +4,32 @@
     <h1><%= @title %></h1>
     <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
   </div>
-  <div class="container-footer_text-btn">
+  <div class="container-footer-text-btn">
     <div class="infos-contact-content">
-      <h6><%= @contact.first_name %></h6>
-      <h6><%= @contact.last_name %></h6>
-      <h6><%= @contact.email %></h6>
+      <h4>Dr <%= @contact.first_name %> <%= @contact.last_name %></h4>
+      <h5>Service d'obstétrique</h5>
+      <h6>Email: <%= @contact.email %></h6>
+      <%# <h6>Tel: <%= @contact.tel %></h6> %>
     </div>
-  </div>
-    <%= link_to "Profile", rooting_path() %>
-  <div class="content-btn">
-    <% if @contact.deplacement == "uncalled" %>
-      <a href="" class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
-    <% else @contact.deplacement == "called" %>
-      <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
-      data-bs-toggle="offcanvas"
-      aria-controls="offcanvasBottom" >Astreinte appelée. Rappel?</a>
-    <% end %>
-    <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
-      <h6>MESSAGES</h6>
-    <% end %>
-
+    <div class="content-btn">
+      <% if @contact.uncalled? %>
+        <a href="" class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
+      <% else @contact.called? %>
+        <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
+        data-bs-toggle="offcanvas"
+        aria-controls="offcanvasBottom" ><h6>RAPPEL?</h6></a>
+      <% end %>
+      <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
+        <h6>MESSAGES</h6>
+      <% end %>
+    </div>
   </div>
 </div>
 
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
     <div class="modal-pink">
       <h5 class="offcanvas-title" id="offcanvasBottomLabel">Souhaitez-vous appeler <%= @title %>?</h5>
-        <%= button_to "Appel d'Urgence", deplacement_update_path(@contact.id), method: :patch, class:"big-btn-alarm", data: {
+        <%= button_to "Appel d'Urgence", deplacement_update_path(@contact.id, deplacement: 1), method: :patch, class:"big-btn-alarm", data: {
                 action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close"%>
       <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
       </div>
