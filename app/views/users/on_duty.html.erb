@@ -28,23 +28,27 @@
 
     <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
       <div class="circle-wrapper">
-        <% if @booking_contact.status == false %>
-          <%= image_tag "icon-status-false.png" %>
-        <% else %>
-          <%= image_tag "icon-status-true.png" %>
-        <% end %>
-      </div>
-      <div>
-        <% if @booking_contact.status == false %>
-          <%= link_to contact_path(), id: "link-blue", class: "text-de-garde" do %>
-            Mon<br>Astreinte
+        <div class="circle-wrapper-avatar-on-call">
+          <%= link_to contact_path(), class: "avatar-personne-de-garde-on-duty" do %>
+              <%= image_tag "avatar-men.jpg" %>
+            <% end %>
+        </div>
+          <% if @booking_contact.status == false %>
+            <%= image_tag "icon-status-false.png", class: "icon-validation-personne-astreinte" %>
+          <% else %>
+            <%= image_tag "icon-status-true.png", class: "icon-validation-personne-astreinte" %>
           <% end %>
-        <% else %>
-          <%= link_to "Astreinte confirmée", contact_path(), id: "link-green" %>
-        <% end %>
+        </div>
+        <div>
+          <% if @booking_contact.status == false %>
+            <%= link_to contact_path(), id: "link-blue", class: "text-de-garde" do %>
+              Mon<br>Astreinte
+            <% end %>
+          <% else %>
+            <%= link_to "Astreinte confirmée", contact_path(), id: "link-green" %>
+          <% end %>
+        </div>
       </div>
-    </div>
-
     <div class="wrapper right-wrapper">
       <%= link_to "", class: "circle-wrapper" do %>
                 <%= image_tag "icon-calendar.png" %>
