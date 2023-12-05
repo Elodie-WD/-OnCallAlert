@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ["messages"]
 
   resetForm(event) {
-    event.preventDefault();
+    // event.preventDefault();
     event.target.reset()
   }
 
@@ -21,7 +21,7 @@ export default class extends Controller {
     #insertMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message_html)
-    this.element.insertAdjacentHTML("afterbegin", messageElement)
+    this.element.insertAdjacentHTML("beforeend", messageElement)
     this.element.scrollTo(0, this.element.scrollHeight)
   }
 
