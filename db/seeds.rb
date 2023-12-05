@@ -11,7 +11,7 @@
 # User.destroy_all
 # Booking.destroy_all
 # Department.destroy_all
-# Chatroom.destroy_all
+Chatroom.destroy_all
 Department.destroy_all
 Hospital.destroy_all
 # Message.destroy_all
