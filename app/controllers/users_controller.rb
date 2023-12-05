@@ -27,6 +27,14 @@ class UsersController < ApplicationController
     # enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
   end
 
+  def get_doctors
+    date = params[:date]
+    bookings = Booking.where(date: date).where.not(on_call: nil)
+    astreinte = bookings.find_by_on_call(true).user
+    de_garde = bookings.find_by_on_call(false).user
+    render json: [ { last_name: astreinte.last_name }, { last_name: de_garde.last_name} ]
+  end
+
   private
 
   #def planning_date

@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
-    @booking = Booking.where(date: Date.today, user: current_user).first
+    @booking = Booking.where(date: "dateselection")
+ 
   end
 
   def update
@@ -10,4 +11,3 @@ class BookingsController < ApplicationController
     redirect_to on_call_path
   end
 end
-
