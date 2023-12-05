@@ -4,26 +4,25 @@
     <h1><%= @title %></h1>
     <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
   </div>
-  <div class="container-footer_text-btn">
+  <div class="container-footer-text-btn">
     <div class="infos-contact-content">
-      <h6><%= @contact.first_name %></h6>
-      <h6><%= @contact.last_name %></h6>
-      <h6><%= @contact.email %></h6>
+      <h4>Dr <%= @contact.first_name %> <%= @contact.last_name %></h4>
+      <h5>Service d'obstétrique</h5>
+      <h6>Email: <%= @contact.email %></h6>
+      <%# <h6>Tel: <%= @contact.tel %></h6> %>
     </div>
-  </div>
-    <%= link_to "Profile", rooting_path() %>
-  <div class="content-btn">
-    <% if @contact.uncalled? %>
-      <a href="" class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
-    <% else @contact.called? %>
-      <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
-      data-bs-toggle="offcanvas"
-      aria-controls="offcanvasBottom" >Rappel?</a>
-    <% end %>
-    <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
-      <h6>MESSAGES</h6>
-    <% end %>
-
+    <div class="content-btn">
+      <% if @contact.uncalled? %>
+        <a href="" class="big-btn-alarm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">URGENCES</a>
+      <% else @contact.called? %>
+        <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
+        data-bs-toggle="offcanvas"
+        aria-controls="offcanvasBottom" ><h6>RAPPEL?</h6></a>
+      <% end %>
+      <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
+        <h6>MESSAGES</h6>
+      <% end %>
+    </div>
   </div>
 </div>
 

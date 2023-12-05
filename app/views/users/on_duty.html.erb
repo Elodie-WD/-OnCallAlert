@@ -63,7 +63,9 @@
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
         <h6>Contacter<br>la personne d'astreinte</h6>
       <% end %>
-        <%= link_to "Départ accepté", map_path(), class: "little-btn-green" %>
+        <%= link_to map_path, class: "little-btn-green" do %>
+        <h6>Temps estimé d'arrivée</h6>
+        <% end %>
     <% elsif @contact.rejected?%>
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
         <h6>Contacter<br>la personne d'astreinte</h6>
