@@ -2,10 +2,10 @@
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-map-latitude-value="<%= current_user.latitude%>"
-  data-map-longitude-value="<%= current_user.longitude%>"
-  data-map-hospital-latitude-value="<%= current_user.department.hospital.latitude%>"
-  data-map-hospital-longitude-value="<%= current_user.department.hospital.longitude%>"></div>
+  data-map-latitude-value="<%= @contact.latitude%>"
+  data-map-longitude-value="<%= @contact.longitude%>"
+  data-map-hospital-latitude-value="<%= @contact.department.hospital.latitude%>"
+  data-map-hospital-longitude-value="<%= @contact.department.hospital.longitude%>"></div>
 
 <%# https://api.mapbox.com/directions/v5/mapbox/driving/44.8360134,-0.5666421;44.8284959,-0.6113139?geometries=geojson&access_token=pk.eyJ1IjoidGlib2xzMzMiLCJhIjoiY2xwam40dXdqMDFlODJqbXJnbnhncGJndiJ9.d-vK2rHVx-RgCv2J_vF27w %>
 
@@ -14,3 +14,4 @@
 
 <h3>Les renforts arrivent ! </h3>
 <h4>Temps estimé : <span class="duration" data-target->duration.innertext </span> mins </h4>
+

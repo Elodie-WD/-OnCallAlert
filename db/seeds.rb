@@ -20,8 +20,8 @@ hospital1 = Hospital.create!(name: "pellegrin", address: "rue de la pelouse de d
 
 department1 = Department.create!(hospital: hospital1)
 
-user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Alice", last_name: "On-call", department: department1, address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux")
-user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Baptiste", last_name: "On-duty",department: department1)
+user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Alice", last_name: "On-call", department: department1, address: "107 cours Balguerie Stuttenberg, 33300 Bordeaux")
+user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Baptiste", last_name: "On-duty",department: department1, address: "10 cours victor hugo, 33300 Bordeaux")
 user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Nadia", last_name: "Default", department: department1)
 
 
