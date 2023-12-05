@@ -65,14 +65,14 @@ text-align: center;
 
 .day {
   text-align: center;
-  background-color: #FFE45E;
-  border-radius: 50%;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 
 .day:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: grey;
+  border-radius: 10%
 }
 
 .calendar-heading{
@@ -85,12 +85,15 @@ text-align: center;
   height: 25px;
 }
 
-#mabalise{
-  color: red;
-}
 
 .calendar-heading{
   display: flex;
   justify-content: space-between;
 
 }
+
+.calendar-title{
+  text-transform: capitalize;
+
+}
+
