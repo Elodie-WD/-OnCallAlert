@@ -13,6 +13,9 @@ export default class extends Controller {
     hospitalLongitude: Number,
     duration: Number
   }
+
+  static targets = ["box", "duration"]
+
   connect() {
     console.log(this.latitudeValue)
     mapboxgl.accessToken = this.apiKeyValue
@@ -20,7 +23,7 @@ export default class extends Controller {
     const end = [this.hospitalLongitudeValue, this.hospitalLatitudeValue];
 
     this.map = new mapboxgl.Map({
-      container: this.element,
+      container: this.boxTarget,
       style: "mapbox://styles/mapbox/streets-v10",
       center: [this.longitudeValue, this.latitudeValue], // starting position
       zoom: 16
@@ -31,6 +34,8 @@ export default class extends Controller {
       console.log(data)
       const itinerary = data.routes[0];
       const duration = itinerary.duration;
+      const time = (Math.ceil(duration/60))
+      this.durationTarget.innerText = time
       const route = itinerary.geometry.coordinates;
       const geojson = {
         type: 'Feature',
@@ -108,11 +113,11 @@ export default class extends Controller {
           'circle-color': '#337e1c'
         }
       });
-
     })
-  }
 
-  #setDuration(duration) {
+
+  }
+  setDuration(duration) {
     duration = (Math.ceil(duration/60))
   }
 }
