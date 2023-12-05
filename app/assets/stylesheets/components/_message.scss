@@ -23,7 +23,7 @@
 }
 
 .receiver-style {
-  background-color: rgb(237, 250, 255);
+  background-color: #F0B6FF;
   font-family: Montserrat;
   font-size: 15px;
   color: #03045E;
@@ -67,4 +67,9 @@
 
 .btn-message-send {
   height: 50px;
+}
+.btn-primary{
+--bs-btn-hover-bg:rgba(255, 0, 0, 0)!important;
+--bs-btn-active-bg: rgba(255, 0, 0, 0)!important;
+--bs-btn-focus-shadow-rgb:rgba(255, 0, 0, 0)!important;
 }

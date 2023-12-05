@@ -11,7 +11,7 @@
 # User.destroy_all
 # Booking.destroy_all
 # Department.destroy_all
-# Chatroom.destroy_all
+Chatroom.destroy_all
 Department.destroy_all
 Hospital.destroy_all
 # Message.destroy_all
@@ -19,6 +19,7 @@ Hospital.destroy_all
 hospital1 = Hospital.create!(name: "pellegrin", address: "rue de la pelouse de douet 33000 Bordeaux")
 
 department1 = Department.create!(hospital: hospital1)
+
 
 # Week 1----------------------------------------------------------------------
 user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Anthony", last_name: "Dr. ROUSSEL", department: department1, address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux")

@@ -1,10 +1,10 @@
 <div class="container chatroom">
-  <h2 class="title-chatroom"><%= %></h1>
+  <h2 class="title-chatroom"><%= @contact.first_name %></h1>
 
   <div class="text-en-tete-historique">
     <div class="row">
       <div class="col">
-        <%= link_to "Retour", rooting_path(), class: "text-historique" %>
+        <%= link_to "Retour", contact_path(), class: "text-historique" %>
       </div>
       <div class="col">
         <h2 class="title-historique"></h2>
@@ -33,14 +33,14 @@
     <%= simple_form_for [@chatroom, @message],
           html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
           %>
-  <%= f.input :content,
+    <%= f.input :content,
     label: false,
     placeholder: "Message",
     wrapper_html: {class: "flex-grow-1"}
-  %>
+    %>
     <%= button_tag(type: 'submit', class: "btn btn-primary mb-3") do %>
-  <%= image_tag('arrow.png', alt: 'Send', class:"btn-message") %>
-<% end %>
+    <%= image_tag('arrow.png', alt: 'Send', class:"btn-message") %>
+    <% end %>
 
   </div>
 
