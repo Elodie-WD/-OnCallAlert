@@ -11,9 +11,7 @@ export default class extends Controller {
       .then(response => response.json())
       .then((data) => {
         this.astreinteLastNameTarget.innerText = data[0].last_name
-        this.astreinteJobTitle.innerText = data[0].job_title
         this.degardeLastNameTarget.innerText = data[1].last_name
-        this.degardeJobTitle.innerText = data[1].job_title
     })
   };
 
