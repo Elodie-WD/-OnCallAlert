@@ -17,6 +17,7 @@ class ChatroomsController < ApplicationController
 
   def show
     @chatroom = Chatroom.find(params[:id])
+    @chatroom.messages.where.not(user: current_user).update(viewed: true)
     @message = Message.new
     search_contact
   end

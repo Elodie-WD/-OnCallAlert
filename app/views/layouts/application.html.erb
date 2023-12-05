@@ -11,7 +11,13 @@
     <%= favicon_link_tag asset_path('favicon-48px.png') %>
   </head>
 
-  <body>
+  <% if current_user&.department&.chatrooms&.find_by(date: Date.today) %>
+    <body data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="<%= current_user.department.chatrooms.find_by(date: Date.today).id %>"
+    data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+  <% else %>
+    <body>
+  <% end %>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
       <%= yield %>

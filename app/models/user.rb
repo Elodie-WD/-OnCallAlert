@@ -23,7 +23,13 @@ class User < ApplicationRecord
     next_bookings.first.date.to_date == Date.today ? next_bookings.second : next_bookings.first
   end
 
-
-
+  def notifs?
+    self.department&.chatrooms
+        &.find_by(date: Date.today)
+        &.messages
+        &.where.not(user: self)
+        &.map(&:viewed)
+        &.include?(nil)
+  end
 
 end
