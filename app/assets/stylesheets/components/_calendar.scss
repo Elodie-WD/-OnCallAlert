@@ -25,6 +25,7 @@ text-align: center;
   border-radius: 10px;
   padding: 5px;
   background-color: white;
+  margin-top: 20px;
 }
 
 .box2{
@@ -34,6 +35,7 @@ text-align: center;
   border-radius: 10px;
   padding: 5px;
   background-color: white;
+  margin-top: 20px;
 }
 
 #status{
@@ -48,6 +50,7 @@ text-align: center;
   font-size: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+
 }
 
 #metier{
@@ -60,11 +63,34 @@ text-align: center;
   color: #7fc8f8;
 }
 
-.day wday-1 today start-date current-month{
-  font-size: 50px;
+.day {
+  text-align: center;
+  background-color: #FFE45E;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+
+.day:hover {
+  background-color: rgb(255, 0, 0);
 }
 
 .calendar-heading{
   text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.simple-calendar .day{
+  height: 25px;
+}
+
+#mabalise{
+  color: red;
+}
+
+.calendar-heading{
+  display: flex;
+  justify-content: space-between;
 
 }
