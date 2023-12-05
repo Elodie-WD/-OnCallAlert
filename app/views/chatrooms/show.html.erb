@@ -29,7 +29,7 @@
       </div>
 
     <% end %>
-
+      </div>
     <%= simple_form_for [@chatroom, @message],
           html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
           %>
@@ -42,7 +42,7 @@
     <%= image_tag('arrow.png', alt: 'Send', class:"btn-message") %>
     <% end %>
 
-  </div>
+
 
 
 <% end %>
