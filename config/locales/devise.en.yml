@@ -2,6 +2,12 @@
 
 fr:
   devise:
+    sessions:
+      new:
+        title: "Connectez-vous à votre compte"
+        email: "Adresse email"
+        password: "Mot de passe"
+        remember_me: "Se souvenir de moi"
     confirmations:
       confirmed: "Votre adresse email est bien confirmée avec succès."
       send_instructions: "Vous allez recevoir, dans quelques minutes, un email avec les instructions permettant de confirmer votre adresse email."
@@ -63,11 +69,3 @@ fr:
       not_saved:
         one: "1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :"
         other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :"
-
-
-
-
-
-
-
-
