@@ -46,7 +46,11 @@ text-align: center;
   gap: 5px;
 
 }
-
+.namecenter{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
 #status{
   text-align: center;
   background-color: #FFE45E;
@@ -222,8 +226,6 @@ text-align: center;
   font-weight: 700;
   margin-bottom: -20px;
 }
-
-
 /* Ligne 1 */
 
 #calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-1.past.prev-month {
@@ -252,3 +254,4 @@ text-align: center;
 #calendrier > div > table > tbody > tr:nth-child(1) {
   background-color: #ff000000;
 }
+

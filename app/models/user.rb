@@ -31,5 +31,4 @@ class User < ApplicationRecord
         &.map(&:viewed)
         &.include?(nil)
   end
-
 end
