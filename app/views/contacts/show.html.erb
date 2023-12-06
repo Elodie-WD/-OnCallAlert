@@ -1,4 +1,3 @@
-
 <div class="container-show">
   <div class="container-header-picture">
     <div class="text-show-profil">
@@ -16,16 +15,14 @@
     </div>
 
 
-
-
     <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
   </div>
   <div class="container-footer-text-btn">
     <div class="infos-contact-content">
-      <h4>Dr <%= @contact.first_name %> <%= @contact.last_name %></h4>
+      <h4><%= @contact.first_name %> <%= @contact.last_name %></h4>
       <h5>Service d'obstétrique</h5>
-      <h6>Email: <%= @contact.email %></h6>
-      <%# <h6>Tel: <%= @contact.tel %>
+      <h6><%= @contact.email %></h6>
+      <h6><%= @contact.phone_number %></h6>
     </div>
     <div class="content-btn">
       <% if @contact.uncalled? %>
@@ -36,7 +33,7 @@
         aria-controls="offcanvasBottom" ><h6>Rappel?</h6></a>
       <% end %>
       <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
-        <h6>Messages</h6>
+        <h6 class="text-message-contact">Messages</h6>
       <% end %>
     </div>
   </div>
@@ -44,7 +41,8 @@
 
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
     <div class="modal-pink" data-controller="activation-btn">
-      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Souhaitez-vous appeler <%= @title %>?</h5>
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Besoin d'appeler la<br> <%= @title %>?</h5>
+         <p class="p-modal">Contactez le Dr. <%= @contact.last_name %></p>
       <%# <a href="#"
             data-activation-btn-target="button"
             class="big-btn-alarm "

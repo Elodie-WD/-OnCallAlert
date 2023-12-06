@@ -4,9 +4,9 @@
 // Changement couleur navbar
 .navbar-dark {
   background-color: rgba(255, 255, 255, 0) !important;
-
   --bs-navbar-toggler-icon-bg: url(data:'app/assets/images/avatar1.png');
   z-index: 10000;
+  height: 47px;
 
 }
 
@@ -41,8 +41,9 @@ padding-right: 5px;
 
 // réglage du side menu à 80% d'ouverture
 .offcanvas {
---bs-offcanvas-width: 300px !important;
-background-color:$blue-ultra-light;
+  --bs-offcanvas-width: 300px !important;
+  background-color:$blue-ultra-light;
+  z-index: 10001;
 }
 
 // Réglage et centrage du logo dans le side menu
@@ -124,4 +125,14 @@ color: #03045E;
     top:20px;
     left:20px;
   }
+}
+
+.fa-regular.fa-bell {
+  margin-left: -25px;
+  margin-top: 17px;
+}
+
+body > nav > div > div.maboiteavatar > a:nth-child(2) > img{
+  width: 40px;
+  margin-top: -52px;
 }
