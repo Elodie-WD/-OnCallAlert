@@ -27,13 +27,6 @@ user1 = User.create!(email: "alice@chu.fr", password: "baby21", password_confirm
 user2 = User.create!(email: "benoit@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Benoit", last_name: "DALLET", phone_number: "06.12.00.12.43", department: department1, address: "12 avenue de verdun, 33700 Merignac")
 user3 = User.create!(email: "clara@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Clara", last_name: "NIEL", phone_number: "06.45.42.38.21", department: department1, address: "8 rue henri wallon, 3310 Begles")
 
-Booking.create!(on_call: true, date: "2023-12-05", user: user1, status: false)
-
-Booking.create!(on_call: false, date: "2023-12-05", user: user2, status: false)
-
-Booking.create!(on_call: nil, date: "2023-12-05", user: user3, status: false)
-
-
 Booking.create!(on_call: false, date: "2023-12-06", user: user1, status: false)
 
 Booking.create!(on_call: true, date: "2023-12-06", user: user2, status: false)
@@ -41,9 +34,9 @@ Booking.create!(on_call: true, date: "2023-12-06", user: user2, status: false)
 Booking.create!(on_call: nil, date: "2023-12-06", user: user3, status: false)
 
 
-Booking.create!(on_call: true, date: "2023-12-07", user: user1, status: false)
+Booking.create!(on_call: false, date: "2023-12-07", user: user1, status: false)
 
-Booking.create!(on_call: false, date: "2023-12-07", user: user2, status: false)
+Booking.create!(on_call: true, date: "2023-12-07", user: user2, status: false)
 
 Booking.create!(on_call: nil, date: "2023-12-07", user: user3, status: false)
 
