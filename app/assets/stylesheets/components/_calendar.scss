@@ -96,7 +96,7 @@ text-align: center;
 }
 
 .simple-calendar .day{
-  height: 25px;
+  height: 36px;
 }
 
 
@@ -127,32 +127,74 @@ text-align: center;
 
 #calendrier > div > table > thead > tr > th:nth-child(2) {
   background-color: #ff000000;
+  color: #fff;
   border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 #calendrier > div > table > thead > tr > th:nth-child(3) {
   background-color: #ff000000;
+  color: #fff;
   border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 #calendrier > div > table > thead > tr > th:nth-child(4) {
   background-color: #ff000000;
+  color: #fff;
   border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 #calendrier > div > table > thead > tr > th:nth-child(5) {
   background-color: #ff000000;
+  color: #fff;
   border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 #calendrier > div > table > thead > tr > th:nth-child(6) {
   background-color: #ff000000;
+  color: #fff;
   border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 #calendrier > div > table > thead > tr > th:nth-child(7) {
   background-color: #ff000000;
+  color: #fff;
   border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 #calendrier > div > table {
@@ -179,4 +221,34 @@ text-align: center;
   font-style: normal;
   font-weight: 700;
   margin-bottom: -20px;
+}
+
+
+/* Ligne 1 */
+
+#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-1.past.prev-month {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-2.past.prev-month {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-3.past.prev-month {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-4.past.prev-month {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-5.past.prev-month {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > tbody > tr:nth-child(1) {
+  background-color: #ff000000;
 }
