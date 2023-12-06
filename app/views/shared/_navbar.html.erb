@@ -42,7 +42,7 @@
                             <i class="fa-regular fa-bell"></i>
                        <div class="notifications <%= current_user&.notifs? ? "" : "d-none" %>" data-chatroom-subscription-target="notif">N</div>
                         </div>
-                     <% end %>                  
+                     <% end %>
                 <% if current_user.bookings.find_by(date: Date.today).on_call %>
                     <img src="<%= image_path('avatar-men.jpg') %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
                   <% else %>
