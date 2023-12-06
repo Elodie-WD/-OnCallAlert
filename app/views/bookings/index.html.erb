@@ -1,7 +1,8 @@
-<div class="container" data-controller="calendar">
-
+<div class="container" data-controller="calendar" >
+<div class="background-blue-calendrier">
+</div>
   <div class="calendar" id="calendrier">
-  <%= calendar(number_of_days: 5) do |date| %>
+  <%= month_calendar do |date| %>
       <div class="day" data-action="click->calendar#getUsers" data-date="<%= date %>">
         <%= date.day %>
       </div>
@@ -10,12 +11,18 @@
 
   <div class="container-calendar">
     <div class="box1">
-      <p data-calendar-target="degardeLastName" id="nom"></p>
+      <div class="namecenter">
+        <p data-calendar-target="degardeFirstName" id="nom"></p>
+        <p data-calendar-target="degardeLastName" id="nom"></p>
+      </div>
       <p id="metier">Service d'Obstétrique</p>
       <p id="status"> De garde </p>
     </div>
     <div class="box2">
-      <p data-calendar-target="astreinteLastName" id="nom"></p>
+      <div class="namecenter">
+        <p data-calendar-target="astreinteFirstName" id="nom"></p>
+        <p data-calendar-target="astreinteLastName" id="nom"></p>
+      </div>
       <p id="metier">Service d'Obstétrique</p>
       <p id="status"> D'astreinte </p>
     </div>

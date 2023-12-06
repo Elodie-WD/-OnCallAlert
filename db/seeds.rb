@@ -22,8 +22,8 @@ department1 = Department.create!(hospital: hospital1)
 
 
 # Week 1----------------------------------------------------------------------
-user1 = User.create!(email: "anthony@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Anthony", last_name: "ROUSSEL", phone_number: "06.22.98.97.34", department: department1, address: "107 cours Balguerie Stuttenberg, 33300 Bordeaux")
-user2 = User.create!(email: "beatrice@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Beatrice", last_name: "DALLET", phone_number: "06.12.00.12.43", department: department1, address: "12 avenue de verdun, 33700 Merignac")
+user1 = User.create!(email: "Alice@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Alice", last_name: "ROUSSEL", phone_number: "06.22.98.97.34", department: department1, address: "107 cours Balguerie Stuttenberg, 33300 Bordeaux")
+user2 = User.create!(email: "Benoit@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Benoit", last_name: "DALLET", phone_number: "06.12.00.12.43", department: department1, address: "12 avenue de verdun, 33700 Merignac")
 user3 = User.create!(email: "clementine@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Clementine", last_name: "NIEL", phone_number: "06.45.42.38.21", department: department1, address: "8 rue henri wallon, 3310 Begles")
 
 
@@ -56,9 +56,9 @@ Booking.create!(on_call: true, date: "2023-12-08", user: user2, status: false)
 Booking.create!(on_call: nil, date: "2023-12-08", user: user3, status: false)
 
 # Week 2--------------------------------------------------------------------
-user4 = User.create!(email: "damien@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Damien", last_name: "Dr. LOUBES", phone_number: "06.61.14.17.02", department: department1, address: "6 rue millet, 33600 Pessac")
-user5 = User.create!(email: "emilie@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Emilie", last_name: "Dr. GUERIN", phone_number: "06.73.54.32.18", department: department1, address: "1 rue charles gounod, 33400 Talence")
-user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "Dr. DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
+user4 = User.create!(email: "damien@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Damien", last_name: "LOUBES", phone_number: "06.61.14.17.02", department: department1, address: "6 rue millet, 33600 Pessac")
+user5 = User.create!(email: "emilie@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Emilie", last_name: "GUERIN", phone_number: "06.73.54.32.18", department: department1, address: "1 rue charles gounod, 33400 Talence")
+user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
 
 Booking.create!(on_call: false, date: "2023-12-11", user: user4, status: false)
 

@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     bookings = Booking.where(date: date).where.not(on_call: nil)
     astreinte = bookings.find_by_on_call(true).user
     de_garde = bookings.find_by_on_call(false).user
-    render json: [ { last_name: astreinte.last_name }, { last_name: de_garde.last_name} ]
+    render json: [ { last_name: astreinte.last_name }, { last_name: de_garde.last_name}, { first_name: astreinte.first_name }, { first_name: de_garde.first_name } ]
   end
 
   private
