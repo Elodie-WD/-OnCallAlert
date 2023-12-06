@@ -26,7 +26,7 @@ export default class extends Controller {
       container: this.boxTarget,
       style: "mapbox://styles/mapbox/streets-v10",
       center: [this.longitudeValue, this.latitudeValue], // starting position
-      zoom: 16
+      zoom: 11
     })
     fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${this.longitudeValue},${this.latitudeValue};${this.hospitalLongitudeValue},${this.hospitalLatitudeValue}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`)
 .then(response => response.json())
