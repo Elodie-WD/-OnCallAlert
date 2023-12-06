@@ -44,9 +44,9 @@
                         </div>
                      <% end %>
                 <% if current_user.bookings.find_by(date: Date.today).on_call %>
-                    <img src="<%= image_path('avatar-men.jpg') %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
-                  <% else %>
                     <img src="<%= image_path('avatar-women.jpg') %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
+                  <% else %>
+                    <img src="<%= image_path('avatar-men.jpg') %>" style="width: 40px;" class="avatar bg-info rounded-circle" />
                   <% end %>
               <% else  %>
                   <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
