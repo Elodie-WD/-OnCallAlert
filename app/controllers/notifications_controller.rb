@@ -4,3 +4,4 @@ class NotificationsController < ApplicationController
     # @modification = Modification.new
   end
 end
+rails
