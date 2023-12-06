@@ -14,7 +14,7 @@
 Chatroom.destroy_all
 Department.destroy_all
 Hospital.destroy_all
-# Message.destroy_all
+Message.destroy_all
 
 hospital1 = Hospital.create!(name: "pellegrin", address: "rue de la pelouse de douet, 33000 Bordeaux")
 
@@ -56,9 +56,9 @@ Booking.create!(on_call: true, date: "2023-12-08", user: user2, status: false)
 Booking.create!(on_call: nil, date: "2023-12-08", user: user3, status: false)
 
 # Week 2--------------------------------------------------------------------
-user4 = User.create!(email: "damien@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Damien", last_name: "Dr. LOUBES", phone_number: "06.61.14.17.02", department: department1, address: "6 rue millet, 33600 Pessac")
-user5 = User.create!(email: "emilie@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Emilie", last_name: "Dr. GUERIN", phone_number: "06.73.54.32.18", department: department1, address: "1 rue charles gounod, 33400 Talence")
-user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "Dr. DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
+user4 = User.create!(email: "damien@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Damien", last_name: "LOUBES", phone_number: "06.61.14.17.02", department: department1, address: "6 rue millet, 33600 Pessac")
+user5 = User.create!(email: "emilie@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Emilie", last_name: "GUERIN", phone_number: "06.73.54.32.18", department: department1, address: "1 rue charles gounod, 33400 Talence")
+user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
 
 Booking.create!(on_call: false, date: "2023-12-11", user: user4, status: false)
 
@@ -155,11 +155,11 @@ Booking.create!(on_call: nil, date: "2023-12-23", user: user3, status: false)
 
 
 
-chatroom1 = Chatroom.create!(name: "Chatroom1", date: "2023-11-30", department: department1)
+chatroom1 = Chatroom.create!(name: "Chatroom1", date: "30/11/2023", department: department1)
 
-chatroom2 = Chatroom.create!(name: "Chatroom2", date: "2023-11-29", department: department1)
+chatroom2 = Chatroom.create!(name: "Chatroom2", date: "29/11/2023", department: department1)
 
-chatroom3 = Chatroom.create!(name: "Chatroom3", date: "2023-11-28", department: department1)
+chatroom3 = Chatroom.create!(name: "Chatroom3", date: "28/11/2023", department: department1)
 
 
 Message.create!(content: "Hello", chatroom: chatroom1, user: user1)
