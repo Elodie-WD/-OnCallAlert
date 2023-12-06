@@ -205,6 +205,7 @@
   text-align: center;
   margin-top: 15px;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 .text-situation-on-duty {
@@ -268,4 +269,12 @@ body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a 
 
 .icon-validation-personne-astreinte {
   z-index: 100;
+}
+
+.titre-dashboard-bonjour {
+  font-size: 23px;
+  font-family: quicksand;
+  font-weight: bold;
+  color: #03045E;
+  margin-bottom: 13px;
 }
