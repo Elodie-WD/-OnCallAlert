@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/default', to: "users#default", as: :default
   get '/get_doctors/:date', to: "users#get_doctors", as: :get_doctors
   patch '/users/:id', to: "users#update", as: :deplacement_update
+  get 'uncalled_to_called/:id', to: "users#uncalled_to_called", as: :uncalled_to_called
 
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -18,9 +19,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get '/rooting', to: "pages#rooting", as: :rooting do
-    resources :modifications, only: :create
-  end
+  get '/rooting', to: "pages#rooting", as: :rooting
 
   get '/show', to: "contacts#show", as: :contact
 
@@ -29,6 +28,4 @@ Rails.application.routes.draw do
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
-
-  resources :notifications, only: :show
 end
