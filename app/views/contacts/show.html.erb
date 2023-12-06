@@ -13,9 +13,11 @@
         </div>
       </div>
     </div>
-
-
-    <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
+    <% if current_user.bookings.find_by(date: Date.today).on_call %>
+        <img src="<%= image_path('avatar1.png') %>" style="width: 150px;" class="picture-circle" />
+    <% else %>
+        <img src="<%= image_path('medecin-femme.png') %>" style="width: 150px;" class="picture-circle"/>
+    <% end %>
   </div>
   <div class="container-footer-text-btn">
     <div class="infos-contact-content">

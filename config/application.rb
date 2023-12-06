@@ -16,7 +16,7 @@ module OnCallAlert
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
-
+    
     config.i18n.available_locales = [:en, :de, :fr]
     config.i18n.default_locale = :fr
 
