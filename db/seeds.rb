@@ -52,9 +52,9 @@ user4 = User.create!(email: "dany@chu.fr", password: "baby21", password_confirma
 user5 = User.create!(email: "emilie@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Emilie", last_name: "GUERIN", phone_number: "06.73.54.32.18", department: department1, address: "1 rue charles gounod, 33400 Talence")
 user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
 
-Booking.create!(on_call: false, date: "2023-12-11", user: user4, status: false)
+Booking.create!(on_call: false, date: "2023-12-11", user: user2, status: false)
 
-Booking.create!(on_call: true, date: "2023-12-11", user: user5, status: false)
+Booking.create!(on_call: true, date: "2023-12-11", user: user1, status: false)
 
 Booking.create!(on_call: nil, date: "2023-12-11", user: user3, status: false)
 
