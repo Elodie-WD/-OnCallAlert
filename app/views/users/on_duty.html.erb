@@ -14,13 +14,13 @@
         <%= link_to "", class: "icons-profil" do %>
             <%= image_tag "icon2.png" %>
           <% end %>
-        <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+        <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date.strftime("%d/%m/%Y") %></span></p>
         </div>
         <div class="elements-profil-box">
           <%= link_to "", class: "icons-profil" do %>
               <%= image_tag "icon3.png" %>
             <% end %>
-          <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+          <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date.strftime("%d/%m/%Y") %></span></p>
         </div>
       </div>
     </div>
