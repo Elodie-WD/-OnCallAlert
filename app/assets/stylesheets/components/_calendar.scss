@@ -38,6 +38,13 @@ text-align: center;
   margin-top: 20px;
 }
 
+.namecenter{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+}
+
 #status{
   text-align: center;
   background-color: #FFE45E;
@@ -96,4 +103,3 @@ text-align: center;
   text-transform: capitalize;
 
 }
-
