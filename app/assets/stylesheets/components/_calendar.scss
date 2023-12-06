@@ -46,7 +46,11 @@ text-align: center;
   gap: 5px;
 
 }
-
+.namecenter{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
 #status{
   text-align: center;
   background-color: #FFE45E;

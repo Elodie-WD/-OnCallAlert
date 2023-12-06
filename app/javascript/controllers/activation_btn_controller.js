@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="activation-btn"
 export default class extends Controller {
-  static targets = ["link"]
+  static targets = ["link", "button"]
 
   update(event) {
     event.preventDefault();
@@ -14,10 +14,14 @@ export default class extends Controller {
     .then(response => {
       event.target.classList.add("d-none");
       this.linkTarget.classList.remove("d-none");
+      console.log(this.buttonTarget);
       // event.currentTarget.addAttribute("disabled");
-    })
-  }
+      this.buttonTarget.innerText ="Rappel?";
+      this.buttonTarget.classList.remove("big-btn-alarm");
+      this.buttonTarget.classList.add("big-btn-green");
 
+  })
+  }
 }
 // @contact = User.find(params[:id])
 // @contact.update(deplacement: params[:deplacement].to_i)
