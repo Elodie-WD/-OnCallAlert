@@ -22,10 +22,10 @@
   </div>
   <div class="container-footer-text-btn">
     <div class="infos-contact-content">
-      <h4>Dr <%= @contact.first_name %> <%= @contact.last_name %></h4>
+      <h4>Dr. <%= @contact.first_name %> <%= @contact.last_name %></h4>
       <h5>Service d'obstétrique</h5>
-      <h6>Email: <%= @contact.email %></h6>
-      <%# <h6>Tel: <%= @contact.tel %>
+      <h6><%= @contact.email %></h6>
+      <h6><%= @contact.phone_number %></h6>
     </div>
     <div class="content-btn">
       <% if @contact.uncalled? %>
