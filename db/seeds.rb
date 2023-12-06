@@ -22,8 +22,8 @@ department1 = Department.create!(hospital: hospital1)
 
 
 # Week 1----------------------------------------------------------------------
-user1 = User.create!(email: "anthony@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Anthony", last_name: "ROUSSEL", phone_number: "06.22.98.97.34", department: department1, address: "107 cours Balguerie Stuttenberg, 33300 Bordeaux")
-user2 = User.create!(email: "beatrice@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Beatrice", last_name: "DALLET", phone_number: "06.12.00.12.43", department: department1, address: "12 avenue de verdun, 33700 Merignac")
+user1 = User.create!(email: "Alice@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Alice", last_name: "ROUSSEL", phone_number: "06.22.98.97.34", department: department1, address: "107 cours Balguerie Stuttenberg, 33300 Bordeaux")
+user2 = User.create!(email: "Benoit@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Benoit", last_name: "DALLET", phone_number: "06.12.00.12.43", department: department1, address: "12 avenue de verdun, 33700 Merignac")
 user3 = User.create!(email: "clementine@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Clementine", last_name: "NIEL", phone_number: "06.45.42.38.21", department: department1, address: "8 rue henri wallon, 3310 Begles")
 
 
