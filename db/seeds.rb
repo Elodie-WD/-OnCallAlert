@@ -27,6 +27,7 @@ user2 = User.create!(email: "beatrice@chu.fr", password: "baby21", password_conf
 user3 = User.create!(email: "clementine@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Clementine", last_name: "NIEL", phone_number: "06.45.42.38.21", department: department1, address: "8 rue henri wallon, 3310 Begles")
 
 
+
 Booking.create!(on_call: true, date: "2023-12-05", user: user1, status: false)
 
 Booking.create!(on_call: false, date: "2023-12-05", user: user2, status: false)

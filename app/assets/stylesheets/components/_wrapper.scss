@@ -150,9 +150,9 @@
 /* Icon calendrier */
 
 .circle-wrapper img {
-  margin-left: 7px;
-  width: 19px;
-  margin-top: 7px;
+  margin-top: -40px;
+  margin-left: 1px;
+  width: 21px;
 }
 
 .text-mon-planning-profil {
@@ -214,7 +214,7 @@
 /* On Duty icon validation astreinte */
 
 .circle-wrapper img {
-  margin-top: 20px;
+  margin-top: -37px;
   margin-left: 2px;
   width: 21px;
 
@@ -254,8 +254,15 @@ body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a 
 .avatar-personne-de-garde-on-duty img {
   width: 36px;
   border-radius: 50px;
-  margin-left: -40px;
-  margin-top: -31px;
+  margin-left: -21px;
+  margin-top: -3px;
+  z-index: 1;
+}
+
+.avatar-personne-de-garde-on-call img {
+  width: 36px;
+  border-radius: 50px;
+  margin-left: -24px;
   z-index: 1;
 }
 
