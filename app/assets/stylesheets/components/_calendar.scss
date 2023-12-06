@@ -26,6 +26,7 @@ text-align: center;
   padding: 5px;
   background-color: white;
   margin-top: 20px;
+  box-shadow: 0px 4px 20px 5px rgba(246, 246, 246, 0.75);
 }
 
 .box2{
@@ -36,6 +37,7 @@ text-align: center;
   padding: 5px;
   background-color: white;
   margin-top: 20px;
+  box-shadow: 0px 4px 20px 5px rgba(246, 246, 246, 0.75);
 }
 
 .namecenter{
@@ -49,15 +51,14 @@ text-align: center;
   text-align: center;
   background-color: #FFE45E;
   border-radius: 40px;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-bottom: 5px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 12px;
   margin-top: 5px;
   height: 24px;
   font-size: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-
 }
 
 #metier{
@@ -66,8 +67,14 @@ text-align: center;
 }
 
 #nom{
+  color: #7FC8F8;
+  text-align: center;
+  font-family: 'quicksand';
   font-size: 15px;
-  color: #7fc8f8;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 
 .day {
@@ -102,4 +109,74 @@ text-align: center;
 .calendar-title{
   text-transform: capitalize;
 
+}
+
+/* Tableau calendrier */
+
+#calendrier > div > table > thead > tr > th:nth-child(1) {
+  background-color: #ff000000;
+  color: #fff;
+  border-color: #ff000000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#calendrier > div > table > thead > tr > th:nth-child(2) {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > thead > tr > th:nth-child(3) {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > thead > tr > th:nth-child(4) {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > thead > tr > th:nth-child(5) {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > thead > tr > th:nth-child(6) {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table > thead > tr > th:nth-child(7) {
+  background-color: #ff000000;
+  border-color: #ff000000;
+}
+
+#calendrier > div > table {
+  border: none;
+}
+
+.background-blue-calendrier {
+  background-color: $blue-light;
+  height: 200px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -55px;
+}
+
+#calendrier > div > div {
+  margin-top: -102px;
+}
+
+#calendrier > div > div > span {
+  color: #fff;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: -20px;
 }
