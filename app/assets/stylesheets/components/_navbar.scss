@@ -41,8 +41,9 @@ padding-right: 5px;
 
 // réglage du side menu à 80% d'ouverture
 .offcanvas {
---bs-offcanvas-width: 300px !important;
-background-color:$blue-ultra-light;
+  --bs-offcanvas-width: 300px !important;
+  background-color:$blue-ultra-light;
+  z-index: 10001;
 }
 
 // Réglage et centrage du logo dans le side menu

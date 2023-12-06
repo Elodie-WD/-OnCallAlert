@@ -15,8 +15,6 @@
     </div>
 
 
-
-
     <img src="<%=image_path("avatar1.png")%>" class="picture-circle" style="width: 150px;">
   </div>
   <div class="container-footer-text-btn">
@@ -43,8 +41,8 @@
 
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
     <div class="modal-pink">
-      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Besoin d'appeler<br> la <%= @title %>?</h5>
-        <p class="p-modal">Contacte le <%= @contact.last_name %></p>
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Besoin d'appeler la<br> <%= @title %>?</h5>
+        <p class="p-modal">Contactez le Dr. <%= @contact.last_name %></p>
 
 
 
