@@ -22,7 +22,7 @@ department1 = Department.create!(hospital: hospital1)
 
 
 # Week 1----------------------------------------------------------------------
-user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Anthony", last_name: "Dr. ROUSSEL", department: department1, address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux")
+user1 = User.create!(email: "admin@hotmail.fr", password: "azerty", password_confirmation: "azerty", first_name: "Anthony", last_name: "Dr. ROUSSEL", department: department1, address: "107 Cours Balguerie Stuttenberg, 33300 Bordeaux")
 user2 = User.create!(email: "user2@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Emilie", last_name: "Dr. DALLET-PAULY",department: department1)
 user3 = User.create!(email: "user3@hotmail.fr", password: "baby21", password_confirmation: "baby21", first_name: "Nadia", last_name: "Default", department: department1)
 

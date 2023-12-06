@@ -28,10 +28,10 @@
 
     <div class="wrapper left-wrapper" data-activation-target="card" data-chatroom-subscription-target="modifications">
       <div class="circle-wrapper">
-        <div class="circle-wrapper-avatar-on-call">
           <%= link_to contact_path(), class: "avatar-personne-de-garde-on-duty" do %>
-              <%= image_tag "avatar-men.jpg" %>
+              <%= image_tag "avatar-women.jpg" %>
             <% end %>
+        <div class="circle-wrapper-avatar-on-call">
         </div>
           <% if @booking_contact.status == false %>
             <%= image_tag "icon-status-false.png", class: "icon-validation-personne-astreinte" %>

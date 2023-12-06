@@ -8,11 +8,13 @@
   height: 100vh;
   border-radius: 60px 60px 0 0;
   padding-bottom: 50px;
+  margin-top: -19px;
   h5{
     margin-top: 45px;
     font-family: $quicksand;
     font-weight: 900;
     text-align: center;
+    color: #03045E;
   }
 }
 modal-header{
@@ -21,4 +23,29 @@ modal-header{
 #offcanvasBottom{
   border-radius: 60px 60px 0 0;
   bottom: 70px;
+  z-index: 99999;
 }
+
+.btn-retour-modal {
+  border: none;
+  background-color: #ff000000;
+  font-size: 18px;
+  font-family: quicksand;
+  font-weight: 500;
+  color: #03045E;
+  margin-top: 8px;
+}
+
+.p-modal {
+  font-family: Montserrat;
+  font-size: 14px;
+  color: #777777;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.offcanvas-backdrop {
+  z-index: 10000!important;
+}
+
+
