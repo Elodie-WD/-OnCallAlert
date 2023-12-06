@@ -27,6 +27,11 @@ class UsersController < ApplicationController
     # enum :deplacement, { uncalled: 0, called: 1, accepted: 2, rejected: 3 }
   end
 
+  def uncalled_to_called
+    @contact = User.find(params[:id])
+    @contact.update(deplacement: 1)
+  end
+
   def get_doctors
     date = params[:date]
     bookings = Booking.where(date: date).where.not(on_call: nil)

@@ -1,7 +1,7 @@
 
 <div class="container-wrapper">
   <h1>Bonjour <%= @user.first_name %> 👋🏻</h1>
-   <div class="text-content">
+  <div class="text-content">
     <div class="text-content-infos">
       <div class="elements-profil-box">
         <%= link_to "", class: "icons-profil" do %>
@@ -10,49 +10,37 @@
         <p class="text-box-profil">Aujourd'hui vous êtes: <span class="text-situation-on-call"><br>EN ASTREINTE</span></p>
       </div>
       <div class="elements-profil-box">
-      <%= link_to "", class: "icons-profil" do %>
+        <%= link_to "", class: "icons-profil" do %>
           <%= image_tag "icon2.png" %>
         <% end %>
-      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+        <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date.strftime("%d/%m/%Y")%></span></p>
       </div>
       <div class="elements-profil-box">
         <%= link_to "", class: "icons-profil" do %>
-            <%= image_tag "icon3.png" %>
-          <% end %>
-        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+          <%= image_tag "icon3.png" %>
+        <% end %>
+        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date.strftime("%d/%m/%Y") %></span></p>
       </div>
     </div>
   </div>
-
-
-  
-
-
+  <div class="grid-wrapper">
+    <div class="wrapper left-wrapper">
+      <%= link_to "", contact_path(), class: "circle-wrapper" %>
       <div>
-      <%= link_to contact_path(), class: "text-de-garde" do %>
-        <%= safe_join(["Personne<br>".html_safe, "de garde"]) %>
-      <% end %>
+        <%= link_to contact_path(), class: "text-de-garde" do %>
+          <%= safe_join(["Personne<br>".html_safe, "de garde"]) %>
+        <% end %>
       </div>
     </div>
-
     <div class="wrapper right-wrapper">
       <%= link_to "", class: "circle-wrapper" do %>
         <%= image_tag "icon-calendar.png" %>
       <% end %>
-
-    <div class="text-mon-planning-profil">
-      <%= link_to bookings_index_path(current_user), class: "nav-link text-de-garde-planning" do %>
-        Mon<br>Planning
-      <% end %>
-    </div>
-
-
-
-
-
-
-
-
+      <div class="text-mon-planning-profil">
+        <%= link_to bookings_index_path(current_user), class: "nav-link text-de-garde-planning" do %>
+          Mon<br>Planning
+        <% end %>
+      </div>
     </div>
   </div>
   <div data-controller="activation" data-controller="notification-subscription">
@@ -75,7 +63,7 @@
         <div class = "content-btn-validation-depart">
           <%= button_to "Départ accepté?", deplacement_update_path(current_user.id, deplacement: 2), method: :patch,     class:"little-btn-green"%>
           <%= button_to "Confirmer le refus", deplacement_update_path(current_user.id, deplacement: 0), method: :patch, class:"little-btn-dark-blue"%>
-       <% else @contact.accepted? %>
+      <% else @contact.accepted? %>
         <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
         data-bs-toggle="offcanvas"
         aria-controls="offcanvasBottom" >Rappel?</a>
@@ -83,7 +71,6 @@
         </div>
       <% end %>
 
-      <%# <a href=""  class="big-btn-alarm" data-bs-toggle="modal" data-bs-target="#exampleModal">Confirmer le<br>début de l'astreinte</a> %>
     </div>
 
     <!-- Modal -->

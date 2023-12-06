@@ -14,7 +14,6 @@ export default class extends Controller {
     this.channel = createConsumer().subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: (data) => {
-        console.log("heah???")
         this.#insertMessageAndScrollDown(data)
       }}
       )
@@ -26,7 +25,6 @@ export default class extends Controller {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
     if(!currentUserIsSender) {
       this.notifTarget.classList.remove("d-none")
-      console.log(this.notifTarget)
     }
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message_html)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)

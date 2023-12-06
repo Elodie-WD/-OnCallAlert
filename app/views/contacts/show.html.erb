@@ -43,13 +43,22 @@
 </div>
 
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" class="rounded-top">
-    <div class="modal-pink">
+    <div class="modal-pink" data-controller="activation-btn">
       <h5 class="offcanvas-title" id="offcanvasBottomLabel">Souhaitez-vous appeler <%= @title %>?</h5>
-          <a href="tel:0645313015"
-          <%= button_to "Appel d'Urgence", deplacement_update_path(@contact.id, deplacement: 1), method: :patch, class:"big-btn-alarm", data: {
-                action: "click->activation#validation", bs_toggle: "modal", bs_target: "#exampleModal", bs_dismiss: "offcanvas"}, aria_label:"Close" %>
-                </a>
-      <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close" class="little-btn-dark-blue">Retour</button>
+      <%# <a href="#"
+            data-activation-btn-target="button"
+            class="big-btn-alarm "
+            data-action="click->activation-btn#validation"
+            data-action="click->activation-btn#update"
+            data-activation-btn-enumerable-value= %>
+            <%# Appel d'Urgence? %>
+      <%= button_to "Appel d'Urgence", uncalled_to_called_path(@contact.id), class:"big-btn-alarm ", data: { action:"click->activation-btn#update" } %>
+      <a href="tel:0645313015"
+            data-activation-btn-target="link"
+            class="big-btn-alarm d-none"
+            data-action="click->activation-btn#appel"
+           > Appeler</a>
+      <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close"class="little-btn-dark-blue">Retour</button>
       </div>
     </div>
   </div>
