@@ -25,6 +25,16 @@
     transform: translateX(-50%);
     margin-top: -17px;
   }
+  h3{
+    font-family: quicksand;
+    font-weight: 700;
+    color: #03045E;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .row{
+    flex-direction: column;
+  }
 }
 
 .infos-contact-content{
