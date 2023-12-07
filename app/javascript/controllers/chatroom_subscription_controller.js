@@ -23,7 +23,14 @@ export default class extends Controller {
 
     #insertMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
-    if(!currentUserIsSender) {
+    // if(!currentUserIsSender) {
+    //   this.notifTarget.classList.remove("d-none")
+    // }
+    if ((!currentUserIsSender) && (document.location.pathname === `/chatrooms/${this.chatroomIdValue}`)) {
+      fetch(`/chatrooms/${this.chatroomIdValue}`)
+      .then(response => response.json())
+      .then(data_fetch => {})
+    } else if ((!currentUserIsSender) && !(document.location.pathname === `/chatrooms/${this.chatroomIdValue}`)){
       this.notifTarget.classList.remove("d-none")
     }
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message_html)

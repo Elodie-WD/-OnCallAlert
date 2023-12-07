@@ -1,10 +1,12 @@
 <div class="container chatroom">
-  <h2 class="title-chatroom">En discussion avec <%= @contact.first_name %></h2>
-
-  <div class="text-en-tete-historique">
+  <div class="header-chatroom">
+    <%= link_to "Retour", contact_path(), class: "text-historique" %>
+    <h4 class="title-chatroom">En discussion avec <br><%= @contact.first_name %></h4>
+  </div>
+  <%# <div class="text-en-tete-historique">
     <div class="row">
       <div class="col">
-        <%= link_to "Retour", contact_path(), class: "text-historique" %>
+
       </div>
       <div class="col">
         <h2 class="title-historique"></h2>
@@ -13,7 +15,7 @@
         <h4 class="text-historique"></h4>
       </div>
     </div>
-  </div>
+  </div> %>
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
