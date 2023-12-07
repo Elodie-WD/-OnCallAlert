@@ -62,7 +62,7 @@
       <% elsif @contact.called?%>
         <div class = "content-btn-validation-depart">
           <%= button_to "Confirmer votre départ", deplacement_update_path(current_user.id, deplacement: 2), method: :patch,     class:"little-btn-green"%>
-          <%= button_to "Refuser l'intervention", deplacement_update_path(current_user.id, deplacement: 3), method: :patch, class:"little-btn-dark-blue"%>
+          <%= button_to "Refuser l'intervention", deplacement_update_path(current_user.id, deplacement: 3), method: :patch, class:"retour-modal"%>
         </div>
       <% elsif @contact.rejected?%>
         <div class = "content-btn-validation-depart">
