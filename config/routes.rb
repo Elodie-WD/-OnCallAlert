@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'bookings/index'
   devise_for :users
-  resources :bookings, only: [:index, :update, :edit]
+  resources :bookings, only: %i[index update edit]
   get '/on_duty', to: "users#on_duty", as: :on_duty
   get '/on_call', to: "users#on_call", as: :on_call
   get '/default', to: "users#default", as: :default
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   get '/itinerary', to: "maps#show", as: :map
 
-  resources :chatrooms, only: [:show, :index] do
+  resources :chatrooms, only: %i[show index] do
     resources :messages, only: :create
   end
 end

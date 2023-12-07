@@ -16,8 +16,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    #@on_call = Booking.find_by(date: Date.today, on_call: true)
-    #@contact = @on_call.user
+    # @on_call = Booking.find_by(date: Date.today, on_call: true)
+    # @contact = @on_call.user
     @contact = User.find(params[:id])
     @contact.update(deplacement: params[:deplacement].to_i)
     redirect_to contact_path if @contact.called?
@@ -37,12 +37,12 @@ class UsersController < ApplicationController
     bookings = Booking.where(date: date).where.not(on_call: nil)
     astreinte = bookings.find_by_on_call(true).user
     de_garde = bookings.find_by_on_call(false).user
-    render json: [ { last_name: astreinte.last_name }, { last_name: de_garde.last_name}, { first_name: astreinte.first_name }, { first_name: de_garde.first_name } ]
+    render json: [{ last_name: astreinte.last_name }, { last_name: de_garde.last_name }, { first_name: astreinte.first_name }, { first_name: de_garde.first_name }]
   end
 
   private
 
-  #def planning_date
+  # def planning_date
   #  @user = current_user
   #  @booking = Booking.find_by(date: Date.today, user: current_user)
   #  @on_calls = Booking.all.where(on_call: true, user: current_user)
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   #  else
   #    @on_duty = @on_duty.first
   #  end
-  #end
+  # end
 
   def planning_date
     @user = current_user
