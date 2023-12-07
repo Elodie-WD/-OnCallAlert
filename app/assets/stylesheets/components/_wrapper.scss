@@ -188,6 +188,11 @@
   margin-top: 40px;
 }
 
+.big-btn-message-on-duty:hover {
+  background-color: #7FC8F8;
+  filter: drop-shadow(0px 4px 22px #7FC8F8);
+}
+
 .content-btn-on-duty {
   width: 70%;
   margin: 0 auto;
@@ -278,4 +283,14 @@ body > div.container-wrapper > div.grid-wrapper > div.wrapper.right-wrapper > a 
   font-weight: bold;
   color: #03045E;
   margin-bottom: 13px;
+}
+
+.retour-modal {
+  background-color: #ff000000;
+  border: none;
+  font-family: quicksand;
+  font-weight: 500;
+  color: #03045E;
+  margin-top: 5px;
+
 }
