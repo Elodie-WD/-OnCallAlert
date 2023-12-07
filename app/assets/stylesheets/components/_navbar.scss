@@ -164,3 +164,6 @@ body > nav > div > div.maboiteavatar > a:nth-child(2) > img{
     right: 60px;
   }
 }
+.navbar-toggler:focus{
+  --bs-navbar-toggler-focus-width: rgba(255, 0, 0, 0)!important;
+}

@@ -2,7 +2,6 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @booking = Booking.where(date: "dateselection")
-
   end
 
   def update
