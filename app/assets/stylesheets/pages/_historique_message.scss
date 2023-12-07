@@ -1,7 +1,19 @@
 .text-en-tete-historique {
   margin-top: 40px;
   padding: 19px;
-
+  h4{
+    margin-bottom: 0;
+  }
+  h2{
+    margin-bottom: 0;
+  }
+  .row{
+    align-items: center;
+  }
+  .col{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .text-historique {
