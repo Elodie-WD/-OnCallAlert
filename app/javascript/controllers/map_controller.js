@@ -85,7 +85,7 @@ export default class extends Controller {
           },
           paint: {
             "circle-radius": 10,
-            "circle-color": "#eb1514",
+            "circle-color": "#7FC8F8",
           },
         });
       this.map.addLayer({
@@ -109,7 +109,7 @@ export default class extends Controller {
         },
         paint: {
           'circle-radius': 10,
-          'circle-color': '#F0B6FF'
+          'circle-color': '#7FC8F8'
         }
       });
 
@@ -134,7 +134,7 @@ export default class extends Controller {
         },
         paint: {
           'circle-radius': 10,
-          'circle-color': '#7FC8F8'
+          'circle-color': '#F0B6FF'
         }
       });
     })
