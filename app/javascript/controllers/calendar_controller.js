@@ -6,6 +6,10 @@ export default class extends Controller {
 
   getUsers(event) {
      const dateselection = event.currentTarget.dataset.date
+     document.querySelectorAll(".simple-calendar td").forEach((td) => {
+      td.classList.remove("today")
+    })
+     event.currentTarget.parentElement.classList.add("today")
      const url = `/get_doctors/${dateselection}`
      fetch(url, {headers: {"Accept": "application/json"}})
       .then(response => response.json())
