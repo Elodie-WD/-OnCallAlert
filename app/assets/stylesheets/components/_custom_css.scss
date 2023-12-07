@@ -15,8 +15,12 @@
   max-width: 200px;
   color: #fff;
   font-family: montserrat;
-  filter: drop-shadow(0px 4px 15px rgba(255, 99, 249, 0.70));
+  filter: drop-shadow(0px 4px 15px rgba(255, 99, 249, 0.5));
   text-decoration: none;
+}
+
+.little-btn-pink:hover {
+  filter: drop-shadow(0px 4px 22px rgba(255, 99, 249, 0.5));
 }
 
 .little-btn-pink a {
@@ -36,9 +40,12 @@
   max-width: 200px;
   color: #fff;
   font-family: montserrat;
-  filter: drop-shadow(0px 4px 15px #7FC8F8);
+  filter: drop-shadow(0px 4px 15px #7fc8f8ad);
   text-decoration: none;
 }
+
+.little-btn-light-blue:hover {
+  filter: drop-shadow(0px 4px 22px #7fc8f8ad);}
 
 .little-btn-light-blue a {
   text-decoration: none;
@@ -60,6 +67,10 @@
   text-decoration: none;
 }
 
+.little-btn-dark-blue:hover {
+  filter: drop-shadow(0px 1px 15px #03045E);
+}
+
 .little-btn-dark-blue a {
   text-decoration: none;
 }
@@ -75,8 +86,13 @@
   max-width: 200px;
   color: #fff;
   font-family: montserrat;
-  filter: drop-shadow(0px 1px 8px #03045E);
+  filter: drop-shadow(0px 1px 8px #80ed99);
   text-decoration: none;
+  border: none;
+}
+
+.little-btn-green:hover {
+  filter: drop-shadow(0px 1px 15px #80ed99);
 }
 
 .little-btn-green a {
@@ -100,6 +116,10 @@
   border: none;
 }
 
+.big-btn-alarm:hover {
+  filter: drop-shadow(0px 4px 22px rgba(255, 99, 249, 0.70));
+}
+
 .big-btn-alarm a {
   text-decoration: none;
 }
@@ -119,6 +139,10 @@
   font-family: montserrat;
   filter: drop-shadow(0px 4px 15px #7FC8F8);
   text-decoration: none;
+}
+
+.big-btn-message:hover {
+  filter: drop-shadow(0px 4px 22px #7FC8F8);
 }
 
 .big-btn-message a {
@@ -141,6 +165,10 @@
   text-decoration: none;
 }
 
+.big-btn-dark-blue:hover {
+  filter: drop-shadow(0px 4px 22px #03045E);
+}
+
 .big-btn-dark-blue a {
   text-decoration: none;
 }
@@ -159,6 +187,11 @@
   text-decoration: none;
   filter: drop-shadow(0px 1px 8px #80ed99);
 }
+
+.big-btn-green:hover {
+  filter: drop-shadow(0px 1px 15px #80ed99);
+}
+
 .cursor{
   cursor: pointer;
 }

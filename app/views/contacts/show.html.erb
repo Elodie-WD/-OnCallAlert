@@ -32,7 +32,7 @@
       <% else @contact.called? %>
         <a class="big-btn-green cursor" data-bs-target="#offcanvasBottom"
         data-bs-toggle="offcanvas"
-        aria-controls="offcanvasBottom" ><h6>Rappel?</h6></a>
+        aria-controls="offcanvasBottom" ><h6>Rappel ?</h6></a>
       <% end %>
       <%= link_to chatroom_path(@chatroom), class: "big-btn-message" do %>
         <h6 class="text-message-contact">Messages</h6>
@@ -58,7 +58,7 @@
             class="big-btn-alarm d-none"
             data-action="click->activation-btn#appel"
            > Appeler</a>
-      <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close"class="little-btn-dark-blue">Retour</button>
+      <button type="button"  data-bs-dismiss="offcanvas" aria-label="Close"class="retour-modal">Retour</button>
       </div>
     </div>
   </div>
