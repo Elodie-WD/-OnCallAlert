@@ -66,6 +66,11 @@ margin-bottom: 12px;
 margin-top: 25px;
 }
 
+.list:hover {
+  color: $blue-light;
+  }
+
+
 // Réglage de la phrase de la list "une urgence ?"
 .listurgence {
 padding-inline-start: 60px;
@@ -97,7 +102,6 @@ text-decoration: none;
 .monul {
 color:#03045E;
 }
-
 
 .maboiteavatar .fa-regular.fa-bell{
 color: #03045E;
