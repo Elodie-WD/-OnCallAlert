@@ -85,7 +85,7 @@ export default class extends Controller {
         },
         paint: {
           'circle-radius': 10,
-          'circle-color': '#eb1514'
+          'circle-color': '#F0B6FF'
         }
       });
 
@@ -110,7 +110,7 @@ export default class extends Controller {
         },
         paint: {
           'circle-radius': 10,
-          'circle-color': '#337e1c'
+          'circle-color': '#7FC8F8'
         }
       });
     })

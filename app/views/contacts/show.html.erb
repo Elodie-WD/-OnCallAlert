@@ -14,7 +14,7 @@
       </div>
     </div>
     <% if current_user.bookings.find_by(date: Date.today).on_call %>
-        <img src="<%= image_path('medecin-femme.png') %>" style="width: 150px;" class="picture-circle" />
+        <img src="<%= image_path('femme-medecin.jpg') %>" style="width: 150px;" class="picture-circle" />
     <% else %>
         <img src="<%= image_path('medecin-homme.png') %>" style="width: 150px;" class="picture-circle"/>
     <% end %>
