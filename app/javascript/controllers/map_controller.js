@@ -88,32 +88,57 @@ export default class extends Controller {
             "circle-color": "#eb1514",
           },
         });
-
-        this.map.addLayer({
-          id: "endpoint",
-          type: "circle",
-          source: {
-            type: "geojson",
-            data: {
-              type: "FeatureCollection",
-              features: [
-                {
-                  type: "Feature",
-                  properties: {},
-                  geometry: {
-                    type: "Point",
-                    coordinates: end,
-                  },
-                },
-              ],
-            },
-          },
-          paint: {
-            "circle-radius": 10,
-            "circle-color": "#337e1c",
-          },
-        });
+      this.map.addLayer({
+        id: 'point',
+        type: 'circle',
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: [
+              {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                  type: 'Point',
+                  coordinates: start
+                }
+              }
+            ]
+          }
+        },
+        paint: {
+          'circle-radius': 10,
+          'circle-color': '#F0B6FF'
+        }
       });
+
+      this.map.addLayer({
+        id: 'endpoint',
+        type: 'circle',
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: [
+              {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                  type: 'Point',
+                  coordinates: end
+                }
+              }
+            ]
+          }
+        },
+        paint: {
+          'circle-radius': 10,
+          'circle-color': '#7FC8F8'
+        }
+      });
+    })
+
   }
   setDuration(duration) {
     duration = Math.ceil(duration / 60);
