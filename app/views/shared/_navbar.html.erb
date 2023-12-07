@@ -36,6 +36,7 @@
                   <% if "#{controller.controller_name}##{controller.action_name}" == "chatrooms#show" %>
                       <div class="bell-container">
                           <i class="fa-regular fa-bell"></i>
+                          <div class="notifications d-none" data-chatroom-subscription-target="notif"></div>
                       </div>
                   <% else %>
                       <div class="bell-container">

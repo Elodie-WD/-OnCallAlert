@@ -41,6 +41,8 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #03045E;
+  font-weight: 700;
 }
 
 /* */
@@ -72,5 +74,32 @@
 --bs-btn-hover-bg:rgba(255, 0, 0, 0)!important;
 --bs-btn-active-bg: rgba(255, 0, 0, 0)!important;
 --bs-btn-focus-shadow-rgb:rgba(255, 0, 0, 0)!important;
+--bs-btn-disabled-border-color:rgba(255, 0, 0, 0)!important;
+--bs-btn-disabled-bg: rgba(255, 0, 0, 0)!important;
+--bs-btn-active-border-color: rgba(255, 0, 0, 0)!important;
+--bs-btn-hover-border-color: rgba(255, 0, 0, 0)!important;
+}
+// body > div.container.chatroom{
+//   height: 80vh;
+// }
+// #message_content{
+//   margin-top: 20px;
+// }
+// #new_message > button > img{
+//   margin-top: 0px;
+// }
+
+.header-chatroom{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+
+}
+.messages{
+  min-height: 200px;
+}
+
+.chatroom{
+  padding-bottom: 20px;
 }
 
