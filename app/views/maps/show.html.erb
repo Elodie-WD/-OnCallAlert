@@ -1,15 +1,17 @@
 <div class="container-map">
   <div class="text-en-tete-map">
-    <div class="row">
-      <div class="col">
-        <%= link_to "Retour", rooting_path(), class: "text-historique" %>
+  <div class="backgroundbluemap"></div>
+    <div class="row" id="itinérairediv">
+      <div class="col" >
+        <%= link_to "Retour", rooting_path(), class: "text-historique-map" %>
       </div>
       <div class="col">
-        <h2 class="title-historique">Itinéraire</h2>
+        <h2 class="title-historique-map">Itinéraire</h2>
       </div>
     </div>
   </div>
     <div
+      class ="mapdesign"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -17,8 +19,33 @@
       data-map-longitude-value="<%= @contact.longitude%>"
       data-map-hospital-latitude-value="<%= @contact.department.hospital.latitude%>"
       data-map-hospital-longitude-value="<%= @contact.department.hospital.longitude%>">
-      <div data-map-target="box" style="width: 100%; height: 550px;"></div>
-    <h3>L'astreinte est en route ! </h3>
-    <h4>Temps estimé : <span class="duration" data-map-target="duration"> </span> mins </h4>
+      <div data-map-target="box" style="width: 100%; height: 400px;"></div>
     </div>
+    <div class ="row" id="rowmap">
+      <p class="text-map"> L'astreinte est en route ! </p>
+
+      <div class="col-2">
+        <% if current_user.bookings.find_by(date: Date.today).on_call %>
+        <img src="<%= image_path('avatar-women.jpg') %>" style="width: 37px;" class="picture-circle-map-avatar" />
+          <% else %>
+        <img src="<%= image_path('avatar-men.jpg') %>" style="width: 37px" class="picture-circle-map-avatar"/>
+        <% end %>
+      </div>
+
+      <div class="col-4">
+        <p class="nomprenommap"> <%= @contact.first_name %> <%= @contact.last_name %></p>
+        <p class ="servicemap" > Service d'obstétrique</p>
+      </div>
+
+      <div class="col-2">
+        <p class= "minuteur"> <i class="fa-regular fa-clock"></i></p>
+      </div>
+
+      <div class="col-4">
+        <p class="timemap"> Temps estimé : </p>
+        <p class="min"><span class="duration" data-map-target="duration"> mins</span> </p>
+      </div>
+
+    </div>
+
 </div>

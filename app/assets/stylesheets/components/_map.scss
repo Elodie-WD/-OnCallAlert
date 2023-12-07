@@ -1,3 +1,86 @@
 .mapboxgl-canvas{
   position: relative;
 }
+
+
+.text-en-tete-map {
+  margin-top: -50px;
+  padding: 19px;
+  background-color: #7fc8f8;
+}
+
+.text-historique-map {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: Quicksand;
+  color: white;
+}
+
+.title-historique-map {
+  font-family: quicksand;
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+  margin-top: -10px;
+  text-align: center;
+  margin-right: 109px;
+}
+
+.text-map{
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.picture-circle-map{
+  border-radius: 50px;
+}
+
+.picture-circle-map-avatar {
+  border-radius: 50px;
+  margin-bottom: 17px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.nomprenommap{
+  font-size: 10px;
+  height: 0px;
+}
+
+.servicemap{
+  font-size: 10px;
+}
+
+#rowmap{
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+
+.timemap{
+  font-size: 10px;
+  margin-left: -50px;
+}
+
+.backgroundbluemap{
+  background-color: #7fc8f86f;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#itinérairediv{
+  background-color: #7fc8f8;
+
+}
+
+.min{
+  font-size: 10px;
+  margin-top: -17px;
+}
+
+.minuteur{
+  margin-right: -47px;
+
+}
