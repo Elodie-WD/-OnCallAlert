@@ -1,21 +1,10 @@
+
 <div class="container chatroom">
   <div class="header-chatroom">
     <%= link_to "Retour", contact_path(), class: "text-historique" %>
     <h4 class="title-chatroom">En discussion avec <br><%= @contact.first_name %></h4>
   </div>
-  <%# <div class="text-en-tete-historique">
-    <div class="row">
-      <div class="col">
-
-      </div>
-      <div class="col">
-        <h2 class="title-historique"></h2>
-      </div>
-      <div class="col">
-        <h4 class="text-historique"></h4>
-      </div>
-    </div>
-  </div> %>
+  
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>

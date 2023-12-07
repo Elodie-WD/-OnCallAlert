@@ -14,6 +14,7 @@ export default class extends Controller {
     this.channel = createConsumer().subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: (data) => {
+        console.log(data)
         this.#insertMessageAndScrollDown(data)
       }}
       )
@@ -23,6 +24,7 @@ export default class extends Controller {
 
     #insertMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
+
     // if(!currentUserIsSender) {
     //   this.notifTarget.classList.remove("d-none")
     // }
@@ -31,9 +33,11 @@ export default class extends Controller {
       .then(response => response.json())
       .then(data_fetch => {})
     } else if ((!currentUserIsSender) && !(document.location.pathname === `/chatrooms/${this.chatroomIdValue}`)){
+
       this.notifTarget.classList.remove("d-none")
     }
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message_html)
+    console.log(messageElement)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
 
