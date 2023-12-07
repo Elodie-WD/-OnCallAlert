@@ -1,5 +1,5 @@
 <div class="container chatroom">
-  <h2 class="title-chatroom"><%= @contact.first_name %></h2>
+  <h2 class="title-chatroom">En discussion avec <%= @contact.first_name %></h2>
 
   <div class="text-en-tete-historique">
     <div class="row">
@@ -15,17 +15,13 @@
     </div>
   </div>
 
-  <div class="messages"
-    data-chatroom-subscription-target="messages"
-  >
-
+  <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
         <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
           <%= render "messages/message", message: message %>
         </div>
       </div>
-
     <% end %>
   </div>
 
@@ -38,11 +34,7 @@
     wrapper_html: {class: "flex-grow-1"}
     %>
     <%= button_tag(type: 'submit', class: "btn btn-primary mb-3") do %>
-    <%= image_tag('arrow.png', alt: 'Send', class:"btn-message") %>
+      <%= image_tag('arrow.png', alt: 'Send', class:"btn-message") %>
     <% end %>
-
-
-
-
-<% end %>
+  <% end %>
 </div>

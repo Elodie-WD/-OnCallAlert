@@ -31,7 +31,7 @@
               <img src="<%=image_path("logo.png")%>" class="logo" style="width: 140px;">
           </div>
            <div class="maboiteavatar">
-              <a href="<%= rooting_path %>">
+
               <% if user_signed_in? %>
                   <% if "#{controller.controller_name}##{controller.action_name}" == "chatrooms#show" %>
                       <div class="bell-container">
@@ -40,14 +40,19 @@
                   <% else %>
                       <div class="bell-container">
                             <i class="fa-regular fa-bell"></i>
-                       <div class="notifications <%= current_user&.notifs? ? "" : "d-none" %>" data-chatroom-subscription-target="notif">N</div>
-                        </div>
-                     <% end %>
+                            <div class="notifications <%= current_user&.notifs? ? "" : "d-none" %>" data-chatroom-subscription-target="notif"></div>
+                      </div>
+                    <% end %>
                 <% if current_user.bookings.find_by(date: Date.today).on_call %>
-                    <img src="<%= image_path('avatar-men.jpg') %>" style="width: 40px;" class="avatar-navbar-women" />
-                  <% else %>
+                  <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
+                    <img src="<%= image_path('avatar-men.jpg') %>" style="width: 40px;" class="avatar-navbar-men" />
+                  <% end %>
+                <% else %>
+                  <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
                     <img src="<%= image_path('avatar-women.jpg') %>" style="width: 40px;" class="avatar-navbar-men" />
                   <% end %>
+
+                <% end %>
               <% else  %>
                   <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
                     <%= image_tag "icon-user-homepage.png" %>
