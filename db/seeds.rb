@@ -126,11 +126,11 @@ Booking.create!(on_call: true, date: "2023-12-23", user: user8, status: false)
 Booking.create!(on_call: nil, date: "2023-12-23", user: user3, status: false)
 
 # -----------------------------------------Chatrooms-------------------------------------
-chatroom1 = Chatroom.create!(name: "Chatroom1", date: "02/12/2023", department: department1)
+chatroom1 = Chatroom.create!(name: "Chatroom1", date: "22/11/2023", department: department1)
 
 chatroom2 = Chatroom.create!(name: "Chatroom2", date: "28/11/2023", department: department1)
 
-chatroom3 = Chatroom.create!(name: "Chatroom3", date: "22/11/2023", department: department1)
+chatroom3 = Chatroom.create!(name: "Chatroom3", date: "02/12/2023", department: department1)
 
 # -----------------------------------------Messages-------------------------------------
 Message.create!(content: "Hello", chatroom: chatroom1, user: user1)
