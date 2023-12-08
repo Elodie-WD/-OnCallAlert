@@ -27,13 +27,6 @@ user2 = User.create!(email: "benoit@chu.fr", password: "baby21", password_confir
 user3 = User.create!(email: "clara@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Clara", last_name: "NIEL", phone_number: "06.45.42.38.21", department: department1, address: "8 rue henri wallon, 3310 Begles")
 
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2023-12-07", user: user1, status: false)
-
-Booking.create!(on_call: true, date: "2023-12-07", user: user2, status: false)
-
-Booking.create!(on_call: nil, date: "2023-12-07", user: user3, status: false)
-
-# -----------------------------------------Booking-------------------------------------
 Booking.create!(on_call: false, date: "2023-12-08", user: user1, status: false)
 
 Booking.create!(on_call: true, date: "2023-12-08", user: user2, status: false)
@@ -91,7 +84,7 @@ user7 = User.create!(email: "gabin@chu.fr", password: "baby21", password_confirm
 user8 = User.create!(email: "hugo@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Hugo", last_name: "DONI", phone_number: "06.61.54.98.12", department: department1, address: "43 avenue de rome, 33530 Bassens")
 user9 = User.create!(email: "iris@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Iris", last_name: "TOUALBI", phone_number: "06.98.35.19.47", department: department1, address: "33 avenue de l'europe, 33290 Blaquefort")
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2023-12-18", user: user7, status: false)
+Booking.create!(on_call: false, date: "2023-12-18", user: user1, status: false)
 
 Booking.create!(on_call: true, date: "2023-12-18", user: user8, status: false)
 
@@ -100,7 +93,7 @@ Booking.create!(on_call: nil, date: "2023-12-18", user: user3, status: false)
 # -----------------------------------------Booking-------------------------------------
 Booking.create!(on_call: false, date: "2023-12-19", user: user8, status: false)
 
-Booking.create!(on_call: true, date: "2023-12-19", user: user9, status: false)
+Booking.create!(on_call: true, date: "2023-12-19", user: user2, status: false)
 
 Booking.create!(on_call: nil, date: "2023-12-19", user: user3, status: false)
 
