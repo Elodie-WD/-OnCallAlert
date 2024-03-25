@@ -21,9 +21,8 @@
     <%= f.input :content,
     label: false,
     placeholder: "Message",
-    wrapper_html: {class: "flex-grow-1"}
-    %>
-    <%= button_tag(type: 'submit', class: "btn btn-primary mb-3") do %>
+    wrapper_html: {class: "flex-grow-1", data: { action: "input->chatroom-subscription#btnDisabled", chatroom_subscription_target: "input"}}%>
+    <%= button_tag(type: 'submit', class: "btn btn-primary mb-3", disabled: true, data: {chatroom_subscription_target: "btn"}) do %>
       <%= image_tag('arrow.png', alt: 'Send', class:"btn-message") %>
     <% end %>
   <% end %>
