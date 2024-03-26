@@ -17,8 +17,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    # raise
     if @booking.save
-      redirect_to new_booking_path
+      redirect_to planning_path
     else
     render :new, status: :unprocessable_entity
     end
@@ -32,6 +33,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:on_call, :date, :user)
+    params.require(:booking).permit(:on_call, :date, :user_id)
   end
 end
