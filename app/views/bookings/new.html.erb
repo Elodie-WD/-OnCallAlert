@@ -1,0 +1,8 @@
+ <div class="container m-3" >
+  <%= simple_form_for @booking do |f| %>
+      <%= f.input :on_call, as: :boolean%>
+      <%= f.input :date, class: "datepicker", value: Date.today.strftime('%d/%m/%Y')%>
+      <%= f.association :user, collection: User.all.map{|user| user.first_name}%>
+      <%= f.submit "Submit", class: "btn-menu-login mt-3" %>
+    <% end %>
+ </div>
