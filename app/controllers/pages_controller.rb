@@ -5,12 +5,12 @@ class PagesController < ApplicationController
   end
 
   def rooting
-    if @booking.on_call
-      redirect_to on_call_path
+    if @booking == nil
+      redirect_to default_path
     elsif @booking.on_call == false
       redirect_to on_duty_path
-    else
-      redirect_to default_path
+    elsif @booking.on_call
+      redirect_to on_call_path
     end
   end
 

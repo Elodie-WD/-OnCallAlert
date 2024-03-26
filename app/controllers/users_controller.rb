@@ -13,6 +13,8 @@ class UsersController < ApplicationController
 
   def default
     planning_date
+    @booking_contact_on_call = Booking.find_by(date: Date.today, on_call: true).user
+    @booking_contact_on_duty = Booking.find_by(date: Date.today, on_call: true).user
   end
 
   def update
@@ -66,8 +68,13 @@ class UsersController < ApplicationController
 
   def planning_date
     @user = current_user
+    if Booking.find_by(user: current_user) == nil
+      @on_call = nil
+      @on_duty = nil
+    else
     @booking = Booking.find_by(date: Date.today, user: current_user)
     @on_call = current_user.next_booking(true)
     @on_duty = current_user.next_booking(false)
+    end
   end
 end
