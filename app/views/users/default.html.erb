@@ -1,41 +1,50 @@
 <div class="container-wrapper">
-  <h1>Bonjour Karim 👋🏻</h1>
+  <h1>Bonjour <%= current_user.first_name %> 👋🏻</h1>
   <div class="text-content">
     <div class="text-content-infos">
       <div class="elements-profil-box">
         <%= link_to "", class: "icons-profil" do %>
           <%= image_tag "icon1.png" %>
         <% end %>
-        <p class="text-box-profil">Situation actuelle: <span class="p-grey">en astreinte</span></p>
+        <p class="text-box-profil">Situation actuelle: <span class="p-grey"> de repos</span></p>
       </div>
       <div class="elements-profil-box">
       <%= link_to "", class: "icons-profil" do %>
           <%= image_tag "icon2.png" %>
         <% end %>
-      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call.date.to_date %></span></p>
+      <p class="text-box-profil">Prochaine astreinte:  <span class="p-grey"><%= @on_call == nil ? "pas d'astreinte" : @on_call.date.to_date.strftime("%d/%m/%Y")%></span></p>
       </div>
       <div class="elements-profil-box">
         <%= link_to "", class: "icons-profil" do %>
             <%= image_tag "icon3.png" %>
           <% end %>
-        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty.date.to_date %></span></p>
+        <p class="text-box-profil">Prochaine garde:  <span class="p-grey"><%= @on_duty == nil ? "pas de garde" : @on_duty.date.to_date.strftime("%d/%m/%Y")%></span></p>
       </div>
     </div>
-  </div>
-  <div class="grid-wrapper">
-    <div class="wrapper left-wrapper">
-      <div class="circle-wrapper"></div>
+    <div class="default-contacts">
       <div>
-        <h6>Personne</h6><h6>D'astreinte</h6>
+        <h6>Personne de garde</h6>
+        <p>tel : <%= @booking_contact_on_duty.phone_number %></p>
       </div>
-    </div>
-     <div class="wrapper right-wrapper">
-      <%= link_to "", class: "circle-wrapper" do %>
-                <%= image_tag "icon-calendar.png" %>
-              <% end %>
-
-      <div class="text-mon-planning-profil">
-        <p class="text-de-garde-planning"><br><br>Mon<br>Planning</h6>
+      <div>
+        <h6>Personne d'astreinte</h6>
+        <p>tel : <%= @booking_contact_on_call.phone_number %></p>
       </div>
     </div>
   </div>
+    <%# <div class="grid-wrapper">
+    <div class="wrapper left-wrapper">
+
+    </div> %>
+    <div class="wrapper right-wrapper">
+      <%= link_to "", class: "circle-wrapper" do %>
+        <%= image_tag "icon-calendar.png" %>
+      <% end %>
+      <div class="text-mon-planning-profil">
+        <%= link_to bookings_index_path(current_user), class: "nav-link text-de-garde-planning" do %>
+          Mon<br>Planning
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

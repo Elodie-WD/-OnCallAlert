@@ -44,15 +44,18 @@
                             <div class="notifications <%= current_user&.notifs? ? "" : "d-none" %>" data-chatroom-subscription-target="notif"></div>
                       </div>
                     <% end %>
-                <% if current_user.bookings.find_by(date: Date.today).on_call %>
-                  <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
-                    <img src="<%= image_path('medecin-homme.png') %>" style="width: 40px;" class="avatar-navbar-men" />
+                <% if current_user.bookings.find_by(date: Date.today) == nil %>
+                    <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
+                    <%= image_tag "icon-user-homepage.png" %>
                   <% end %>
-                <% else %>
+                <% elsif current_user.bookings.find_by(date: Date.today).on_call == false%>
                   <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
                     <img src="<%= image_path('femme-medecin.jpg') %>" style="width: 40px;" class="avatar-navbar-men" />
                   <% end %>
-
+                <% elsif current_user.bookings.find_by(date: Date.today).on_call %>
+                   <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
+                    <img src="<%= image_path('medecin-homme.png') %>" style="width: 40px;" class="avatar-navbar-men" />
+                  <% end %>
                 <% end %>
               <% else  %>
                   <%= link_to rooting_path, class: "icon-navbar-connexion" do %>
