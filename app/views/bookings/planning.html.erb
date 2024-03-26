@@ -1,0 +1,22 @@
+<div class="background-blue-calendrier"></div>
+    <div class="calendar" id="calendrier">
+    <%= month_calendar do |date| %>
+        <div class="day">
+          <%= date.day %>
+        </div>
+        <% @bookings.where(date: date).each do |booking| %>
+          <div class="garde">
+          <h6><%= booking.user.first_name %></h6>
+          <h6><%= booking.user.last_name %></h6>
+            <% if booking.on_call == true %>
+            <p>Astreinte</p>
+            <% else %>
+            <p>Garde</p>
+            <% end %>
+          </div>
+          <div class="astreinte"></div>
+        <% end %>
+    <% end %>
+    </div>
+  <div class="container-calendar">
+</div>

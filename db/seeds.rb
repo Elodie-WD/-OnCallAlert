@@ -38,25 +38,25 @@ user3 = User.create!(email: "clara@chu.fr", password: "baby21", password_confirm
 # user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
 
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-24", user: user2, status: false)
+Booking.create!(on_call: false, date: "2024-03-27", user: user2, status: false)
 
-Booking.create!(on_call: true, date: "2024-03-24", user: user1, status: false)
+Booking.create!(on_call: true, date: "2024-03-27", user: user1, status: false)
 
-Booking.create!(on_call: nil, date: "2024-03-24", user: user3, status: false)
 
-# -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-25", user: user1, status: false)
-
-Booking.create!(on_call: true, date: "2024-03-25", user: user2, status: false)
-
-Booking.create!(on_call: nil, date: "2024-03-25", user: user3, status: false)
 
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-26", user: user3, status: false)
+Booking.create!(on_call: false, date: "2024-03-30", user: user1, status: false)
+
+Booking.create!(on_call: true, date: "2024-03-30", user: user2, status: false)
+
+
+
+# -----------------------------------------Booking-------------------------------------
+Booking.create!(on_call: false, date: "2024-03-26", user: user2, status: false)
 
 Booking.create!(on_call: true, date: "2024-03-26", user: user1, status: false)
 
-Booking.create!(on_call: nil, date: "2024-03-26", user: user2, status: false)
+
 
 # Week 3------------------------------------------------------------------
 # user7 = User.create!(email: "gabin@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Gabin", last_name: "SOLER", phone_number: "06.08.89.92.17", department: department1, address: "4 route de jourdan, 33500 Libourne")
@@ -67,14 +67,12 @@ Booking.create!(on_call: false, date: "2024-03-28", user: user2, status: false)
 
 Booking.create!(on_call: true, date: "2024-03-28", user: user1, status: false)
 
-Booking.create!(on_call: nil, date: "2024-03-28", user: user3, status: false)
-
 # -----------------------------------------Booking-------------------------------------
 Booking.create!(on_call: false, date: "2024-03-29", user: user1, status: false)
 
 Booking.create!(on_call: true, date: "2024-03-29", user: user2, status: false)
 
-Booking.create!(on_call: nil, date: "2024-03-29", user: user3, status: false)
+
 
 # -----------------------------------------Booking-------------------------------------
 # Booking.create!(on_call: false, date: "2023-12-20", user: user2, status: false)
