@@ -1,5 +1,7 @@
 <div class="background-blue-calendrier"></div>
-    <div class="calendar" id="calendrier">
+<div class="container-planning" data-controller = "planning" data-planning-textopen-value ="Ajouter une garde ou une astreinte"
+data-planning-textclose-value ="Fermer le formulaire">
+  <div class="calendar" id="calendrier">
     <%= month_calendar do |date| %>
         <div class="day">
           <%= date.day %>
@@ -18,6 +20,11 @@
         <% end %>
     <% end %>
     </div>
-  <div class="container-calendar">
-  <%= link_to "add a booking", new_booking_path %>
-</div>
+    <div class="btn-planning-form">
+      <button class = "little-btn-green" data-action="click->planning#toggle" data-planning-target = "btn">Ajouter une garde ou une astreinte </button>
+    </div>
+    <%# <%= link_to "add a booking", new_booking_path %>
+    <div class="container-form d-none" data-planning-target = "form">
+        <%= render "form", booking:@booking %>
+    </div>
+  </div>
