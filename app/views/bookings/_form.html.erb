@@ -1,0 +1,8 @@
+  <%= simple_form_for (booking) do |f| %>
+      <%= f.input :date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+      <%= f.collection_select(:user_id, User.all, :id, :first_name) %>
+      <%= f.input :on_call, as: :boolean%>
+      <%= f.submit "Submit", class: "btn-menu-login mt-3" %>
+    <% end %>
