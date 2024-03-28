@@ -16,12 +16,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @bookings = Booking.all
     @booking = Booking.new(booking_params)
-    # raise
     if @booking.save
       redirect_to planning_path
     else
-    render :new, status: :unprocessable_entity
+    render :planning, status: :unprocessable_entity
     end
   end
 
