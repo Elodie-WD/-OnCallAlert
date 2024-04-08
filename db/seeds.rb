@@ -38,23 +38,23 @@ user3 = User.create!(email: "clara@chu.fr", password: "baby21", password_confirm
 # user6 = User.create!(email: "fanny@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Fanny", last_name: "DAGUES", phone_number: "06.14.99.34.67", department: department1, address: "165 rue du clauet, 33140 Cadaujac")
 
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-27", user: user2, status: false)
+Booking.create!(on_call: false, date: "2024-04-08", user: user2, status: false)
 
-Booking.create!(on_call: true, date: "2024-03-27", user: user1, status: false)
-
-
-
-# -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-30", user: user1, status: false)
-
-Booking.create!(on_call: true, date: "2024-03-30", user: user2, status: false)
+Booking.create!(on_call: true, date: "2024-04-08", user: user1, status: false)
 
 
 
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-26", user: user2, status: false)
+Booking.create!(on_call: false, date: "2024-04-09", user: user1, status: false)
 
-Booking.create!(on_call: true, date: "2024-03-26", user: user1, status: false)
+Booking.create!(on_call: true, date: "2024-04-09", user: user3, status: false)
+
+
+
+# -----------------------------------------Booking-------------------------------------
+Booking.create!(on_call: false, date: "2024-04-10", user: user2, status: false)
+
+Booking.create!(on_call: true, date: "2024-04-10", user: user3, status: false)
 
 
 
@@ -63,14 +63,14 @@ Booking.create!(on_call: true, date: "2024-03-26", user: user1, status: false)
 # user8 = User.create!(email: "hugo@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Hugo", last_name: "DONI", phone_number: "06.61.54.98.12", department: department1, address: "43 avenue de rome, 33530 Bassens")
 # user9 = User.create!(email: "iris@chu.fr", password: "baby21", password_confirmation: "baby21", first_name: "Dr. Iris", last_name: "TOUALBI", phone_number: "06.98.35.19.47", department: department1, address: "33 avenue de l'europe, 33290 Blaquefort")
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-28", user: user2, status: false)
+Booking.create!(on_call: false, date: "2024-04-11", user: user2, status: false)
 
-Booking.create!(on_call: true, date: "2024-03-28", user: user1, status: false)
+Booking.create!(on_call: true, date: "2024-04-12", user: user1, status: false)
 
 # -----------------------------------------Booking-------------------------------------
-Booking.create!(on_call: false, date: "2024-03-29", user: user1, status: false)
+Booking.create!(on_call: false, date: "2024-04-13", user: user1, status: false)
 
-Booking.create!(on_call: true, date: "2024-03-29", user: user2, status: false)
+Booking.create!(on_call: true, date: "2024-04-13", user: user2, status: false)
 
 
 
