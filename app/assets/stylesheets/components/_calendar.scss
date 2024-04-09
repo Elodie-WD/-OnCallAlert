@@ -1,8 +1,8 @@
-#TitreCalendrier{
-text-align: center;
+#TitreCalendrier {
+  text-align: center;
 }
 
-.calendar{
+.calendar {
   margin-right: 35px;
   margin-left: 35px;
   margin-top: 25px;
@@ -21,7 +21,7 @@ text-align: center;
   margin-bottom: 100px;
 }
 
-.box1{
+.box1 {
   text-align: center;
   margin-bottom: 25px;
   border-radius: 10px;
@@ -31,7 +31,7 @@ text-align: center;
   padding: 20px 5px 5px 5px;
 }
 
-.box2{
+.box2 {
   text-align: center;
   margin-bottom: 25px;
   border-radius: 10px;
@@ -41,7 +41,7 @@ text-align: center;
   padding: 20px 5px 5px 5px;
 }
 
-#status{
+#status {
   text-align: center;
   background-color: #FFE45E;
   border-radius: 40px;
@@ -54,12 +54,12 @@ text-align: center;
   padding-top: 2px;
 }
 
-#metier{
+#metier {
   color: #c4c4c4;
   font-size: 13px;
 }
 
-#nom{
+#nom {
   color: #7FC8F8;
   text-align: center;
   font-family: 'quicksand';
@@ -82,31 +82,75 @@ text-align: center;
   color: #fff;
 }
 
-.calendar-heading{
+.calendar-heading {
   text-align: center;
   padding: 10px;
   font-weight: bold;
 }
 
-.simple-calendar .day{
+.simple-calendar .day {
   height: 36px;
 }
 
+.list-date {
+  height: 120px;
+  border: 2px solid rgba(181, 180, 180, 0.363);
+  padding-top: 20px;
+  margin: 10px;
 
-.calendar-heading{
+  #garde {
+    color: #03045E;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ;
+
+  #astreinte {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ;
+}
+
+.list-planning {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 140px 140px;
+  min-height: 265px;
+  border: 2px solid rgba(167, 192, 232, 0.363);
+
+  .garde {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  ;
+
+  .astreinte {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  ;
+}
+
+.calendar-heading {
   display: flex;
   justify-content: space-between;
 
 }
 
-.calendar-title{
+.calendar-title {
   text-transform: capitalize;
 
 }
 
 /* Tableau calendrier */
 
-#calendrier > div > table > thead > tr > th:nth-child(1) {
+#calendrier>div>table>thead>tr>th:nth-child(1) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -118,7 +162,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table > thead > tr > th:nth-child(2) {
+#calendrier>div>table>thead>tr>th:nth-child(2) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -130,7 +174,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table > thead > tr > th:nth-child(3) {
+#calendrier>div>table>thead>tr>th:nth-child(3) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -142,7 +186,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table > thead > tr > th:nth-child(4) {
+#calendrier>div>table>thead>tr>th:nth-child(4) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -154,7 +198,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table > thead > tr > th:nth-child(5) {
+#calendrier>div>table>thead>tr>th:nth-child(5) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -166,7 +210,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table > thead > tr > th:nth-child(6) {
+#calendrier>div>table>thead>tr>th:nth-child(6) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -178,7 +222,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table > thead > tr > th:nth-child(7) {
+#calendrier>div>table>thead>tr>th:nth-child(7) {
   background-color: #ff000000;
   color: #fff;
   border-color: #ff000000;
@@ -190,7 +234,7 @@ text-align: center;
   line-height: normal;
 }
 
-#calendrier > div > table {
+#calendrier>div>table {
   border: none;
 }
 
@@ -202,11 +246,11 @@ text-align: center;
   margin-top: -55px;
 }
 
-#calendrier > div > div {
+#calendrier>div>div {
   margin-top: -102px;
 }
 
-#calendrier > div > div > span {
+#calendrier>div>div>span {
   color: #fff;
   text-align: center;
   font-family: Quicksand;
@@ -219,140 +263,143 @@ text-align: center;
 
 /* Gris par dessus calendrier */
 
-.table-striped > tbody > tr:nth-of-type(odd) > * {
+.table-striped>tbody>tr:nth-of-type(odd)>* {
   --bs-table-bg-type: rgba(255, 0, 0, 0);
 }
 
 
 /* Ligne 1 */
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-1.past.prev-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-1.past.prev-month {
   background-color: #ff000000;
   border-color: #ff000000;
   color: #BDBDBD;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-2.past.prev-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-2.past.prev-month {
   background-color: #ff000000;
   border-color: #ff000000;
   color: #BDBDBD;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-3.past.prev-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-3.past.prev-month {
   background-color: #ff000000;
   border-color: #ff000000;
   color: #BDBDBD;
 }
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-4.past.prev-month {
+
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-4.past.prev-month {
   background-color: #ff000000;
   border-color: #ff000000;
   color: #BDBDBD;
 }
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-5.past.prev-month {
+
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-5.past.prev-month {
   background-color: #ff000000;
   border-color: #ff000000;
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) {
+#calendrier>div>table>tbody>tr:nth-child(1) {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-5.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-5.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-6.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-6.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-7.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-7.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
 }
 
-#calendrier > div > table > tbody > tr:nth-child(1) > td.day.wday-0.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(1)>td.day.wday-0.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
 }
 
 /* Ligne 2 */
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-1.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-1.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-2.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-2.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-3.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-3.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-4.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-4.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-5.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-5.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-6.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-6.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-7.past.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-7.past.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-4.today.start-date.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-4.today.start-date.current-month {
   background-color: #7FC8F8;
   border-radius: 10px;
   border-color: rgba(255, 0, 0, 0);
   height: 20px;
-  width: 10px!important;
+  width: 10px !important;
 }
+
 .today {
   background-color: #7FC8F8 !important;
   border-radius: 10px !important;
   border-color: rgba(255, 0, 0, 0) !important;
   height: 20px !important;
-  width: 10px!important;
+  width: 10px !important;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-5.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-5.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-6.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-6.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(2) > td.day.wday-0.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(2)>td.day.wday-0.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
@@ -361,43 +408,43 @@ text-align: center;
 
 /* Ligne 3 */
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-1.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-1.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-2.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-2.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-3.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-3.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-4.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-4.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-5.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-5.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-6.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-6.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(3) > td.day.wday-0.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(3)>td.day.wday-0.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
@@ -405,43 +452,43 @@ text-align: center;
 
 /* Ligne 4 */
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-1.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-1.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-2.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-2.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-3.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-3.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-4.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-4.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-5.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-5.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-6.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-6.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(4) > td.day.wday-0.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(4)>td.day.wday-0.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
@@ -449,43 +496,43 @@ text-align: center;
 
 /* Ligne 5 */
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-1.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-1.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-2.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-2.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-3.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-3.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-4.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-4.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-5.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-5.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-6.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-6.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
 }
 
-#calendrier > div > table > tbody > tr:nth-child(5) > td.day.wday-0.future.current-month {
+#calendrier>div>table>tbody>tr:nth-child(5)>td.day.wday-0.future.current-month {
   background-color: #ff000000;
   border-color: rgba(255, 0, 0, 0);
   color: #03045E;
@@ -504,13 +551,13 @@ text-align: center;
 
 /* previous next */
 
-#calendrier > div > div > a:nth-child(1) {
+#calendrier>div>div>a:nth-child(1) {
   font-family: quicksand;
   color: #fff;
   font-size: 15px;
 }
 
-#calendrier > div > div > a:nth-child(3) {
+#calendrier>div>div>a:nth-child(3) {
   font-family: quicksand;
   color: #fff;
   font-size: 15px;
@@ -519,8 +566,8 @@ text-align: center;
 
 /* Sélecteur gris */
 
-.table > :not(caption) > * > * {
+.table> :not(caption)>*>* {
   background-color: rgba(255, 0, 0, 0);
-  border:none;
+  border: none;
 
 }

@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @users = User.all
   end
+
   def new
     @bookings = Booking.all
     @booking = Booking.new
@@ -16,13 +17,22 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @bookings = Booking.all
     @booking = Booking.new(booking_params)
-    if @booking.save
-      redirect_to planning_path
-    else
-    render :planning, status: :unprocessable_entity
+    respond_to do |format|
+      if @booking.save
+        format.html { redirect_to planning_path, notice: "Booking was successfully created." }
+        format.json
+      else
+        format.html { render :planning, status: :unprocessable_entity }
+        format.json
+      end
     end
+    @bookings = Booking.all
+    # if @booking.save
+    #   redirect_to planning_path
+    # else
+    # render :planning, status: :unprocessable_entity
+    # end
   end
 
   def update
