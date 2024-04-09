@@ -1,0 +1,13 @@
+<% if booking.on_call == true %>
+  <div class=" list-date astreinte">
+    <h6><%= booking.user.first_name %></h6>
+    <h6><%= booking.user.last_name %></h6>
+    <p id="astreinte">Astreinte</p>
+  </div>
+<% else %>
+  <div class="list-date garde">
+    <h6><%= booking.user.first_name %></h6>
+    <h6><%= booking.user.last_name %></h6>
+    <p id="garde">Garde</p>
+  </div>
+<% end %>

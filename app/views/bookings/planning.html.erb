@@ -2,31 +2,22 @@
 <div class="container-planning" data-controller = "planning" data-planning-textopen-value ="Ajouter une garde ou une astreinte"
 data-planning-textclose-value ="Fermer le formulaire">
   <div class="calendar" id="calendrier" >
-    <%= month_calendar do |date| %>
-        <div class="day">
-          <%= date.day %>
-        </div>
-        <div class="list-booking">
-          <% @bookings.where(date: date).each do |booking| %>
-            <div class="garde">
-            <h6><%= booking.user.first_name %></h6>
-            <h6><%= booking.user.last_name %></h6>
-              <% if booking.on_call == true %>
-              <p>Astreinte</p>
-              <% else %>
-              <p>Garde</p>
-              <% end %>
-            </div>
-            <div class="astreinte"></div>
-          <% end %>
-        </div>
+    <%= week_calendar(number_of_weeks: 2) do |date| %>
+      <div class="day" data-planning-target = "divday" data-planning-day-value = "<%= date %>">
+        <%= date.day %>
+      </div>
+      <div class="list-booking list-planning" data-planning-target="items">
+        <% @bookings.where(date: date).each do |booking| %>
+          <%= render booking %>
+        <% end %>
+      </div>
     <% end %>
-    </div>
+  </div>
     <div class="btn-planning-form">
       <button class = "little-btn-green" data-action="click->planning#toggle" data-planning-target = "btn">Ajouter une garde ou une astreinte </button>
     </div>
     <%# <%= link_to "add a booking", new_booking_path %>
-    <div class="container-form d-none" data-planning-target = "form">
+    <div class="container-form d-none" data-planning-target = "divform">
         <%= render "form", booking: @booking %>
     </div>
-  </div>
+</div>
