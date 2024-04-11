@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="calendar"
 export default class extends Controller {
   static targets = ["day", "astreinteLastName", "astreinteFirstName", "degardeLastName", "degardeFirstName"]
 
@@ -48,5 +47,4 @@ export default class extends Controller {
         this.degardeFirstNameTarget.innerText = data[3].first_name
       })
   };
-  // creation fonction dat
 }

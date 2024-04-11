@@ -7,8 +7,7 @@ class UsersController < ApplicationController
 
   def on_duty
     planning_date
-    @booking_contact = Booking.find_by(date: Date.today, on_call: true)
-    @contact = @booking_contact.user
+    (@booking_contact = Booking.find_by(date: Date.today, on_call: true))?(@contact = @booking_contact.user):(@contact = "Attention pas d'attribution")
   end
 
   def default
@@ -69,9 +68,11 @@ class UsersController < ApplicationController
   def planning_date
     @user = current_user
     if Booking.find_by(user: current_user) == nil
+      # raise
       @on_call = nil
       @on_duty = nil
     else
+      # raise
     @booking = Booking.find_by(date: Date.today, user: current_user)
     @on_call = current_user.next_booking(true)
     @on_duty = current_user.next_booking(false)

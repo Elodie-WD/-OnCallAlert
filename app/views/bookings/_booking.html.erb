@@ -1,13 +1,33 @@
-<% if booking.on_call == true %>
-  <div class=" list-date astreinte">
-    <h6><%= booking.user.first_name %></h6>
-    <h6><%= booking.user.last_name %></h6>
-    <p id="astreinte">Astreinte</p>
-  </div>
+<% if booking.user == current_user %>
+  <% if booking.on_call == true %>
+    <div class=" list-date astreinte" id="bg-user">
+      <h6><%= booking.user.first_name %></h6>
+      <h6><%= booking.user.last_name %></h6>
+      <p id="astreinte">Astreinte</p>
+      <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Supprimer l'astreinte?"} %>
+    </div>
+  <% else %>
+    <div class="list-date garde" id="bg-user">
+      <h6><%= booking.user.first_name %></h6>
+      <h6><%= booking.user.last_name %></h6>
+      <p id="garde">Garde</p>
+      <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Supprimer la garde?"} %>
+    </div>
+  <% end %>
 <% else %>
-  <div class="list-date garde">
-    <h6><%= booking.user.first_name %></h6>
-    <h6><%= booking.user.last_name %></h6>
-    <p id="garde">Garde</p>
-  </div>
+  <% if booking.on_call == true %>
+    <div class=" list-date astreinte">
+      <h6><%= booking.user.first_name %></h6>
+      <h6><%= booking.user.last_name %></h6>
+      <p id="astreinte">Astreinte</p>
+      <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Supprimer l'astreinte?"} %>
+    </div>
+  <% else %>
+    <div class="list-date garde">
+      <h6><%= booking.user.first_name %></h6>
+      <h6><%= booking.user.last_name %></h6>
+      <p id="garde">Garde</p>
+      <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Supprimer la garde?"} %>
+    </div>
+  <% end %>
 <% end %>

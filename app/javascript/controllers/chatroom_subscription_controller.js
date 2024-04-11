@@ -13,7 +13,7 @@ export default class extends Controller {
   btnDisabled(event) {
     console.log(event.target.value);
     if (this.btnTarget.getAttribute("disabled") && event.target.value != "") {
-      console.log("yes");
+      // console.log("yes");
       this.btnTarget.removeAttribute("disabled", "");
     } else if (!this.btnTarget.getAttribute
       ("disabled") && event.target.value === "") {
@@ -28,7 +28,7 @@ export default class extends Controller {
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       {
         received: (data) => {
-          console.log(data)
+          // console.log(data)
           this.#insertMessageAndScrollDown(data)
         }
       }
@@ -52,7 +52,7 @@ export default class extends Controller {
       this.notifTarget.classList.remove("d-none")
     }
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message_html)
-    console.log(messageElement)
+    // console.log(messageElement)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
 

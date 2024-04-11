@@ -40,6 +40,13 @@ class BookingsController < ApplicationController
     @booking.update!(status: true)
     redirect_to on_call_path, notice:"Vous avez validé votre astreinte!"
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to planning_path, status: :see_other
+
+  end
   private
 
   def booking_params
