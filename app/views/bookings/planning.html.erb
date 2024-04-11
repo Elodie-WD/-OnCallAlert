@@ -13,6 +13,7 @@ data-planning-textclose-value ="Fermer le formulaire">
       </div>
     <% end %>
   </div>
+  <% if current_user.admin %>
     <div class="btn-planning-form">
       <button class = "little-btn-green" data-action="click->planning#toggle" data-planning-target = "btn">Ajouter une garde ou une astreinte </button>
     </div>
@@ -20,4 +21,5 @@ data-planning-textclose-value ="Fermer le formulaire">
     <div class="container-form d-none" data-planning-target = "divform">
         <%= render "form", booking: @booking %>
     </div>
+  <% end %>
 </div>

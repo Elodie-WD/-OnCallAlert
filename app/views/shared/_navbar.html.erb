@@ -15,7 +15,7 @@
               <div>
                 <ul class="monul">
                   <ol class="list">  <%= link_to "L'astreinte du jour", contact_path(current_user), class: "nav-link"%></ol>
-                  <ol class="list"> <%= link_to "Mon planning", bookings_index_path(current_user), class: "nav-link"%></ol>
+                  <ol class="list"> <%= link_to "Mon planning", planning_path, class: "nav-link"%></ol>
                   <ol class="list">  <%= link_to "Historique des conversations", chatrooms_path, class: "nav-link"%> </ol>
                   <ol class="list"> <%= link_to "Mon profil", rooting_path, class: "nav-link"%></ol>
                   <ol class="list"> <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %> </ol>
