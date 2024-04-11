@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'bookings/index'
   devise_for :users
-  resources :bookings, only: %i[update edit new create]
+  resources :bookings, only: %i[update edit new create destroy]
   get '/planning', to: "bookings#planning", as: :planning
   get '/on_duty', to: "users#on_duty", as: :on_duty
   get '/on_call', to: "users#on_call", as: :on_call
