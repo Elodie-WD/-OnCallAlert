@@ -1,7 +1,7 @@
 <div class="container chatroom">
   <div class="header-chatroom">
     <%= link_to "Retour", contact_path(), class: "text-historique" %>
-    <h4 class="title-chatroom">En discussion avec <br><%= @contact.first_name %></h4>
+    <h4 class="title-chatroom">En discussion avec <br><%= @chatroom.chatroom_contact(@chatroom.date, current_user) %></h4>
   </div>
 
 
