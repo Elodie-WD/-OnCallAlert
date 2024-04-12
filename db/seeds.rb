@@ -61,10 +61,10 @@ Booking.create!(on_call: true, date: date_after_tomorrow, user: user2, status: f
 # user 3 en garde user 2 en astreinte
 # -----------------------------------------Booking-------------------------------------
 
-Booking.create!(on_call: false, date: "2024-04-14", user: user2, status: false)
+# Booking.create!(on_call: false, date: "2024-04-14", user: user2, status: false)
 
-Booking.create!(on_call: true, date: "2024-04-14", user: user1, status: false)
-# user 2 en garde user 1 en astreinte
+# Booking.create!(on_call: true, date: "2024-04-14", user: user1, status: false)
+# # user 2 en garde user 1 en astreinte
 
 
 # Week 3------------------------------------------------------------------
@@ -86,36 +86,46 @@ Booking.create!(on_call: true, date: "2024-04-14", user: user1, status: false)
 
 # Booking.create!(on_call: nil, date: "2023-12-20", user: user3, status: false)
 
-# # -----------------------------------------Booking-------------------------------------
-# Booking.create!(on_call: false, date: "2023-12-21", user: user7, status: false)
+# # -----------------------------------------Booking------------------------------------- Chatroom 1
+Booking.create!(on_call: false, date: "2023-11-11", user: user1, status: false)
 
-# Booking.create!(on_call: true, date: "2023-12-21", user: user9, status: false)
+Booking.create!(on_call: true, date: "2023-11-11", user: user2, status: false)
 
-# Booking.create!(on_call: nil, date: "2023-12-21", user: user3, status: false)
 
-# # -----------------------------------------Booking-------------------------------------
-# Booking.create!(on_call: false, date: "2023-12-22", user: user7, status: false)
 
-# Booking.create!(on_call: true, date: "2023-12-22", user: user8, status: false)
+# # -----------------------------------------Booking------------------------------------- Chatroom 2
+Booking.create!(on_call: false, date: "2023-11-28", user: user1, status: false)
 
-# Booking.create!(on_call: nil, date: "2023-12-22", user: user3, status: false)
+Booking.create!(on_call: true, date: "2023-11-28", user: user3, status: false)
 
-# # -----------------------------------------Booking-------------------------------------
-# Booking.create!(on_call: false, date: "2023-12-23", user: user9, status: false)
 
-# Booking.create!(on_call: true, date: "2023-12-23", user: user8, status: false)
 
-# Booking.create!(on_call: nil, date: "2023-12-23", user: user3, status: false)
+# # -----------------------------------------Booking------------------------------------- Chatroom 3
+Booking.create!(on_call: false, date: "2023-12-02", user: user2, status: false)
+
+Booking.create!(on_call: true, date: "2023-12-02", user: user3, status: false)
+
+
 
 # -----------------------------------------Chatrooms-------------------------------------
-chatroom1 = Chatroom.create!(name: "Chatroom1", date: "22/11/2023", department: department1)
+chatroom1 = Chatroom.create!(name: "Chatroom1", date: "2023-11-11", department: department1)
 
-chatroom2 = Chatroom.create!(name: "Chatroom2", date: "28/11/2023", department: department1)
+chatroom2 = Chatroom.create!(name: "Chatroom2", date: "2023-11-28", department: department1)
 
-chatroom3 = Chatroom.create!(name: "Chatroom3", date: "02/12/2023", department: department1)
+chatroom3 = Chatroom.create!(name: "Chatroom3", date: "2023-12-02", department: department1)
 
 # -----------------------------------------Messages-------------------------------------
-Message.create!(content: "Hello", chatroom: chatroom1, user: user1)
-Message.create!(content: "Salut Anthony", chatroom: chatroom1, user: user2)
-Message.create!(content: "Super merci, je suis d'astreinte aujourd'hui, comment est le service ce soir ?", chatroom: chatroom1, user: user1)
-Message.create!(content: "Plutôt calme pour l'instant, je te tiens au jus", chatroom: chatroom1, user: user2)
+Message.create!(content: "Bonsoir", chatroom: chatroom1, user: user1)
+Message.create!(content: "Bonsoir", chatroom: chatroom1, user: user2)
+Message.create!(content: "Ceci est un modèle de message de la chatroom", chatroom: chatroom1, user: user1)
+Message.create!(content: "C'est fonctionnel", chatroom: chatroom1, user: user2)
+# --------------------------------------
+Message.create!(content: "Bonsoir", chatroom: chatroom2, user: user1)
+Message.create!(content: "Bonsoir", chatroom: chatroom2, user: user3)
+Message.create!(content: "Ceci est un modèle de message de la chatroom", chatroom: chatroom2, user: user1)
+Message.create!(content: "C'est fonctionnel", chatroom: chatroom2, user: user3)
+# -------------------------------------
+Message.create!(content: "Bonsoir", chatroom: chatroom3, user: user3)
+Message.create!(content: "Bonsoir", chatroom: chatroom3, user: user2)
+Message.create!(content: "Ceci est un modèle de message de la chatroom", chatroom: chatroom3, user: user3)
+Message.create!(content: "C'est fonctionnel", chatroom: chatroom3, user: user2)
