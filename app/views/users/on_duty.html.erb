@@ -32,14 +32,14 @@
             <% end %>
         <div class="circle-wrapper-avatar-on-call">
         </div>
-          <% if @booking_contact.status == false %>
+          <% if @on_call_booking.status == false %>
             <%= image_tag "icon-status-false.png", class: "icon-validation-personne-astreinte" %>
           <% else %>
             <%= image_tag "icon-status-true.png", class: "icon-validation-personne-astreinte" %>
           <% end %>
         </div>
         <div>
-          <% if @booking_contact.status == false %>
+          <% if @on_call_booking = Booking.find_by(date: Date.today, on_call: true).status == false %>
             <%= link_to contact_path(), id: "link-blue", class: "text-de-garde" do %>
               Mon<br>Astreinte
             <% end %>
@@ -63,18 +63,18 @@
       </div>
     </div>
     <div class="content-btn-on-duty">
-    <% if @contact.uncalled?%>
+    <% if @on_call_contact.uncalled?%>
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
         <h6>Contacter<br>la personne d'astreinte</h6>
       <% end %>
-    <% elsif @contact.accepted?%>
+    <% elsif @on_call_contact.accepted?%>
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
         <h6>Contacter<br>la personne d'astreinte</h6>
       <% end %>
         <%= link_to map_path, class: "little-btn-green" do %>
         <h6>Suivre l'arrivée de l'astreinte</h6>
         <% end %>
-    <% elsif @contact.rejected?%>
+    <% elsif @on_call_contact.rejected?%>
       <%= link_to contact_path, class: "big-btn-message-on-duty" do %>
         <h6>Contacter<br>la personne d'astreinte</h6>
       <% end %>
