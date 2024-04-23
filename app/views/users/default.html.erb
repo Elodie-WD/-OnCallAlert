@@ -23,12 +23,12 @@
     </div>
     <div class="default-contacts">
       <div>
-        <h6>Personne de garde</h6>
-        <p>tel : <%= @booking_contact_on_duty.phone_number %></p>
+        <h6>Personne de garde : <%= @on_duty_contact.first_name %> <%= @on_duty_contact.last_name %></h6>
+        <p>tel : <%= @on_duty_contact.phone_number %></p>
       </div>
       <div>
-        <h6>Personne d'astreinte</h6>
-        <p>tel : <%= @booking_contact_on_call.phone_number %></p>
+        <h6>Personne d'astreinte : <%= @on_call_contact.first_name %> <%= @on_call_contact.last_name %></h6>
+        <p>tel : <%= @on_call_contact.phone_number %></p>
       </div>
     </div>
   </div>
