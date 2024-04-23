@@ -28,9 +28,9 @@ class ChatroomsController < ApplicationController
 
   private
   def chatroom_user
-    bookings_user = Booking.all.where("date < ?", Date.current).where(user: current_user)
+    bookings_user = Booking.where(user: current_user).where("date < ?", Date.current)
     booking_date_user = bookings_user.map{|booking| booking.date.strftime("%Y-%m-%d")}
-    @chatrooms_user = booking_date_user.map{|date| Booking.all.where(date:date).where.not(user:current_user)}.flatten.map{|booking| Chatroom.all.find_by(date: booking.date)}
+    @chatrooms_user = booking_date_user.map{|date| Booking.where(date:date).where.not(user:current_user)}.flatten.map{|booking| Chatroom.find_by(date: booking.date)}
   end
   # def chatroom_contact(date)
   #   booking_contact = Booking.all.where(date: date).where.not(user: current_user).first.user

@@ -4,7 +4,7 @@ class Chatroom < ApplicationRecord
   validates :date, presence: true
   has_many :users, through: :messages
 
-
+# chatroom.users.uniq
 def chatroom_contact(date, user)
   Booking.all.where(date: date).where.not(user: user).first.user.first_name
 end
