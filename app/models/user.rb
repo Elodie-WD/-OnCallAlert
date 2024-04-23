@@ -1,9 +1,10 @@
 class User < ApplicationRecord
   has_many :messages, dependent: :destroy
+  has_many :chatrooms, through: :messages
   has_many :bookings, dependent: :destroy
   belongs_to :department
   validates :last_name, presence: true
-  validates :first_name, presence: true
+  validates :first_name, presence: true, uniqueness: {scope: :last_name}
   # validates :address, presence: true
   # validates :phone_number, presence: true
   # validates :job_title, presence: true

@@ -1,18 +1,16 @@
 class BookingsController < ApplicationController
+before_action :bookings_all, only: %i[index planning new create]
+before_action :booking_set, only: %i[planning new]
+
   def index
-    @bookings = Booking.all
     @booking = Booking.where(date: "dateselection")
   end
 
   def planning
-    @bookings = Booking.all
-    @booking = Booking.new
     @users = User.all
   end
 
   def new
-    @bookings = Booking.all
-    @booking = Booking.new
     @users = User.all
   end
 
@@ -27,7 +25,6 @@ class BookingsController < ApplicationController
         format.json
       end
     end
-    @bookings = Booking.all
     # if @booking.save
     #   redirect_to planning_path
     # else
@@ -51,5 +48,13 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:on_call, :date, :user_id)
+  end
+
+  def bookings_all
+    @bookings = Booking.all
+  end
+
+  def booking_set
+    @booking = Booking.new
   end
 end
